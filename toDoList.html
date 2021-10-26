@@ -1,0 +1,22 @@
+<input id="input" type="text" placeholder="add an event...">
+<button id="btn" onclick=" add(document.getElementById('input').value); document.getElementById('input').value='';">Add</button>
+<div id="out"></div>
+
+<script>
+   let list = [];
+    function add(item){
+        if(item != ""){
+            list.push(item);
+            document.getElementById("btn").style.backgroundColor = "green";
+            setTimeout(() => (document.getElementById("btn").style.backgroundColor = ""), 250);
+        }
+            let out = document.getElementById("out");
+        out.innerHTML = "";
+        for(let i = 0; i < list.length; i++){
+            let elem = document.createElement("div");
+            elem.setAttribute("id", "elem" + i);
+            elem.innerHTML = list[i];
+            out.appendChild(elem);
+        }
+    }
+</script>
