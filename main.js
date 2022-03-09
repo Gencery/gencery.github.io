@@ -5,10 +5,10 @@ async function getData(hat) {
   let hourList = document.getElementById("hourList");
   data = data.HareketSaatleriHici;
 
-  let now = new Date();
+  let now = new Date().toLocaleTimeString("en-US", {timeZone: "Europe/Istanbul", hour12: false});
 
-  let nowHour = now.getUTCHours();
-  let nowMin = now.getUTCMinutes();
+  let nowHour = now.slice(0,2);
+  let nowMin = now.slice(3,5);
 
   let counter = 0;
   createAppendElem("h3", hat);
