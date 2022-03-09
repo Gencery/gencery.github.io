@@ -7,8 +7,8 @@ async function getData(hat) {
 
   let now = new Date().toLocaleTimeString("en-US", {timeZone: "Europe/Istanbul", hour12: false});
 
-  let nowHour = now.slice(0,2);
-  let nowMin = now.slice(3,5);
+  let nowHour = Number.parseInt(now.slice(0,2));
+  let nowMin = Number.parseInt(now.slice(3,5));
 
   let counter = 0;
   createAppendElem("h3", hat);
