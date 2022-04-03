@@ -5,10 +5,13 @@ async function getData(hat) {
   let hourList = document.getElementById("hourList");
   data = data.HareketSaatleriHici;
 
-  let now = new Date().toLocaleTimeString("en-US", {timeZone: "Europe/Istanbul", hour12: false});
+  let now = new Date().toLocaleTimeString("en-US", {
+    timeZone: "Europe/Istanbul",
+    hour12: false,
+  });
 
-  let nowHour = Number.parseInt(now.slice(0,2));
-  let nowMin = Number.parseInt(now.slice(3,5));
+  let nowHour = Number.parseInt(now.slice(0, 2));
+  let nowMin = Number.parseInt(now.slice(3, 5));
 
   let counter = 0;
   createAppendElem("h3", hat);
@@ -32,5 +35,28 @@ function createAppendElem(x, inner) {
   elem.textContent = inner;
   document.body.appendChild(elem);
 }
+
 getData("267");
 getData("505");
+
+let timeURL =
+  "https://corsanywhere.herokuapp.com/http://worldtimeapi.org/api/timezone/Europe/Istanbul";
+
+exchangeRateURL =
+  "https://corsanywhere.herokuapp.com/https://www.google.com/search?q=usd+try";
+
+let timePara = document.createElement("p");
+let exchPara = document.createElement("p");
+
+fetch(timeURL)
+  .then((res) => res.json())
+  .then((data) => (timePara.innerText = data.datetime.slice(11, 19)));
+document.body.append(timePara);
+
+fetch(exchangeRateURL)
+  .then((res) => res.text())
+  .then((data) => {
+    const index = data.indexOf("data-exchange-rate");
+    exchPara.innerText = "usd/try: " + data.slice(index + 20, index + 25);
+  });
+document.body.append(exchPara);
