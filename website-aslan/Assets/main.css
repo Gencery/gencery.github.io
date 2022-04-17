@@ -1,4 +1,50 @@
 * {
   box-sizing: border-box;
   margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+}
+header .logo-container {
+  border: 1px solid red;
+  height: 100%;
+  width: 15%;
+  margin-left: 1%;
+}
+header .logo-container > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+header .nav-menu {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 75%;
+  width: 100%;
+}
+header .nav-menu > div {
+  border: 1px solid green;
+  position: relative;
+  width: 100%;
+}
+header .nav-menu > div > a {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+  display: block;
+}
+header .nav-menu > div > a + ul {
+  border: 1px solid black;
+  text-align: center;
+  visibility: hidden;
+  list-style: none;
+  width: 100%;
+  padding: 0%;
+  position: absolute;
 }/*# sourceMappingURL=main.css.map */
