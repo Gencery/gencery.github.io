@@ -40,10 +40,10 @@ getData("267");
 getData("505");
 
 let timeURL =
-  "https://corsanywhere.herokuapp.com/http://worldtimeapi.org/api/timezone/Europe/Istanbul";
+  "http://worldtimeapi.org/api/timezone/Europe/Istanbul";
 
 exchangeRateURL =
-  "https://corsanywhere.herokuapp.com/https://www.google.com/search?q=usd+try";
+  "https://www.google.com/search?q=usd+try";
 
 let timePara = document.createElement("p");
 let exchPara = document.createElement("p");
