@@ -6,11 +6,9 @@
 header {
   height: 100px;
   width: 100%;
-  border: 1px solid green;
   display: flex;
 }
 header .logo-container {
-  border: 1px solid red;
   height: 100%;
   width: 15%;
   margin-left: 1%;
@@ -20,7 +18,6 @@ header .logo-container > img {
   max-width: 100%;
 }
 header .nav-menu {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +25,6 @@ header .nav-menu {
   width: 100%;
 }
 header .nav-menu > div {
-  border: 1px solid green;
   position: relative;
   width: 100%;
 }
@@ -40,11 +36,19 @@ header .nav-menu > div > a {
   display: block;
 }
 header .nav-menu > div > a + ul {
-  border: 1px solid black;
   text-align: center;
   visibility: hidden;
   list-style: none;
   width: 100%;
   padding: 0%;
   position: absolute;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 1px solid red;
+}
+header .nav-menu > div > a + ul > li {
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid red;
 }/*# sourceMappingURL=main.css.map */

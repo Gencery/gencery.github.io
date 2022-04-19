@@ -1,8 +1,10 @@
-*{
-    box-sizing: border-box;
-    margin: 0 auto;
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
 }
+
+//variables
+$sm: 600px;
 
 @import "./components/footer";
 @import "./components/header";
-@import "./base/variables"

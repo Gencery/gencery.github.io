@@ -1,45 +1,47 @@
-header{
-	height: 100px;
+header {
+  height: 100px;
   width: 100%;
-  border: 1px solid green;
   display: flex;
-  .logo-container{
-    border: 1px solid red;
+  .logo-container {
     height: 100%;
     width: 15%;
     margin-left: 1%;
-    >img{
+    > img {
       max-height: 100%;
-			max-width: 100%;
+      max-width: 100%;
     }
   }
-  .nav-menu{
-    border: 1px solid red;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		max-width: 75%;
-		width: 100%;
-		>div{
-			border: 1px solid green;
-			position: relative;
-			width: 100%;
-			>a{
-				text-align: center;
-				line-height: 50px;
-				height: 50px;
-				width: 100%;
-				display: block;
-			}
-			>a +ul{
-				border: 1px solid black;
-				text-align: center;
-				visibility: hidden;
-				list-style: none;
-				width: 100%;
-				padding: 0%;
-				position: absolute;
-			}
-		}
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+    width: 100%;
+    > div {
+      position: relative;
+      width: 100%;
+      > a {
+        text-align: center;
+        line-height: 50px;
+        height: 50px;
+        width: 100%;
+        display: block;
+      }
+      > a + ul {
+        text-align: center;
+        visibility: hidden;
+        list-style: none;
+        width: 100%;
+        padding: 0%;
+        position: absolute;
+        height: max-content;
+        border: 1px solid red;
+        > li {
+          height: 50px;
+          line-height: 50px;
+          border: 1px solid red;
+        }
+      }
+    }
   }
 }
