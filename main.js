@@ -43,7 +43,7 @@ let timeURL =
   "http://worldtimeapi.org/api/timezone/Europe/Istanbul";
 
 exchangeRateURL =
-  "https://www.google.com/search?q=usd+try";
+  "https://corsanywhere.herokuapp.com/https://www.google.com/search?q=usd+try";
 
 let timePara = document.createElement("p");
 let exchPara = document.createElement("p");
