@@ -1,0 +1,8 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <rect fill="#9D83E9" width="50" height="50" rx="5"/>
+        <text transform="translate(7 12)" fill="#FFF" font-family="Helvetica" font-size="18">
+                        <tspan x=".497" y="18">JPG</tspan>
+                    </text>
+    </g>
+</svg>
