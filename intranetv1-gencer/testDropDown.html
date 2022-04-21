@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body class="gtestDropDown">
+    <div id="personel-ara-bar-input">
+      <input
+        class="selection-passive"
+        placeholder="Personel"
+        oninput="filterByInput(3, this, this.nextElementSibling)"
+        onfocus="this.nextElementSibling.style.visibility = 'visible'"
+        ooooooooooooooonfocusout="this.nextElementSibling.style.visibility = 'hidden'; event.stopImmediatePropagation()"
+      />
+      <div>
+        <p>anasayfa</p>
+        <p>anasayfa-reklam</p>
+        <p>anasayfa-sizdengelenler-anket</p>
+        <p>banasayfa</p>
+        <p>anasayfabc</p>
+        <p>canasayfa</p>
+        <p>banasayfab</p>
+        <p>banasayfb</p>
+      </div>
+    </div>
+    <script>
+      let inputElem = document.getElementById("personel-ara-bar-input").children[0];
+
+      function filterByInput(minInputSize, inputElement, container) {
+        let inputStr = inputElement.value;
+        if (inputStr.length >= minInputSize || inputStr == "")
+          for (let item of container.children) {
+            if (item.innerText.indexOf(inputStr) == 0) {
+              item.style.display = "block";
+            } else item.style.display = "none";
+          }
+      }
+
+      let pelems = document.getElementsByTagName("p");
+
+      function toInput(elem) {
+        inputElem.value = elem.innerText;
+      }
+
+      for (let pelem of pelems) pelem.addEventListener("click", () => toInput(pelem));
+    </script>
+  </body>
+</html>

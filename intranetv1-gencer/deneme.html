@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intranet</title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div style="background-color: #f7f7f7; height: 600px; width: 100%">
+        <h1 class="title">İBB Logo - Masaüstü</h1>
+        <div class="dynamic">
+          <!-- tabs button -->
+          <div class="dynamic-button-group">
+            <button class="button-active tablinks" onclick="Opentab(event,'DuvarKagiti')">
+              Masaüstü Duvar Kağıdı
+            </button>
+            <button class="button-passive tablinks" onclick="Opentab(event,'EkranKoruyucu')">
+              Ekran Koruyucu
+            </button>
+            <button class="button-passive tablinks" onclick="Opentab(event,'Logolar')">
+              İBB Logoları
+            </button>
+            <button class="button-passive tablinks" onclick="Opentab(event,'OrnekKullanim')">
+              Örnek Kullanım
+            </button>
+          </div>
+          <!-- Duvar Kağıtı Tab -->
+          <div class="dynamic-logo-tab">
+            <p class="p-announcement">
+              İzmir Büyükşehir Belediyesi kurumsal masaüstü duvar kağıdını indirmek için aşağıdak
+              linleri kullanabilirsiniz.
+            </p>
+            <div class="dynamic-logo-tab-downloads">
+              <div>
+                <img src="/Assets/img/logo.svg" />
+                <p class="p-announcement">jpg Formatında</p>
+                <p class="p-announcement">800 x 600</p>
+                <button class="button-regular">İndir</button>
+              </div>
+              <div>
+                <img src="/Assets/img/logo.svg" />
+                <p class="p-announcement">jpg Formatında</p>
+                <p class="p-announcement">1024 x 768</p>
+                <button class="button-regular">İndir</button>
+              </div>
+              <div>
+                <img src="/Assets/img/logo.svg" />
+                <p class="p-announcement">jpg Formatında</p>
+                <p class="p-announcement">1280 x 1024</p>
+                <button class="button-regular">İndir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="./Assets/img/group-2-copy-2.svg" />
+    </footer>
+    <script src="./Assets/scripts/main.js"></script>
+  </body>
+</html>

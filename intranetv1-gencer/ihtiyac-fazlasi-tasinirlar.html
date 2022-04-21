@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İhtiyaç Fazlası Taşınırlar</title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="ihtiyac-fazlasi-tasinirlar">
+        <h3 class="title-h">İhtiyaç Fazlası Taşınırlar</h3>
+        <div class="dynamic">
+          <div class="button-group-g">
+            <button class="button">Tüm İlanlar</button>
+            <button class="button">Kendi İlanlarım</button>
+            <a href="./ihtiyac-fazlasi-tasinirlar-ekleme.html" class="button-regular"
+              >Yeni İlan Ekle</a
+            >
+          </div>
+          <hr />
+          <div class="tabContents">
+            <!--Tüm İlanlar-->
+            <div>
+              <form class="bar-inputs-g">
+                <input placeholder="Malzeme Adı" />
+                <select>
+                  <option hidden>Taşınır Cinsi</option>
+                  <option>Dayanıklı Taşınır</option>
+                  <option>Tüketim Malzemesi</option>
+                </select>
+                <input
+                  oninput="this.value = this.value.replace(/[^0-9]|(^0)/g, '').replace(/(\..*?)\..*/g, '$1');"
+                  type="number"
+                  min="1"
+                  placeholder="Miktar"
+                />
+                <input
+                  placeholder="İlan Tarihi"
+                  type="text"
+                  onclick='this.setAttribute("type", "date");'
+                />
+              </form>
+              <div class="ihtiyac-fazlasi-tasinirlar-sonuc">
+                <div class="personel-kart">
+                  <div class="personel-kart-head">
+                    <p>Kaset Tipi Tavan Klima</p>
+                    <span>
+                      <b>Dahili:&nbsp;</b>
+                      <p>9168</p>
+                    </span>
+                  </div>
+                  <div class="personel-kart-body">
+                    <div>
+                      <img
+                        src="https://cdn.akakce.com/viessmann/viessmann-vitoclima-200-s-he-cs2071mhe0-24000-btu-inverter-kaset-tipi-z.jpg"
+                      />
+                    </div>
+                    <div>
+                      <span>
+                        <b>Kayıt Tarihi:&nbsp;</b>
+                        <p>07.04.2022</p>
+                      </span>
+                      <span>
+                        <b>Miktar:&nbsp;</b>
+                        <p>3 Adet</p>
+                      </span>
+                      <span>
+                        <b>Cinsi:&nbsp;</b>
+                        <p>Dayanıklı Taşınır</p>
+                      </span>
+                    </div>
+                    <div>
+                      <span>
+                        <b>İlgili Kişi:&nbsp;</b>
+                        <p>Fırat ÖZKAN</p>
+                      </span>
+                      <span>
+                        <b>Birimi:&nbsp;</b>
+                        <p>Yazılım Şube Müdürlüğü</p>
+                      </span>
+                      <span>
+                        <b>E-posta:&nbsp;</b>
+                        <p>firatozkan@izmir.bel.tr</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="personel-kart">
+                  <div class="personel-kart-head">
+                    <p>Kaset Tipi Tavan Klima</p>
+                    <span>
+                      <b>Dahili:&nbsp;</b>
+                      <p>9168</p>
+                    </span>
+                  </div>
+                  <div class="personel-kart-body">
+                    <div>
+                      <img
+                        src="https://cdn.akakce.com/viessmann/viessmann-vitoclima-200-s-he-cs2071mhe0-24000-btu-inverter-kaset-tipi-z.jpg"
+                      />
+                    </div>
+                    <div>
+                      <span>
+                        <b>Kayıt Tarihi:&nbsp;</b>
+                        <p>07.04.2022</p>
+                      </span>
+                      <span>
+                        <b>Miktar:&nbsp;</b>
+                        <p>3 Adet</p>
+                      </span>
+                      <span>
+                        <b>Cinsi:&nbsp;</b>
+                        <p>Dayanıklı Taşınır</p>
+                      </span>
+                    </div>
+                    <div>
+                      <span>
+                        <b>İlgili Kişi:&nbsp;</b>
+                        <p>Fırat ÖZKAN</p>
+                      </span>
+                      <span>
+                        <b>Birimi:&nbsp;</b>
+                        <p>Yazılım Şube Müdürlüğü</p>
+                      </span>
+                      <span>
+                        <b>E-posta:&nbsp;</b>
+                        <p>firatozkan@izmir.bel.tr</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="pagination-g">
+                <!-- Prev -->
+                <button>&#10094;</button>
+                <button>1</button>
+                <button class="page-selected">2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <!-- Next -->
+                <button>&#10095;</button>
+              </form>
+            </div>
+            <!--Kendi İlanlarım-->
+            <div>
+              <div>
+                <form class="bar-inputs-g">
+                  <input placeholder="Malzeme Adı" />
+                  <select>
+                    <option hidden>Taşınır Cinsi</option>
+                    <option>Dayanıklı Taşınır</option>
+                    <option>Tüketim Malzemesi</option>
+                  </select>
+                  <input type="number" min="1" placeholder="Miktar" />
+                  <input
+                    placeholder="İlan Tarihi"
+                    type="text"
+                    onclick='this.setAttribute("type", "date");'
+                  />
+                </form>
+                <div class="ihtiyac-fazlasi-tasinirlar-sonuc">
+                  <div class="personel-kart">
+                    <div class="personel-kart-head">
+                      <p>Kaset Tipi Tavan Klima</p>
+                      <span>
+                        <b>Dahili:&nbsp;</b>
+                        <p>9168</p>
+                      </span>
+                    </div>
+                    <div class="personel-kart-body">
+                      <div>
+                        <img
+                          src="https://cdn.akakce.com/viessmann/viessmann-vitoclima-200-s-he-cs2071mhe0-24000-btu-inverter-kaset-tipi-z.jpg"
+                        />
+                      </div>
+                      <div>
+                        <span>
+                          <b>Kayıt Tarihi:&nbsp;</b>
+                          <p>07.04.2022</p>
+                        </span>
+                        <span>
+                          <b>Miktar:&nbsp;</b>
+                          <p>3 Adet</p>
+                        </span>
+                        <span>
+                          <b>Cinsi:&nbsp;</b>
+                          <p>Dayanıklı Taşınır</p>
+                        </span>
+                      </div>
+                      <div>
+                        <span>
+                          <b>İlgili Kişi:&nbsp;</b>
+                          <p>Fırat ÖZKAN</p>
+                        </span>
+                        <span>
+                          <b>Birimi:&nbsp;</b>
+                          <p>Yazılım Şube Müdürlüğü</p>
+                        </span>
+                        <span>
+                          <b>E-posta:&nbsp;</b>
+                          <p>firatozkan@izmir.bel.tr</p>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="pagination-g">
+                  <!-- Prev -->
+                  <button>&#10094;</button>
+                  <button>1</button>
+                  <button>2</button>
+                  <button>3</button>
+                  <button>4</button>
+                  <button>5</button>
+                  <button class="page-selected">6</button>
+                  <button>7</button>
+                  <!-- Next -->
+                  <button>&#10095;</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+    <script src="./Assets/scripts/tabs.js"></script>
+  </body>
+</html>

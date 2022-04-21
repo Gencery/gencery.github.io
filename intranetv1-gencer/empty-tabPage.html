@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empty Tab Page</title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h3 class="title-h">Başlık</h3>
+      <div class="dynamic">
+        <div class="button-group-g">
+          <button class="button">BUTTON-0</button>
+          <button class="button">BUTTON-1</button>
+          <button class="button">BUTTON-2</button>
+          <button class="button">BUTTON-3</button>
+          <button class="button">BUTTON-4</button>
+        </div>
+        <hr />
+        <div class="tabContents">
+          <div>CONTENT-0</div>
+          <div>CONTENT-1</div>
+          <div>CONTENT-2</div>
+          <div>CONTENT-3</div>
+          <div>CONTENT-4</div>
+        </div>
+        <div class="fwd-bwd-buttons">
+          <button onclick="bwdTab()" class="button-negative">Geri</button>
+          <button onclick="fwdTab()" class="button-regular">İleri</button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+    <script src="./Assets/scripts/tabs.js"></script>
+  </body>
+</html>

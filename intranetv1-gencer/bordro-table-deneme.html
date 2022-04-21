@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bordro Table Deneme</title>
+    <!-- <style>
+       .table-bordro {
+        border-collapse: collapse;
+        width: 100%;
+      } 
+      .border-bordro {
+        border: 1px solid #2c8a27;
+      }
+      .img-bordro {
+        width: 100%;
+        height: 90px;
+      }
+    </style> -->
+    <style>
+      * {
+        text-align: center;
+      }
+      th {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1px" bordercolor="#2C8A27" style="border-collapse: collapse">
+      <tr>
+        <th rowspan="3">
+          <img class="img-bordro" src="/Assets/img/group-29.svg" alt="" />
+        </th>
+        <th>ADI SOYADI</th>
+        <td colspan="8">NİHAT TAVŞAN</td>
+      </tr>
+      <tr>
+        <th>ÜNVANI</th>
+        <td colspan="8">PROGRAMCI</td>
+      </tr>
+      <tr>
+        <th>KISIM</th>
+        <td colspan="8">YAZILIM ŞUBE MÜDÜRLÜĞÜ</td>
+      </tr>
+      <tr>
+        <th colspan="3">T.C. KİMLİK NUMARASI</th>
+        <th colspan="7">TABİ OLDUĞU KANUN</th>
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align: center">123456789</td>
+        <td style="text-align: center" colspan="7">5510</td>
+      </tr>
+      <tr>
+        <th>SİCİL NO</th>
+        <th>SIRA NO</th>
+        <th colspan="4">BORDRO AYI</th>
+        <th>KID. T.A.</th>
+        <th colspan="2">KID. AY.</th>
+        <th>KAD. DER.</th>
+      </tr>
+      <tr>
+        <td>12224</td>
+        <td>7</td>
+        <td colspan="4">12.2021</td>
+        <td></td>
+        <td colspan="2">157</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th colspan="5">AYLIĞA ESAS DURUM</th>
+        <th colspan="5">EMEKLİLİĞE ESAS DURUM</th>
+      </tr>
+      <tr>
+        <th>DERECE</th>
+        <th>KAD.</th>
+        <th>GÖSTERGE</th>
+        <th>EK GÖST.</th>
+        <th>T.AYI</th>
+        <th>DER.</th>
+        <th>KAD.</th>
+        <th>GÖST.</th>
+        <th>EK GÖST.</th>
+        <th>TER. AYI</th>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>1</td>
+        <td></td>
+        <td>1100</td>
+        <td>12</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>0</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <th>MEDENİ DURUM</th>
+        <th>VER. D.</th>
+        <th>ÇO. D.</th>
+        <th colspan="4">EMEKLİ SİCİL NO.</th>
+        <th>YAN. Ö. P.</th>
+        <th>ÖZ. HİZ. P.</th>
+        <th>KAT SAYI</th>
+      </tr>
+      <tr>
+        <td>EVLİ</td>
+        <td></td>
+        <td>0</td>
+        <td colspan="4">88.625.038</td>
+        <td>2050</td>
+        <td>100</td>
+        <td>0,179797</td>
+      </tr>
+      <tr>
+        <th>BRÜT MAAŞ</th>
+        <td>164,51</td>
+        <th>GÖREV TAZ.</th>
+        <td></td>
+        <th>EM. KES. ŞA. PA.</th>
+        <td></td>
+        <th>%9 MYÖ.</th>
+        <td>431,01</td>
+        <th>GELİR VER.</th>
+        <td>1668,77</td>
+        <th>ŞAHIS BORCU</th>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>EK GÖSTERGE</th>
+        <td>197,78</td>
+        <th>DENT TAZ.</th>
+        <td>1565,73</td>
+        <th>EM. KES. ŞA. PA.</th>
+        <td></td>
+        <th>%11 MYÖ.</th>
+        <td>526,79</td>
+        <th>KÜM. GEL. VER.</th>
+        <td>63409,54</td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>TABAN MAAŞ</th>
+        <td>2814,19</td>
+        <th>EM. KES. İD. PA.</th>
+        <td></td>
+        <th>%100 ART. KES.</th>
+        <td></td>
+        <th>%5 GSS.</th>
+        <td>239,45</td>
+        <th>KÜM. GEL. MAT.</th>
+        <td>61740,77</td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>KIDEM ZAMMI</th>
+        <td>46,75</td>
+        <th>%12 GSS.</th>
+        <td>359,17</td>
+        <th>%12 GSS.</th>
+        <td>359,17</td>
+        <th>%7,5 GSS.</th>
+        <td>359,17</td>
+        <th>DAMGA VER.</th>
+        <td>86,01</td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>YAN ÖDEME</th>
+        <td></td>
+        <th>%11 MYO.</th>
+        <td>359,17</td>
+        <th></th>
+        <td></td>
+        <th>HİZMET BORÇ</th>
+        <td></td>
+        <th>KEFALET AİD.</th>
+        <td>0</td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>ÖZ. HİZ. TAZ.</th>
+        <td>1565,73</td>
+        <th>%7,5 GSS.</th>
+        <td>359,17</td>
+        <th></th>
+        <td></td>
+        <th>DİS.PAR.CEZA</th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>YAB. DİL. TAZ.</th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th>İCRA</th>
+        <td></td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>EK ÖDEME</th>
+        <td>1878,88</td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th>GER. AL. PARA</th>
+        <td></td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>ÇOCUK YRD.</th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th>TAMİR FONU</th>
+        <td></td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>AİLE YRD.</th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th>SÖZ. PRİM</th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th>KİRA</th>
+        <td></td>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>DOĞUM YRD.</th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th>SND. ÖD.</th>
+        <td>42,21</td>
+        <th>VERGİ MAT.</th>
+        <td></td>
+        <th>YEMEK KES.</th>
+        <td>60,32</td>
+        <th>KESİNTİ TOP.</th>
+        <td>3569,53</td>
+      </tr>
+      <tr>
+        <th>MAKAM TAZ.</th>
+        <td></td>
+        <th></th>
+        <td></td>
+        <th>BÜTÇE TOP.</th>
+        <td>12177,16</td>
+        <th>VERGİ İNDİR.</th>
+        <td></td>
+        <th>A. G. İND.</th>
+        <td>268,31</td>
+        <th>NET ÖDENEN</th>
+        <td>8607,63</td>
+      </tr>
+    </table>
+  </body>
+</html>

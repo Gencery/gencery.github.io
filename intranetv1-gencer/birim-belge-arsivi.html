@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birim Belge Arşivi</title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div id="birim-belge-arsivi">
+        <h3 class="title-h">Birim Belge Arşivi</h3>
+        <div class="dynamic">
+          <div class="button-group-g">
+            <button
+              class="button"
+              onclick="bbaToggleDisplay(this, document.getElementById('bba-genelgeler'));"
+            >
+              Genelgeler
+            </button>
+            <button
+              class="button"
+              onclick="bbaToggleDisplay(this, document.getElementById('bba-yonergeYonetmelikler'))"
+            >
+              Yönerge ve Yönetmelikler
+            </button>
+            <button
+              class="button"
+              onclick="bbaToggleDisplay(this, document.getElementById('bba-bilgiGuvenligi'))"
+            >
+              Bilgi Güvenliği
+            </button>
+            <button
+              class="button"
+              onclick="bbaToggleDisplay(this, document.getElementById('bba-enerjiYonetimi'))"
+            >
+              Enerji Yönetimi
+            </button>
+            <button
+              class="button"
+              onclick="bbaToggleDisplay(this, document.getElementById('bba-digerBelgeler'))"
+            >
+              Diğer Belgeler
+            </button>
+          </div>
+          <hr />
+          <div id="bba-content">
+            <!--Genelgeler-->
+            <div class="bba-content-firstChild" id="bba-genelgeler">
+              <div>
+                <div id="bba-genelgeler-titles">
+                  <h3>Belge Adı</h3>
+                  <h3>Tip</h3>
+                  <h3>Birim Adı</h3>
+                  <h3>Eklenme Tarihi</h3>
+                </div>
+                <form id="bba-genelgeler-inputs">
+                  <input placeholder="Belge Adı..." />
+                  <input placeholder="Tip..." />
+                  <select>
+                    <option style="display: none">Birim Adı Seç</option>
+                    <option>Entegre Sistemler Şube Müdürlüğü</option>
+                    <option>Yazılım Şube Müdürlüğü</option>
+                    <option>Bilgi Ağları Şube Müdürlüğü</option>
+                    <option>Bilgi İşlem Şube Müdürlüğü</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Tarih Seç"
+                    value=""
+                    onfocus="typeChange(this)"
+                    oninput="changeDateFormat(this.value)"
+                  />
+                </form>
+              </div>
+              <table>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+              </table>
+              <form class="pagination-g">
+                <button>&#10094;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>&#10095;</button>
+              </form>
+            </div>
+            <!--Yönerge ve Yönetmelikler-->
+            <div class="bba-content-firstChild" id="bba-yonergeYonetmelikler">
+              <div>
+                <form id="bba-yonergeYonetmelikler-inputs">
+                  <select>
+                    <option style="display: none">Birim Adı</option>
+                    <option>Entegre Sistemler Şube Müdürlüğü</option>
+                    <option>Yazılım Şube Müdürlüğü</option>
+                    <option>Bilgi Ağları Şube Müdürlüğü</option>
+                    <option>Bilgi İşlem Şube Müdürlüğü</option>
+                  </select>
+                  <select>
+                    <option style="display: none">Dosya Türü</option>
+                    <option>Tür1</option>
+                    <option>Tür2</option>
+                    <option>Tür3</option>
+                    <option>Tür4</option>
+                  </select>
+                  <button class="button-regular">Sorgula</button>
+                </form>
+                <div id="bba-yonergeYonetmelikler-titles">
+                  <h3>Dosya Türü</h3>
+                  <h3>Dosya Adı</h3>
+                  <h3>Tarih</h3>
+                </div>
+              </div>
+              <table>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Kurum Yönetmelikleri</td>
+                  <td>
+                    <a href="">1. Hukuk Müşavirliği Kuruluş Görev ve Yetki Yönetmeliği</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+              </table>
+              <form class="pagination-g">
+                <button>&#10094;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>&#10095;</button>
+              </form>
+            </div>
+            <!--Bilgi Güvenliği-->
+            <div class="bba-content-firstChild" id="bba-bilgiGuvenligi">
+              <form id="bba-bilgiGuvenligi-inputs">
+                <select>
+                  <option style="display: none">Doküman Tipi</option>
+                  <option>Politika</option>
+                  <option>Prosedür</option>
+                  <option>Dokuman</option>
+                  <option>Yönetim Beyanı</option>
+                  <option>Süreç</option>
+                  <option>Form</option>
+                  <option>Standart</option>
+                  <option>Liste</option>
+                  <option>Gizlilik Sözleşmesi</option>
+                  <option>Plan</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="Yayınlanma Tarihi"
+                  value=""
+                  onfocus="typeChange(this)"
+                  oninput="changeDateFormat(this.value)"
+                />
+                <input placeholder="Doküman Numarası..." />
+                <input placeholder="Doküman Adı..." />
+              </form>
+              <div id="bba-bilgiGuvenligi-titles">
+                <h3>Doküman Numarası</h3>
+                <h3>Doküman Adı</h3>
+                <h3>Yayımlanma Tarihi</h3>
+              </div>
+              <table>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>İBB.BDB.D.14</td>
+                  <td>
+                    <a href="">Mobil İletişim Altyapı Yönetimi Dokümanı </a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+              </table>
+              <form class="pagination-g">
+                <button>&#10094;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>&#10095;</button>
+              </form>
+            </div>
+            <!--Enerji Yönetimi-->
+            <div class="bba-content-firstChild" id="bba-enerjiYonetimi">
+              <div>
+                <div id="bba-enerjiYonetimi-titles">
+                  <h3>Belge Adı</h3>
+                  <h3>Tip</h3>
+                  <h3>Eklenme Tarihi</h3>
+                </div>
+                <form id="bba-enerjiYonetimi-inputs">
+                  <input placeholder="Belge Adı..." />
+                  <input placeholder="Belge Tipi..." />
+                  <input
+                    type="text"
+                    placeholder="Tarih Seç"
+                    onfocus="typeChange(this)"
+                    oninput="changeDateFormat(this.value)"
+                  />
+                </form>
+              </div>
+              <table>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td>Otopark ile ilgili genelgeler</td>
+                  <td>
+                    <a href="">Enerji Politikası</a>
+                  </td>
+                  <td>13.07.2012</td>
+                </tr>
+              </table>
+              <form class="pagination-g">
+                <button>&#10094;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>&#10095;</button>
+              </form>
+            </div>
+            <!--Diğer Belgeler-->
+            <div class="bba-content-firstChild" id="bba-digerBelgeler">
+              <div>
+                <div id="bba-digerBelgeler-titles">
+                  <h3>Belge Adı</h3>
+                  <h3>Tip</h3>
+                  <h3>Birim Adı</h3>
+                  <h3>Eklenme Tarihi</h3>
+                </div>
+                <form id="bba-digerBelgeler-inputs">
+                  <input placeholder="Belge Adı..." />
+                  <input placeholder="Belge Tipi..." />
+                  <select>
+                    <option style="display: none">Birim Adı Seç</option>
+                    <option>Entegre Sistemler Şube Müdürlüğü</option>
+                    <option>Yazılım Şube Müdürlüğü</option>
+                    <option>Bilgi Ağları Şube Müdürlüğü</option>
+                    <option>Bilgi İşlem Şube Müdürlüğü</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Tarih Seç"
+                    value=""
+                    onfocus="typeChange(this)"
+                    oninput="changeDateFormat(this.value)"
+                  />
+                </form>
+              </div>
+              <table>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+                <tr>
+                  <td><a href="">Otopark ile ilgili genelgeler</a></td>
+                  <td>Genelge</td>
+                  <td>İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ</td>
+                  <td>13.07.2012</td>
+                </tr>
+              </table>
+              <form class="pagination-g">
+                <button>&#10094;</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>&#10095;</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+    <script src="./Assets/scripts/birimBelgeArsivi.js"></script>
+  </body>
+</html>

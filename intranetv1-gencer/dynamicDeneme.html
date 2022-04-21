@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intranet</title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link rel="stylesheet" href="./Assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header>
+      <!--Login Modal-->
+      <div class="loginModal">
+        <div class="loginModal-inner">
+          <input placeholder="Kullanıcı Adı" />
+          <input placeholder="Şifre" type="password" onkeyup="if(event.keyCode===13){login()}" />
+          <button class="button-regular navbar-button" onclick="login()">Giriş Yap</button>
+          <p></p>
+        </div>
+        <div class="loginModal-exit" onclick="closeLoginModal()"></div>
+      </div>
+      <!--Logout Confirmation Modal-->
+      <div class="logoutModal">
+        <div class="logoutModal-inner">
+          <p>Çıkış yapmak istediğinize emin misiniz?</p>
+          <div>
+            <button class="button-passive" onclick="closeLogoutModal()">Vazgeç</button>
+            <button class="button-regular" onclick="logout();closeLogoutModal()">Çıkış Yap</button>
+          </div>
+        </div>
+        <div class="logoutModal-exit" onclick="closeLogoutModal()"></div>
+      </div>
+      <!--NAVBAR-->
+      <div class="navbar">
+        <img
+          onclick="window.open('./index-empty.html', '_self')"
+          class="navbar-logo"
+          src="./Assets/img/logo.svg"
+        />
+
+        <div class="navbar-arama-giris">
+          <label class="navbar-label">
+            <input class="navbar-input" />
+            <img class="navbar-arama" src="./Assets/img/arama.svg" />
+          </label>
+          <div class="button-regular navbar-button">
+            <button id="giris-button-outer" class="button-regular" onclick="openLoginModal()">
+              Kullanıcı Girişi
+            </button>
+            <img onclick="openLogoutModal()" id="hesabim-cikis" src="./Assets/img/cikis_yap.svg" />
+          </div>
+          <img
+            onclick="openLoginModal()"
+            class="navbar-kullanici_girisi_mobile"
+            src="./Assets/img/kullanici-girisi.svg"
+          />
+          <img onclick="openSideMenu()" class="navbar-ham" src="./Assets/img/icon8-menu.svg" />
+        </div>
+      </div>
+      <div id="navmenu">
+        <div class="navmenulist">
+          <div class="navmenulist-head">
+            <p class="p-bold">MENÜ</p>
+            <img onclick="closeSideMenu();openLogoutModal()" src="./Assets/img/cikis_yap.svg" />
+          </div>
+          <!--Menu Content-->
+          <div class="navmenulist-content">
+            <!-- HAKKIMIZDA-->
+            <span
+              >Hakkımızda<img src="./Assets/img/ok-copy-6.svg" />
+              <div>
+                <ul>
+                  <a href="./baskanin-mesaji.html">Başkandan Mesaj</a>
+                </ul>
+                <ul>
+                  <a>Vizyon Misyon</a>
+                </ul>
+              </div>
+            </span>
+            <!--KURUMSAL-->
+            <span
+              >Kurumsal<img src="./Assets/img/ok-copy-6.svg" />
+              <div>
+                <ul>
+                  İBB Hizmetler
+                  <b>&#10148;</b>
+                  <div>
+                    <li><a>İBB Hizmet Lokasyonları</a></li>
+                    <li><a>Kurumsal Bağlantılar</a></li>
+                    <li><a>İBB Birimleri</a></li>
+                    <li><a>Organizasyon Şeması</a></li>
+                  </div>
+                </ul>
+                <ul>
+                  <a>Formlar</a>
+                </ul>
+              </div>
+            </span>
+            <!--UYGULAMALAR-->
+            <span
+              >Uygulamalar<img src="./Assets/img/ok-copy-6.svg" />
+              <div>
+                <ul>
+                  <a>Bilgi İşlem</a>
+                </ul>
+                <ul>
+                  <a>CBS</a>
+                </ul>
+                <ul>
+                  <a>Uygulamalarım</a>
+                </ul>
+              </div>
+            </span>
+            <span><a>Eğitimler</a></span>
+            <span><a>Eşrefpaşa Hastanesi</a></span>
+            <!--KURUMDAN-->
+            <span
+              >Kurumdan<img src="./Assets/img/ok-copy-6.svg" />
+              <div>
+                <ul>
+                  <a>Vefat</a>
+                </ul>
+                <ul>
+                  <a>Yeni Katılanlar</a>
+                </ul>
+                <ul>
+                  <a>Emekli Olanlar</a>
+                </ul>
+                <ul>
+                  <a>Bugün Doğanlar</a>
+                </ul>
+                <ul>
+                  <a>Evlenenler</a>
+                </ul>
+                <ul>
+                  <a>Ebeveyn Olanlar</a>
+                </ul>
+              </div>
+            </span>
+            <span><a>Bilgi İşlem</a></span>
+            <span><a>Bilgi Ağları</a></span>
+            <u id="yetkiMesaji"
+              ><a onclick="openLoginModal()"
+                >Yetkili Olduğunuz Menüleri Görmek İçin Lütfen Kullanıcı Girişi Yapınız.</a
+              ></u
+            >
+          </div>
+          <!--Menu Content-->
+        </div>
+        <div class="navmenu-exit-area" onclick="closeSideMenu()"></div>
+      </div>
+    </header>
+    <main>
+      <div class="dynamic2">
+        <div class="randevu">
+          <p>T.C. Kimlik Numaranızı Giriniz.</p>
+          <input type="number" />
+          <button class="button-negative">İptal Et</button>
+          <button class="button-regular">İleri</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="./Assets/img/group-2-copy-2.svg" />
+    </footer>
+    <script src="./Assets/scripts/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
