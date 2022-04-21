@@ -1,0 +1,308 @@
+// Eşrefpaşa Hastanesi Randevu Sayfaları scss
+
+//Deneme ölçüleri   1280x720
+
+// İlk Sayfa CSS
+.randevu {
+  width: 70%;
+  height: 70%;
+
+  > p {
+    margin-top: 5%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  //flex kullanımı
+  > input {
+    display: block;
+    width: 40%;
+    margin-left: 30%;
+  }
+  &-button-group {
+    margin-left: 30%;
+    margin-bottom: 15%;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    > button {
+      width: 45%;
+      height: 45px;
+      margin-top: 4%;
+    }
+  }
+  //İlk sayfa query
+  @media only screen and (max-width: $sm) {
+    > input {
+      width: 70%;
+      margin-left: 15%;
+    }
+
+    &-button-group {
+      display: block;
+      width: 70%;
+      margin-left: 15%;
+      button {
+        min-width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+.randevu-h1 {
+  margin-left: 15%;
+}
+
+// randevu 2 CSS
+
+.randevu2 {
+  width: 70%;
+  height: auto;
+  h2 {
+    text-align: center;
+    font-size: $font-size-small;
+  }
+  &-bordered-area {
+    border-radius: 5px;
+    border: 1px solid $color-button-active;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  span {
+    color: $color-button-active;
+  }
+  .span-hayir {
+    font-weight: bold !important;
+    color: black;
+  }
+  > p {
+    margin-top: 20px;
+    font-size: $font-size-small;
+    text-align: center;
+    width: 40%;
+  }
+
+  &-button-group {
+    margin-top: 20px;
+    margin-left: 25%;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    button {
+      width: 40%;
+      height: 40px;
+    }
+  }
+  //ikinci sayfa query
+  @media only screen and (max-width: $sm) {
+    width: 98%;
+    &-button-group {
+      width: 50%;
+      display: block;
+      button {
+        display: block;
+        min-width: 100%;
+        margin-top: 20px;
+      }
+    }
+    > p {
+      width: auto;
+    }
+  }
+}
+
+// Randevu 3 CSS
+
+.randevu3 {
+  width: 70%;
+  height: 100%;
+  margin-left: 15%;
+  padding-left: 7%;
+
+  > p {
+    font-size: $font-size-small;
+    margin-left: 1%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  &-button {
+    border-radius: 5px;
+    border: 1px solid $color-button-active;
+    text-align: center;
+    background-color: $color-white;
+    margin-top: 10px;
+
+    width: 230px;
+    height: 120px;
+
+    hr {
+      width: 170px;
+      border: 1px solid #979797;
+      margin: auto;
+      margin-bottom: 10px;
+      opacity: 0.28;
+    }
+    p {
+      color: $color-button-active;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    span {
+      width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    &:hover {
+      background-color: $color-button-active;
+      transition: 500ms;
+      p {
+        color: $color-white;
+      }
+      span {
+        color: $color-white;
+      }
+      hr {
+        border: 1px solid $color-white;
+      }
+    }
+  }
+  //randevu 3 media query
+  @media screen and (max-width: $sm) {
+    padding-left: 17%;
+    width: 98%;
+    margin-left: 1%;
+  }
+}
+.randevu-3-h1 {
+  margin-left: 20%;
+}
+
+// randevu 4 CSS
+
+.randevu4 {
+  width: 70%;
+  height: auto;
+  > p {
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    text-align: center;
+    font-size: $font-size-small;
+    margin-top: 20px;
+  }
+  &-bordered-area {
+    border-radius: 5px;
+    border: 1px solid $color-button-active;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  span {
+    color: $color-button-active;
+  }
+  .red-span {
+    color: red;
+  }
+  .green-span {
+    color: #4ba000;
+  }
+  .black-span {
+    color: black;
+    font-weight: bolder;
+  }
+  //randevu 4 media query
+  @media screen and (max-width: $sm) {
+    width: 98%;
+    &-bordered-area {
+      width: 100%;
+      text-align: center;
+    }
+    p {
+      margin-left: 5%;
+    }
+  }
+}
+
+//randevu 5 CSS
+
+.randevu5 {
+  width: 70%;
+  height: auto;
+
+  // Eşrefpaşa Logo
+  img {
+    width: 40%;
+    height: 20%;
+    margin-left: 30%;
+  }
+
+  &-bordered-area {
+    border-radius: 5px;
+    border: 1px solid $color-button-active;
+    width: 60%;
+    height: auto;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 20px;
+
+    p {
+      font-size: $font-size-small;
+    }
+    span {
+      color: $color-button-active;
+      font-size: 12px;
+    }
+    .green-span {
+      color: #4ba000;
+      font-weight: bolder;
+      font-size: 12px;
+    }
+    .red-span {
+      color: red;
+      font-weight: bolder;
+      font-size: 12px;
+    }
+    .black-span {
+      color: black;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+  &-button-group {
+    margin-top: 20px;
+    margin-left: 25%;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    button {
+      width: 40%;
+      height: 40px;
+    }
+  }
+  //randevu 4 media query
+  @media screen and (max-width: $sm) {
+    width: 98%;
+    &-bordered-area {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

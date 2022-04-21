@@ -1,0 +1,116 @@
+.loginModal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  //hidden default
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-inner {
+    width: 70vw;
+    position: absolute;
+    min-height: 400px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //animation-name: animLoginModal3;
+    animation-duration: 1s;
+    > form {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      justify-content: center;
+      align-items: center;
+      //animation-name: animLoginModal;
+      animation-duration: 0.5s;
+      position: relative;
+      > h2 {
+        font-size: 1.5rem;
+      }
+      > * {
+        margin: 0%;
+        width: 70%;
+        margin-top: 6%;
+        height: 40px;
+        min-height: 40px;
+        box-sizing: border-box;
+        font-size: 1rem;
+      }
+      > p {
+        color: $color-information-card-h;
+        text-align: center;
+      }
+      @keyframes animLoginModal {
+        0% {
+          margin-bottom: -100%;
+        }
+        100% {
+          margin-bottom: unset;
+        }
+      }
+      @keyframes animLoginModal2 {
+        0% {
+          margin-top: -100%;
+        }
+        100% {
+          margin-top: unset;
+        }
+      }
+      @keyframes animLoginModal3 {
+        0% {
+          background-color: transparent;
+        }
+        100% {
+          background-color: white;
+        }
+      }
+      > input {
+        text-indent: 7%;
+      }
+    }
+    > div:nth-of-type(1) {
+      height: 100%;
+      width: 60%;
+      margin-right: 0%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 1px;
+        //animation-name: animLoginModal2;
+        animation-duration: 0.5s;
+      }
+    }
+
+    @media only screen and (max-width: $sm) {
+      min-width: 80vw;
+      > form:nth-of-type(1) {
+        width: 100%;
+      }
+      > div:nth-of-type(1) {
+        display: none;
+      }
+    }
+    @media only screen and (min-width: $sm) and (max-width: $md) {
+    }
+    @media only screen and (min-width: $md) {
+    }
+  }
+  &-exit {
+    position: top;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+  }
+}

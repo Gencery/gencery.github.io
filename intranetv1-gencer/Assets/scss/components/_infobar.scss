@@ -1,0 +1,41 @@
+//Personel aramak için kullanılan ana sayfadaki button ve select leri içeren alan
+.info-bar {
+  width: 100%;
+  height: auto;
+  background-color: $color-white;
+  display: inline-flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+
+  justify-content: space-between;
+}
+//İnfo barın altında bulunan tarihin yazdığı alan
+.date {
+  width: 314px;
+  height: 176px;
+  background-color: $color-date-background;
+  border: 0px;
+  border-radius: 5px;
+  text-align: center;
+
+  &-clock-text {
+    color: $color-white;
+    font-size: 66px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  &-date-text {
+    font-size: 28px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,360 @@
+.p {
+  font-size: $font-size-p;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+
+  &-slider {
+    @extend .p;
+    color: $color-white-p;
+  }
+
+  &-bold {
+    color: $color-black;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  &-announcement {
+    @extend .p;
+    color: $color-announcement-p;
+  }
+
+  &-redflag-p {
+    color: $color-white-p;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+  }
+}
+
+// dinamik alanın üzerindeki tüm başlıklar (h1)
+.title {
+  color: $color-black;
+  font-size: $font-size-h1;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+//başkanlık ve vizyon&misyon sayfası div
+
+.static {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-top: 10%;
+
+  img {
+    margin-left: 5%;
+    width: 100%;
+    height: 50%;
+  }
+  h1 {
+    font-size: $font-size-h1;
+  }
+  p {
+    font-size: $font-size-small;
+    min-width: 250px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  div {
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 50%;
+    height: 30%;
+  }
+}
+
+//static sayfalar için query
+
+@media screen and (max-width: 1050px) {
+  .static {
+    display: block;
+  }
+}
+
+//input types
+
+.tc-input {
+  width: 40%;
+  height: 45px;
+  border: 1px solid $color-input-border;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+//table üzerindeki filter aranları için input türü
+.filter-input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+}
+
+//duyuru textarea Css
+
+.duyuru-text-area {
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5px;
+  border: solid 0.5px #aaa;
+  margin-bottom: 20px;
+}
+
+.link-icon {
+  @media screen and (max-width: $sm) {
+    box-shadow: none;
+    padding: 2% 0% 2% 0%;
+    margin-top: 2%;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+  }
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  > span {
+    width: 60%;
+    float: right;
+    text-align: left;
+  }
+}
+
+.title-h {
+  font-size: 1.25rem !important;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  @media only screen and (max-width: $sm) {
+    width: 98%;
+    margin-left: 1%;
+  }
+  @media only screen and (min-width: $sm) and (max-width: $md) {
+    width: 98%;
+    margin-left: 1%;
+  }
+  @media only screen and (min-width: $md) {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+.table-regular {
+  max-width: 100%;
+  margin-bottom: 1%;
+  display: flex;
+  > table {
+    margin: 2%;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    > thead,
+    tbody {
+      > tr {
+        height: 35px;
+        > th {
+          height: 40px;
+          border: 2px solid $color-button-active;
+          letter-spacing: 1px;
+          background-color: white;
+        }
+        > td {
+          border: 1px solid gray;
+          * {
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0%;
+            box-sizing: border-box;
+          }
+        }
+        > td:not(:nth-of-type(1)) {
+          text-align: center;
+        }
+      }
+      > tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
+//PAGINATION
+.pagination-g {
+  @media only screen and (max-width: $sm) {
+    min-width: 98%;
+  }
+  padding: 1%;
+  max-width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  > button {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 10px 50px 2px rgba(0, 0, 0, 0.25);
+    margin: 1%;
+    text-align: center;
+  }
+  .page-selected {
+    background-color: $color-button-active;
+    color: white;
+  }
+}
+.button-group-g {
+  margin: 1%;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1%;
+  > button {
+    height: 50px;
+    width: 18%;
+    margin: 0%;
+    cursor: pointer;
+    margin-right: 0.25%;
+    margin-left: 0.25%;
+    flex-grow: 1;
+    max-width: 300px;
+  }
+  @media only screen and (max-width: $sm) {
+    min-width: 98%;
+    flex-direction: column;
+    > button,
+    a {
+      display: block;
+      min-width: 100%;
+      border: 1px solid gray;
+      margin-bottom: 1%;
+      margin-top: 1%;
+    }
+  }
+}
+.fwd-bwd-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  @media only screen and (max-width: $sm) {
+    justify-content: center;
+  }
+  > button {
+    height: 40px;
+    width: 20%;
+    margin: 0%;
+    margin-left: 3%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+  }
+}
+
+.card-container {
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    @media only screen and (max-width: $sm) {
+      width: 96%;
+      max-width: 96%;
+      margin-top: 5%;
+      margin-left: 2%;
+    }
+    box-shadow: 5px 5px 50px 5px rgba(0, 0, 0, 0.15);
+    height: fit-content;
+    border-radius: 5px;
+    margin: 2% 0% 2% 2%;
+  }
+  .card-std {
+    @media only screen and (max-width: $sm) {
+      min-width: 96%;
+    }
+    width: 405px;
+    height: 210px;
+    display: flex;
+    border: none;
+    > div {
+      height: 100%;
+      margin: 0%;
+    }
+    > div:nth-of-type(1) {
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > img {
+        width: 50%;
+      }
+    }
+    > div:nth-of-type(2) {
+      width: 65%;
+      background-color: $color-button-active;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 5px;
+      border-top-left-radius: 0%;
+      border-bottom-left-radius: 0%;
+      > span {
+        display: flex;
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        > p {
+          color: white;
+        }
+        > p:nth-of-type(1) {
+          margin-left: 0%;
+          color: white;
+          min-width: 30%;
+        }
+        > p:nth-of-type(2) {
+          margin-left: 0%;
+          color: white;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.bar-inputs-g {
+  @media only screen and (max-width: $sm) {
+    flex-direction: column;
+    > * {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      height: 40px;
+      min-width: 100%;
+    }
+  }
+  margin-top: 1%;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  > * {
+    box-sizing: border-box;
+    width: 24%;
+    font-size: 0.9rem;
+    min-height: 100%;
+  }
+  > input {
+    width: 24%;
+  }
+}

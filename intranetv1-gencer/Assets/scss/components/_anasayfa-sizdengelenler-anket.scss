@@ -1,0 +1,290 @@
+#anasayfa-sizdengelenler-anket {
+  background-color: #f9f9f9;
+  margin-top: 2%;
+  padding-top: 3%;
+  > div {
+    margin-left: 15%;
+    width: 70%;
+    @media screen and (max-width: $md) {
+      width: 100%;
+      margin-left: 0%;
+    }
+    .linkler-biliyormuydunuz-anket {
+      * {
+        border-radius: 3px;
+      }
+      display: flex;
+      .linkler-biliyormuydunuz {
+        max-width: 100%;
+        display: flex;
+        .linkler {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          > a {
+            min-height: 100px;
+            width: 90%;
+            margin-right: 0%;
+            @media screen and (max-width: $md) {
+              margin-right: 5%;
+            }
+          }
+        }
+        #bunlaribiliyormuydunuz {
+          max-width: 60%;
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
+          padding: 3%;
+          height: max-content;
+          background-color: white;
+          display: block;
+          > h3 {
+            text-align: center;
+          }
+          p {
+            text-align: justify;
+          }
+          .slick-dots {
+            @media screen and (max-width: $sm) {
+              margin-top: 3%;
+              margin-bottom: 3%;
+            }
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            margin-top: 3%;
+            padding: 0;
+            list-style-type: none;
+            li {
+              margin: 0 0.25rem;
+            }
+
+            button {
+              display: block;
+              width: 1rem;
+              height: 1rem;
+              padding: 0;
+              border: none;
+              border-radius: 100%;
+              background-color: #bfbfbf;
+              text-indent: -9999px;
+            }
+
+            li.slick-active button {
+              background-color: white;
+              border: 3px solid #bfbfbf;
+            }
+          }
+        }
+      }
+    }
+    #faturaAdresi-bilgiIslem {
+      margin-top: 3%;
+      margin-bottom: 0%;
+      display: flex;
+      @media screen and (max-width: $sm) {
+        flex-direction: column;
+        max-width: 98%;
+      }
+      height: max-content;
+      width: 100%;
+      justify-content: space-between;
+      > div {
+        border-radius: 3px;
+        margin: 0%;
+        margin-bottom: 3%;
+        width: 49%;
+        @media screen and (max-width: $sm) {
+          width: 100%;
+        }
+        box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
+        background-color: #bdbdbd;
+        padding-top: 0%;
+        display: block;
+        > h3 {
+          text-align: center;
+          color: #0178c0;
+          margin-top: 3%;
+          margin-bottom: 3%;
+        }
+        > div {
+          height: 72.5%;
+          border-radius: 3px;
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1);
+          display: flex;
+          @media screen and (max-width: $sm) {
+            flex-direction: column;
+            > div {
+              width: 100% !important;
+            }
+            > div:nth-of-type(2) {
+              display: none;
+            }
+          }
+          background-color: white;
+          margin: 2%;
+          > div {
+            margin-left: 0%;
+            justify-content: space-between;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            width: 100%;
+            > p:nth-of-type(1) {
+              margin-left: 0%;
+              margin-top: 2%;
+              margin-bottom: 2%;
+              font-size: 16px;
+              color: #0179c3;
+            }
+            > p:nth-of-type(2) {
+              height: max-content;
+              display: flex;
+              align-items: center;
+              margin-left: 0%;
+              font-size: 14px;
+              color: black;
+              margin-top: 2%;
+              margin-bottom: 2%;
+            }
+          }
+          > div:nth-of-type(2) {
+            max-width: 0% !important;
+            height: auto;
+            border: 1px solid #0179c3;
+            height: 66%;
+            margin: 0%;
+            align-self: center;
+          }
+          > div {
+            * {
+              margin-left: 5% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $sm) {
+    margin-top: 2%;
+    > div {
+      margin-left: 0%;
+      width: 100%;
+      .linkler-biliyormuydunuz-anket {
+        * {
+          border-radius: 3px;
+        }
+        display: block;
+        .linkler-biliyormuydunuz {
+          width: 98%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0%;
+          .linkler {
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+            margin-top: 2%;
+            > a {
+              background-color: white;
+              width: 80%;
+              margin: 0%;
+              margin-left: 10%;
+              margin-top: 1%;
+              height: unset;
+              min-height: 30px;
+            }
+          }
+          #bunlaribiliyormuydunuz {
+            margin: 0%;
+            margin-top: 3%;
+            padding: 3%;
+            max-width: 100%;
+            height: max-content;
+            background-color: white;
+            display: block;
+            > h3 {
+              text-align: center;
+              margin-bottom: 2%;
+            }
+
+            .slick-dots {
+              @media screen and (max-width: $sm) {
+                margin-top: 3%;
+                margin-bottom: 3%;
+              }
+              display: flex;
+              justify-content: center;
+              margin: 0;
+              margin-top: 3%;
+              padding: 0;
+              list-style-type: none;
+              li {
+                margin: 0 0.25rem;
+              }
+
+              button {
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                padding: 0;
+
+                border: none;
+                border-radius: 100%;
+                background-color: #bfbfbf;
+
+                text-indent: -9999px;
+              }
+
+              li.slick-active button {
+                background-color: white;
+                border: 3px solid #bfbfbf;
+              }
+            }
+          }
+        }
+        //anket
+        > div:nth-of-type(2) {
+          background-color: #027ac4;
+          margin-left: 1%;
+          width: 95% !important;
+          padding: 1.5%;
+          padding-top: 0.5%;
+          > h3 {
+            text-align: center;
+            color: white;
+            margin-top: 3%;
+            margin-bottom: 3%;
+          }
+          > div {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            height: 90%;
+            > * {
+              height: 8%;
+            }
+            > p {
+              margin: 3%;
+              height: max-content;
+            }
+            > input {
+              width: 90%;
+              margin-top: 4%;
+              border-radius: 5px;
+              background-color: #f6f6f6;
+              border: 1px solid gray;
+              height: 5vh;
+            }
+            > button {
+              margin-top: 6%;
+              margin-bottom: 3%;
+              width: 50%;
+              min-height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

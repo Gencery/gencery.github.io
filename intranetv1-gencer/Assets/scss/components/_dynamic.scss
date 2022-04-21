@@ -1,0 +1,144 @@
+.dynamic {
+  border-radius: 5px;
+  box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-top: $color-button-active 3px solid;
+  @media only screen and (max-width: $sm) {
+    width: 98%;
+  }
+  @media only screen and (min-width: $sm) and (max-width: $md) {
+    width: 98%;
+  }
+  @media only screen and (min-width: $md) {
+    width: 70%;
+  }
+}
+
+//logo-masaustu.html ve logo.html için CSS (beyaz dinamik alana ve içindeki tag lere müdahale etmek için kullanılan alan)
+
+.logo-masaustu {
+  width: 80%;
+  height: 100%;
+
+  > p {
+    font-size: $font-size-small;
+    color: #535252;
+    margin-left: 5%;
+  }
+
+  &-button-group {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    button {
+      width: 24%;
+      height: 50px;
+      margin-top: 10px;
+    }
+  }
+
+  &-download-area {
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    p {
+      color: #535252;
+    }
+  }
+
+  &-logo-group {
+    width: 30%;
+    height: 60%;
+    text-align: center;
+    margin-top: 20px;
+
+    button {
+      display: block;
+      margin-left: 15%;
+      width: 70%;
+      height: 60%;
+      margin-top: 10px;
+    }
+
+    img {
+      width: 50%;
+      height: 60%;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: $sm) {
+    width: 100%;
+    &-download-area {
+      display: block;
+    }
+    &-button-group {
+      display: block;
+      button {
+        margin-top: 20px;
+        margin-left: 10%;
+        width: 80%;
+      }
+    }
+  }
+  &-logo-group {
+    width: 100%;
+    button {
+      width: 80%;
+      height: 40px;
+      margin-left: 10%;
+    }
+  }
+}
+.logo-masaustu-h1 {
+  margin-left: 10%;
+}
+
+//logo.html
+
+.logo-group {
+  width: 30%;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  > p {
+    margin-bottom: 10px;
+  }
+
+  > button {
+    width: 60%;
+    height: 40px;
+  }
+
+  > img {
+    width: auto;
+    height: auto;
+  }
+
+  &-img {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 40px;
+  }
+  @media only screen and (max-width: $sm) {
+    margin-bottom: 15%;
+
+    &-img {
+      display: block;
+      margin-left: 20%;
+      img {
+        margin-top: 40px;
+      }
+    }
+  }
+}

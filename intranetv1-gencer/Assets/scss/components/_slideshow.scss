@@ -1,0 +1,123 @@
+#slideshow {
+  position: relative;
+  z-index: 0;
+  height: 18.5%;
+  min-height: 400px;
+  > span {
+    position: absolute;
+    color: white;
+    bottom: 68%;
+    left: 15%;
+    z-index: 1;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    > img:nth-of-type(1) {
+      visibility: visible;
+    }
+    > img:nth-of-type(2) {
+      visibility: hidden;
+    }
+    > span {
+      position: absolute;
+      width: 33%;
+      height: 30%;
+      bottom: 36%;
+      left: 15%;
+      color: white;
+      font-size: $font-size-small;
+      padding: 0.5%;
+      padding-top: 0%;
+      padding-left: 0%;
+      overflow: hidden;
+    }
+  }
+  > button {
+    position: absolute;
+    outline: inherit;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 45%;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  > button:nth-of-type(1) {
+    right: 3%;
+  }
+
+  > button:nth-of-type(2) {
+    left: 3%;
+  }
+  > form {
+    position: absolute;
+    display: flex;
+    bottom: 30%;
+    left: 15%;
+    height: 5%;
+    width: 6%;
+    > input {
+      height: 100%;
+      margin: 0%;
+      padding: 0%;
+      accent-color: black;
+    }
+  }
+  > a {
+    color: #fff;
+    right: 52%;
+    bottom: 30%;
+    position: absolute;
+    font-size: 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: $sm) {
+    width: 100%;
+    > span {
+      left: 5%;
+      bottom: 80%;
+    }
+    .slide {
+      width: 100%;
+      > img {
+        position: absolute;
+      }
+      > img:nth-of-type(1) {
+        visibility: hidden;
+      }
+      > img:nth-of-type(2) {
+        visibility: visible;
+      }
+      > span {
+        left: 5%;
+        width: 90%;
+        height: 50%;
+        bottom: 27.5%;
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: scroll;
+      }
+    }
+    > button {
+      display: none;
+    }
+    > form {
+      width: 25%;
+      left: 7%;
+      bottom: 30%;
+    }
+    > a {
+      right: 5%;
+      bottom: 30%;
+    }
+  }
+}

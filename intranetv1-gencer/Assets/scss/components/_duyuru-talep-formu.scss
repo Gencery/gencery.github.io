@@ -1,0 +1,141 @@
+#duyuruTalepFormu {
+  .tabContents {
+    > div {
+      min-height: 50vh;
+    }
+    //Duyuru isteyen
+    > div:nth-of-type(1) {
+      margin: 1%;
+      > div:nth-of-type(1) {
+        display: flex;
+        margin: 1% 0% 1% 0%;
+        justify-content: space-between;
+        > * {
+          width: 30%;
+          height: 35px;
+          box-sizing: border-box;
+          margin: 0%;
+        }
+
+        @media only screen and (max-width: $sm) {
+          flex-direction: column;
+          > * {
+            width: 100%;
+            margin-bottom: 1%;
+          }
+        }
+      }
+      > div:nth-of-type(2) {
+        margin: 1% 0% 1% 0%;
+        > textarea {
+          min-width: 100%;
+          box-sizing: border-box;
+          min-height: 200px;
+          resize: none;
+        }
+      }
+    }
+    //Duyuru özeti
+    > div:nth-of-type(2) {
+      > input:nth-of-type(1) {
+        width: 98%;
+        box-sizing: border-box;
+        margin-top: 1%;
+        margin-left: 1%;
+        height: 40px;
+      }
+      #cke_editor1 {
+        width: 98%;
+        margin: 1% 0% 1% 1%;
+      }
+    }
+    //Duyuru Detayı
+    > div:nth-of-type(3) {
+      #cke_editor2 {
+        width: 98%;
+        margin: 1% 0% 1% 1%;
+      }
+    }
+    //Yayınlanma Süresi
+    > div:nth-of-type(4) {
+      margin: 1%;
+      > * {
+        margin-top: 1%;
+      }
+      > div:nth-of-type(1) {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $sm) {
+          flex-direction: column;
+          > * {
+            min-width: 100%;
+            margin-top: 1% !important;
+          }
+        }
+        > * {
+          margin: 0%;
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          width: 33%;
+          height: 35px;
+          font-size: 100%;
+          border: 1px solid darkgray;
+          border-radius: 2px;
+          cursor: pointer;
+        }
+        > *:hover {
+          background-color: lightgray;
+        }
+        > div:nth-of-type(1) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: gray;
+          > input {
+            display: none;
+          }
+          > label {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            line-height: 35px;
+          }
+        }
+      }
+      #dtfUploadFileList {
+        > table {
+          margin: 0%;
+          tr {
+            height: 30px;
+            > td {
+              text-align: center;
+              border: 1px solid gray;
+            }
+            > td:nth-of-type(3) {
+              > img {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    #dtfSonuc {
+      margin: 1%;
+      > * {
+        word-wrap: break-word;
+        margin-top: 1%;
+        > * {
+          margin-top: 1%;
+          word-wrap: break-word;
+        }
+      }
+      #dtfSubmit {
+        height: 40px;
+        width: 20%;
+        right: 5%;
+      }
+    }
+  }
+}

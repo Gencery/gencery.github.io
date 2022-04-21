@@ -1,0 +1,111 @@
+.voleybolMasaTenisi {
+  .tabContents {
+    min-height: 80vh;
+    > div {
+      //Voleybol
+      > h4 {
+        margin: 1%;
+        margin-bottom: 0%;
+        font-size: 1.5rem;
+        display: inline-block;
+      }
+      > form {
+        @media only screen and (max-width: $sm) {
+          > input {
+            min-width: 98%;
+            box-sizing: border-box;
+            min-height: 100%;
+            margin: 0%;
+          }
+          min-width: 100%;
+        }
+        > input {
+          height: 30px;
+          width: 200px;
+          margin: 1%;
+          font-size: 1rem;
+        }
+      }
+      .card-container {
+        //card
+        > div {
+          width: 410px;
+          height: 450px;
+          border-radius: 5px;
+          > p:nth-of-type(1) {
+            text-align: center;
+            margin: 1%;
+          }
+          > .mac-sonucu-img-slider {
+            > button {
+              position: absolute;
+              z-index: 1;
+              top: 50%;
+
+              position: absolute;
+              outline: inherit;
+              border: none;
+              width: 50px;
+              height: 50px;
+              background-color: rgba(255, 255, 255, 0.5);
+              top: 40%;
+              border-radius: 5px;
+              font-weight: bold;
+              cursor: pointer;
+            }
+            > button:nth-of-type(1) {
+              left: 10px;
+            }
+            > button:nth-of-type(2) {
+              right: 10px;
+            }
+            > div {
+              > div {
+                > img {
+                  display: block !important;
+                  max-height: 220px;
+                }
+              }
+            }
+          }
+          .vol-mt-card-body {
+            display: flex;
+            flex-direction: column;
+            > span {
+              margin: 0%;
+              display: flex;
+              height: 100px;
+              border-top: 1px solid gray;
+              > p:nth-of-type(1) {
+                margin-left: 5%;
+                min-width: 65%;
+                margin-right: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              > p:nth-of-type(2) {
+                margin-right: 0%;
+                min-width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 300%;
+              }
+            }
+          }
+          @media only screen and (max-width: $sm) {
+            flex-direction: column-reverse;
+            > .mac-sonucu-img-slider {
+              min-width: 100%;
+              > img {
+                min-height: 200px;
+                max-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

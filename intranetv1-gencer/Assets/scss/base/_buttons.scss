@@ -1,0 +1,70 @@
+.button {
+  display: inline-block;
+  font-size: $font-size-button-text;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  // ana sayfada kullanılan Kullanıcı girişi, gönder, pesonel ara gibi button türü
+  &-regular {
+    @extend .button;
+    color: $color-button-text;
+    background-image: linear-gradient(to bottom, #0293d6, #015aad);
+
+    &:hover {
+      box-shadow: -0px 3px 10px -2px rgba(1, 90, 173, 0.6);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  //Geri, İptal et gibi olumsuz button CSS
+  &-negative {
+    @extend .button;
+    background-image: linear-gradient(to bottom, #d4d4d4, #b4b4b4);
+    color: $color-white;
+    border: none;
+    &:hover {
+      // box-shadow: 0 10px 10px 0px rgba(1, 90, 173, 0.6);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  //tab page için kullanılan sayfa değiştirmeye yarayan buttonlar
+  &-active {
+    @extend .button;
+    background-color: $color-button-active;
+    color: $color-button-text;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  &-passive {
+    @extend .button;
+    background-color: $color-button-passive;
+    color: $color-button-passive-text;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    &:focus {
+      @extend .button-active;
+    }
+  }
+  &-datepicker {
+    @extend .button;
+    background: $color-white;
+    color: $color-button-active;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+    border: solid 0.5px #aaa;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
