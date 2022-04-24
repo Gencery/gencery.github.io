@@ -1,0 +1,31 @@
+* {
+  margin: auto 0%;
+  box-sizing: border-box;
+}
+
+body {
+  border: 1px solid black;
+  height: 100vh;
+  max-width: 400px;
+  width: 100%;
+}
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  > img {
+    height: 100%;
+    width: 75%;
+  }
+  > button {
+    max-width: 25%;
+    min-width: max-content;
+    margin-right: 3%;
+    max-height: 100%;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+  }
+}
