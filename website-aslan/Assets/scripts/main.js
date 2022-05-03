@@ -3,7 +3,7 @@ fetch("./header.html")
   .then((res) => res.text())
   .then((data) => {
     document.getElementsByTagName("header")[0].innerHTML = data;
-
+    //button li elements
     let btns = document
       .getElementsByTagName("nav")[0]
       .getElementsByTagName("span");
@@ -28,6 +28,18 @@ fetch("./header.html")
           400
         );
       });
+
+      //menu hide / display button
+      function toggleMenu(prop, elem) {
+        if (elem.style[prop] === "0px") elem.style[prop] = "-300px";
+        else elem.style[prop] = "0px";
+      }
+      document
+        .getElementById("navbar")
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", () =>
+          toggleMenu("margin-top", document.getElementsByTagName("nav")[0])
+        );
     }
   });
 //fetch footer
