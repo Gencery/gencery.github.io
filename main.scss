@@ -29,3 +29,14 @@ header {
     background-color: transparent;
   }
 }
+main {
+  > button {
+    border: none;
+    background-color: transparent;
+    border: 1px solid red;
+    display: block;
+    width: 100%;
+    height: 40px;
+    visibility: hidden;
+  }
+}

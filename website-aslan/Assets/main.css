@@ -4,51 +4,74 @@
 }
 
 header {
-  height: 100px;
+  min-height: 120px;
   width: 100%;
   display: flex;
+  align-items: center;
 }
 header .logo-container {
-  height: 100%;
+  height: 90%;
   width: 15%;
   margin-left: 1%;
+  border: 1px solid red;
 }
 header .logo-container > img {
   max-height: 100%;
   max-width: 100%;
 }
-header .nav-menu {
+header nav {
+  border: 1px solid red;
+  width: 75%;
+  display: flex;
+}
+header nav > div {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+header nav > div > span {
+  height: 40px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 75%;
-  width: 100%;
+  border: 1px solid red;
+  cursor: pointer;
 }
-header .nav-menu > div {
-  position: relative;
-  width: 100%;
-}
-header .nav-menu > div > a {
-  text-align: center;
-  line-height: 50px;
-  height: 50px;
-  width: 100%;
-  display: block;
-}
-header .nav-menu > div > a + ul {
-  text-align: center;
-  visibility: hidden;
-  list-style: none;
-  width: 100%;
-  padding: 0%;
+header nav > div > ul {
+  height: auto;
   position: absolute;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  border: 1px solid red;
+  top: 100%;
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+  padding: 0%;
+  visibility: hidden;
 }
-header .nav-menu > div > a + ul > li {
-  height: 50px;
-  line-height: 50px;
-  border: 1px solid red;
+header nav > div > ul > li {
+  height: 0px;
+  transition: height 0.5s;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  border: 1px solid black;
+  cursor: pointer;
+}
+header nav > div > ul :hover {
+  background-color: gray;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  header > nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  header > nav > div > ul {
+    position: relative;
+  }
 }/*# sourceMappingURL=main.css.map */

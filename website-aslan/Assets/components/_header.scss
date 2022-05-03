@@ -1,45 +1,70 @@
 header {
-  height: 100px;
+  min-height: 120px;
   width: 100%;
   display: flex;
+  align-items: center;
   .logo-container {
-    height: 100%;
+    height: 90%;
     width: 15%;
     margin-left: 1%;
+    border: 1px solid red;
     > img {
       max-height: 100%;
       max-width: 100%;
     }
   }
-  .nav-menu {
+  nav {
+    border: 1px solid red;
+    width: 75%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 75%;
-    width: 100%;
     > div {
-      position: relative;
       width: 100%;
-      > a {
-        text-align: center;
-        line-height: 50px;
-        height: 50px;
+      text-align: center;
+      position: relative;
+      > span {
+        height: 40px;
         width: 100%;
-        display: block;
-      }
-      > a + ul {
-        text-align: center;
-        visibility: hidden;
-        list-style: none;
-        width: 100%;
-        padding: 0%;
-        position: absolute;
-        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 1px solid red;
+        cursor: pointer;
+      }
+      > ul {
+        height: auto;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        overflow: hidden;
+        list-style: none;
+        padding: 0%;
+        visibility: hidden;
         > li {
-          height: 50px;
-          line-height: 50px;
-          border: 1px solid red;
+          height: 0px;
+          transition: height 0.5s;
+          margin-left: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: lightgray;
+          border: 1px solid black;
+          cursor: pointer;
+        }
+        :hover {
+          background-color: gray;
+          color: white;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    > nav {
+      flex-direction: column;
+      width: 100%;
+      > div {
+        > ul {
+          position: relative;
         }
       }
     }

@@ -4,32 +4,30 @@ fetch("./header.html")
   .then((data) => {
     document.getElementsByTagName("header")[0].innerHTML = data;
 
-    let openedItem = null;
-
-    let menuitems = document.getElementsByClassName("menu-item");
-    for (let menuitem of menuitems) {
-      menuitem.addEventListener("click", function toggleDropDown(event) {
-        let next = this.nextElementSibling;
-        event.stopPropagation();
-        if (window.getComputedStyle(next).visibility == "hidden") {
-          next.style.visibility = "visible";
-          openedItem = next;
-        } else {
-          next.style.visibility = "hidden";
-          openedItem = null;
+    let btns = document
+      .getElementsByTagName("nav")[0]
+      .getElementsByTagName("span");
+    for (let btn of btns) {
+      btn.setAttribute("tabIndex", 0);
+      //focus display li items
+      btn.addEventListener("focus", () => {
+        btn.nextElementSibling.style.visibility = "visible";
+        let lis = btn.nextElementSibling.children;
+        for (let li of lis) {
+          li.style.height = "40px";
         }
       });
-    }
-
-    let items = document.getElementsByTagName("*");
-    for (let item of items)
-      if (!item.classList.contains("menu-item"))
-        item.addEventListener("click", closeOpen);
-    function closeOpen() {
-      if (openedItem) {
-        openedItem.style.visibility = "hidden";
-        openedItem = null;
-      }
+      //blur hide li items
+      btn.addEventListener("blur", () => {
+        let lis = btn.nextElementSibling.children;
+        for (let li of lis) {
+          li.style.height = "0px";
+        }
+        setTimeout(
+          () => (btn.nextElementSibling.style.visibility = "hidden"),
+          400
+        );
+      });
     }
   });
 //fetch footer
