@@ -26,6 +26,7 @@ header > div:nth-of-type(1) > button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  display: none;
 }
 header nav {
   width: 75%;
@@ -74,6 +75,9 @@ header nav > div > ul :hover {
 @media screen and (max-width: 600px) {
   header {
     flex-direction: column;
+  }
+  header > div:nth-of-type(1) > button {
+    display: block;
   }
   header > nav {
     flex-direction: column;
