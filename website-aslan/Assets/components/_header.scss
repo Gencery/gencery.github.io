@@ -1,10 +1,9 @@
 header {
-  border: 1px solid red;
-  min-height: 120px;
+  min-height: 150px;
   width: 100%;
   display: flex;
   align-items: center;
-  > div:nth-of-type(1) {
+  #navbar {
     height: 120px;
     display: flex;
     justify-content: space-between;
@@ -12,13 +11,16 @@ header {
     width: 100%;
     z-index: 1;
     background-color: white;
-    > img {
-      height: 80px;
+    > a {
+      height: 100px;
       margin-left: 3%;
+      > img {
+        height: 100%;
+      }
     }
     > button {
       margin-right: 3%;
-      font-size: 2rem;
+      font-size: 2.5rem;
       border: none;
       background-color: transparent;
       cursor: pointer;
@@ -86,19 +88,20 @@ header {
     flex-direction: column;
     height: 0%;
     overflow: hidden;
-    > div:nth-of-type(1) {
+    #navbar {
       > button {
         display: block;
       }
     }
     > nav {
       flex-direction: column;
-      width: 100%;
+      min-width: 100%;
       height: auto;
+      margin: 0%;
       transition: margin-top 0.5s;
       margin-top: -300px;
       > div {
-        margin-left: 0.5%;
+        width: 100%;
         > ul {
           position: relative;
         }

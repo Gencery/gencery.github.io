@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.5px;
 }
@@ -10,3 +10,10 @@ $sm: 600px;
 
 @import "./components/footer";
 @import "./components/header";
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}

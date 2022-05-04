@@ -1,18 +1,23 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.5px;
 }
 
+footer {
+  height: 150px;
+  width: 100%;
+  background-color: lightgrey;
+}
+
 header {
-  border: 1px solid red;
-  min-height: 120px;
+  min-height: 150px;
   width: 100%;
   display: flex;
   align-items: center;
 }
-header > div:nth-of-type(1) {
+header #navbar {
   height: 120px;
   display: flex;
   justify-content: space-between;
@@ -21,13 +26,16 @@ header > div:nth-of-type(1) {
   z-index: 1;
   background-color: white;
 }
-header > div:nth-of-type(1) > img {
-  height: 80px;
+header #navbar > a {
+  height: 100px;
   margin-left: 3%;
 }
-header > div:nth-of-type(1) > button {
+header #navbar > a > img {
+  height: 100%;
+}
+header #navbar > button {
   margin-right: 3%;
-  font-size: 2rem;
+  font-size: 2.5rem;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -96,18 +104,19 @@ header nav > div > ul :hover {
     height: 0%;
     overflow: hidden;
   }
-  header > div:nth-of-type(1) > button {
+  header #navbar > button {
     display: block;
   }
   header > nav {
     flex-direction: column;
-    width: 100%;
+    min-width: 100%;
     height: auto;
+    margin: 0%;
     transition: margin-top 0.5s;
     margin-top: -300px;
   }
   header > nav > div {
-    margin-left: 0.5%;
+    width: 100%;
   }
   header > nav > div > ul {
     position: relative;
@@ -115,4 +124,11 @@ header nav > div > ul :hover {
   header > nav > div > span {
     margin: 0%;
   }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }/*# sourceMappingURL=main.css.map */
