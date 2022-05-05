@@ -8,8 +8,8 @@
 //variables
 $sm: 600px;
 
-@import "./components/footer";
 @import "./components/header";
+@import "./components/footer";
 
 body {
   display: flex;

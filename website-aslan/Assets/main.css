@@ -5,12 +5,6 @@
   letter-spacing: 0.5px;
 }
 
-footer {
-  height: 150px;
-  width: 100%;
-  background-color: lightgrey;
-}
-
 header {
   min-height: 150px;
   width: 100%;
@@ -124,6 +118,67 @@ header nav > div > ul :hover {
   header > nav > div > span {
     margin: 0%;
   }
+}
+
+footer {
+  height: 150px;
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    height: 450px;
+  }
+  footer > * {
+    height: 150px;
+    min-width: 98%;
+    margin: 1%;
+  }
+}
+footer > div:nth-of-type(1) {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1%;
+  height: 100%;
+  width: 30%;
+}
+footer > div:nth-of-type(1) > a {
+  display: block;
+  height: 65%;
+}
+footer > div:nth-of-type(1) > a > img {
+  height: 100%;
+  margin: 0%;
+}
+footer > div:nth-of-type(1) > p {
+  height: 25%;
+}
+footer > ul {
+  padding: 0%;
+  font-size: 1.25rem;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer > ul > li {
+  font-size: 1rem;
+  list-style: none;
+}
+footer > ul > li > a {
+  color: black;
+}
+footer > ul > li > a > i {
+  margin-right: 5px;
+  margin-left: 5px;
+  color: red;
 }
 
 body {
