@@ -4,6 +4,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   @media screen and (max-width: $sm) {
     flex-direction: column-reverse;
     > * {
@@ -64,7 +65,7 @@ footer {
     justify-content: space-around;
     border: none;
     border-radius: 5px;
-    background-color: white;
+    //background-color: white;
     box-shadow: 0px 0px 10px 2px #bbb;
     margin-right: 1%;
     > li {
@@ -81,5 +82,11 @@ footer {
         }
       }
     }
+  }
+  #copyright {
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1%;
   }
 }

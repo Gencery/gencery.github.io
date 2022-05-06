@@ -45,6 +45,13 @@ fetch("./header.html")
 //fetch footer
 fetch("./footer.html")
   .then((res) => res.text())
-  .then(
-    (data) => (document.getElementsByTagName("footer")[0].innerHTML = data)
-  );
+  .then((data) => {
+    document.getElementsByTagName("footer")[0].innerHTML = data;
+
+    //dynamic footer
+    let copyright = document.createElement("p");
+    copyright.innerText =
+      " Copyright Aslan Marketing " + new Date().getFullYear();
+    copyright.setAttribute("id", "copyright");
+    document.getElementsByTagName("footer")[0].appendChild(copyright);
+  });
