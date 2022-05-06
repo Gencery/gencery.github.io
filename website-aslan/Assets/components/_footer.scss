@@ -14,8 +14,11 @@ footer {
     > div:nth-of-type(1) {
       flex-direction: row !important;
       justify-content: space-between !important;
-      align-items: center;
+      align-items: center !important;
       height: 100px !important;
+      > * {
+        margin: 0% !important;
+      }
       > a {
         height: 100%;
         > img {
@@ -85,8 +88,8 @@ footer {
   }
   #copyright {
     flex-shrink: 0;
-    width: 100%;
+    max-width: 100%;
     text-align: center;
-    padding: 1%;
+    order: -1;
   }
 }
