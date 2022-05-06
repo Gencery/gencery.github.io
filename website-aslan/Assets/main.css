@@ -216,9 +216,15 @@ footer > ul > li > a > i {
 footer #copyright {
   flex-shrink: 0;
   max-width: 100%;
+  width: 98%;
   text-align: center;
-  order: -1;
-  margin-bottom: 3% !important;
+  order: 1;
+  margin-bottom: 5px !important;
+}
+@media screen and (max-width: 600px) {
+  footer #copyright {
+    order: -1;
+  }
 }
 
 body {
