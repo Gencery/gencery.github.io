@@ -217,6 +217,7 @@ footer #copyright {
   max-width: 100%;
   text-align: center;
   order: -1;
+  margin-bottom: 3% !important;
 }
 
 body {
