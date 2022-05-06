@@ -183,6 +183,7 @@ footer > div:nth-of-type(1) > a > img {
 footer > div:nth-of-type(1) > p {
   height: 35%;
   margin-top: 5%;
+  margin-left: 5% !important;
 }
 footer > ul {
   padding: 1%;
