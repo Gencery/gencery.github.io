@@ -227,12 +227,15 @@ footer #copyright {
   }
 }
 
+.mainpage {
+  border: 1px solid red;
+}
 .mainpage .catalog-slider {
-  height: 600px;
-  margin: 1%;
+  width: 98%;
+  margin-left: 1%;
+  padding: 1%;
   display: flex;
   align-items: center;
-  padding: 1%;
 }
 .mainpage .catalog-slider > button {
   min-height: 50px;
@@ -241,14 +244,20 @@ footer #copyright {
   border-radius: 5px;
   background-color: rgba(255, 0, 0, 0.75);
   cursor: pointer;
+  margin: 1%;
 }
 .mainpage .catalog-slider > div {
   height: 100%;
 }
 .mainpage .catalog-slider > div > div {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mainpage .catalog-slider > div > div > img {
+  max-height: 100%;
+  border: 1px solid red;
   -o-object-fit: contain;
      object-fit: contain;
 }
