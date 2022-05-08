@@ -8,14 +8,48 @@
     <link rel="icon" type="image/x-icon" href="/Assets/images/logo.png" />
     <link
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./Assets/main.css" />
   </head>
   <body>
     <header></header>
-    <main></main>
+
+    <main class="mainpage">
+      <div class="catalog-slider">
+        <img src="./Assets/images/1-angebote-neu.jpg" />
+        <img src="./Assets/images/2-angebote-neu.jpg" />
+      </div>
+    </main>
+
     <footer></footer>
+
     <script type="text/javascript" src="./Assets/scripts/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".catalog-slider").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          nextArrow: "<button>&#10095;</button>",
+          prevArrow: "<button>&#10094;</button>",
+        });
+      });
+    </script>
   </body>
 </html>
