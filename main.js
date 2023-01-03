@@ -38,6 +38,7 @@ function createAppendElem(x, inner) {
 
 getData("267");
 getData("505");
+getData("847");
 
 let timeURL =
   "http://worldtimeapi.org/api/timezone/Europe/Istanbul";
