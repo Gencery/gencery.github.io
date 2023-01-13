@@ -61,3 +61,27 @@ fetch(exchangeRateURL)
     exchPara.innerText = "usd/try: " + data.slice(index + 20, index + 25);
   });
 document.body.append(exchPara);
+
+fetch("https://www.eshot.gov.tr/tr/AdreseYakinDuraklar/IlceninMahalleleriniGetir/?ilceId=11", {
+  "credentials": "include",
+  "headers": {
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Connection": "keep-alive",
+    "Host": "www.eshot.gov.tr",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": 1,
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0"
+  },
+  "referrer": "https://www.eshot.gov.tr/tr/AdreseYakinDuraklar/301",
+  "method": "GET",
+  "mode": "cors"
+}).then(res => res.json())
+  .then(data => {
+    for (let item of data) {
+      document.write(item.Name)
+    }
+  });
