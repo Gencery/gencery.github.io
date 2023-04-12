@@ -59,7 +59,7 @@ let days = {
 	7: "Pazar",
 };
 
-fetch("/header.html")
+fetch("./header.html")
 	.then((res) => res.text())
 	.then(
 		(data) => (document.getElementsByTagName("header")[0].innerHTML = data)
