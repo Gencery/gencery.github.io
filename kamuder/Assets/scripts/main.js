@@ -332,7 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 });
 
-
 function createAnlasmaliKurulus(kurulus, container) {
 	let kurulusDiv = document.createElement("div");
 	kurulusDiv.classList.add("anlasmaliKurulus");
@@ -353,7 +352,7 @@ function createAnlasmaliKurulus(kurulus, container) {
 	let detayButton = document.createElement("span");
 	detayButton.classList.add("detay");
 	detayButton.innerText = "Detay";
-	kurulusDiv.append(detayButton)
+	kurulusDiv.append(detayButton);
 
 	//kurulusDiv onclick popup ac
 	kurulusDiv.addEventListener("click", () => {
@@ -364,7 +363,7 @@ function createAnlasmaliKurulus(kurulus, container) {
 		popupImg.setAttribute("src", kurulusDivImg.getAttribute("src"));
 
 		openPopUp("anlasmaliKuruluslarPopup");
-	})
+	});
 
 	//append Kurulus
 	container.append(kurulusDiv);
@@ -372,14 +371,16 @@ function createAnlasmaliKurulus(kurulus, container) {
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (document.getElementsByClassName("anlasmaliKuruluslar").length > 0) {
-		fetch("/JsonData/anlasmaliKuruluslar.json")
-			.then(res => res.json())
-			.then(data => {
-				let kurulusListesiContainer = document.getElementsByClassName("anlasmaliKurulusListesi")[0];
+		fetch("./JsonData/anlasmaliKuruluslar.json")
+			.then((res) => res.json())
+			.then((data) => {
+				let kurulusListesiContainer = document.getElementsByClassName(
+					"anlasmaliKurulusListesi"
+				)[0];
 
 				for (let kurulus of data.kuruluslar) {
 					createAnlasmaliKurulus(kurulus, kurulusListesiContainer);
 				}
-			})
+			});
 	}
-})
+});
