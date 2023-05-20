@@ -43,3 +43,20 @@ listNextHours("505");
 listNextHours("267");
 listNextHours("847");
 listNextHours("152");
+
+{
+	fetch("https://www.eshot.gov.tr/tr/OtobusumNerede/290", {
+		method: "POST",
+		headers: {
+			Accept: "application/json",
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({
+			hatId: 505,
+			durakId: 30562,
+			hatyon: 0,
+		}),
+	})
+		.then((res) => res.text())
+		.then((data) => document.write(data));
+}
