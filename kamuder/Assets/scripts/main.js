@@ -384,3 +384,36 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 	}
 });
+
+
+//banka dokumanlar indirme
+
+document.addEventListener("DOMContentLoaded", () => {
+	if (document.getElementsByClassName("nasilUyeOlabilirim").length > 0) {
+		let bankaButtons = document.getElementsByClassName("banka");
+
+		for (let bankaButton of bankaButtons) {
+
+			bankaButton.addEventListener("click", (event) => {
+				event.preventDefault();
+				let docs = bankaButton.getElementsByTagName("a");
+
+				for (let i = 0; i < docs.length; i++) {
+					setTimeout(() => {
+						window.open(docs[0].getAttribute("href"));
+
+					}, 500);
+					setTimeout(() => {
+						window.open(docs[1].getAttribute("href"), "_self");
+					}, 1000);
+				}
+
+
+				// for (let link of bankaButton.getElementsByTagName("a")) {
+				// 	window.open(link.getAttribute("href"));
+				// }
+			})
+		}
+	}
+})
+
