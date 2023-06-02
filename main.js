@@ -38,8 +38,9 @@ function listNextHours(lineNo) {
 			});
 		});
 }
-
-listNextHours("505");
-listNextHours("267");
-listNextHours("847");
-listNextHours("152");
+if (document.getElementById("otobusSaatleri")) {
+	listNextHours("505");
+	listNextHours("267");
+	listNextHours("847");
+	listNextHours("152");
+}
