@@ -1,4 +1,11 @@
-body{
-  background-color: #000;
-  color: #fff;
+body {
+	background-color: #000;
+	color: #fff;
+	font-size: 1.25rem;
+	padding: 10px;
+}
+
+p {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
