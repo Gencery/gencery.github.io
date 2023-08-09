@@ -21,6 +21,12 @@ function getDayPeriodName() {
 	return periodName;
 }
 
+function addDataToRow(row, tdData) {
+	let td = document.createElement("td");
+	td.innerText = tdData;
+	row.append(td);
+}
+
 function listNextHours(lineNo) {
 	fetch("https://openapi.izmir.bel.tr/api/eshot/hareketsaatleri/" + lineNo)
 		.then((res) => res.json())
@@ -34,13 +40,19 @@ function listNextHours(lineNo) {
 				.filter((hour) => hour >= nowHoursMins)
 				.slice(0, 2);
 
-			addPara(lineNo, "innerText");
+			let tableBody = document.getElementsByTagName("table")[0].getElementsByTagName("tbody")[0];
+			let tr = document.createElement("tr");
+
+			addDataToRow(tr, lineNo);
 
 			nextExpeditionHours.forEach((hour) => {
-				addPara(hour, "innerText");
+				addDataToRow(tr, hour);
 			});
+
+			tableBody.append(tr);
 		});
 }
+
 
 listNextHours("505");
 listNextHours("267");
