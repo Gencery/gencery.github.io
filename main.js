@@ -28,6 +28,11 @@ function addDataToRow(row, tdData) {
 }
 
 function listNextHours(lineNo) {
+	let tableBody = document.getElementsByTagName("table")[0].getElementsByTagName("tbody")[0];
+	let tr = document.createElement("tr");
+	addDataToRow(tr, lineNo);
+	tableBody.append(tr);
+
 	fetch("https://openapi.izmir.bel.tr/api/eshot/hareketsaatleri/" + lineNo)
 		.then((res) => res.json())
 		.then((data) => {
@@ -40,22 +45,16 @@ function listNextHours(lineNo) {
 				.filter((hour) => hour >= nowHoursMins)
 				.slice(0, 2);
 
-			let tableBody = document.getElementsByTagName("table")[0].getElementsByTagName("tbody")[0];
-			let tr = document.createElement("tr");
 
-			addDataToRow(tr, lineNo);
 
 			nextExpeditionHours.forEach((hour) => {
 				addDataToRow(tr, hour);
 			});
-
-			tableBody.append(tr);
 		});
 }
 
 
 listNextHours("152");
-listNextHours("204");
 listNextHours("267");
 listNextHours("505");
 listNextHours("847");
