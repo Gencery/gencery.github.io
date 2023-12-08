@@ -1,11 +1,24 @@
+* {
+  font-family: Verdana;
+}
 body {
-	background-color: #000;
-	color: #fff;
-	font-size: 1.25rem;
-	padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 10px;
 }
 
 p {
-	margin-top: 20px;
-	margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  margin: auto;
+}
+
+table * {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
 }
