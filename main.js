@@ -11,11 +11,11 @@ function getDayPeriodName() {
 	let weekDay = now.getDay();
 
 	if (weekDay == 0) {
-		periodName = "HareketSaatleriPazar";
+		periodName = "sundays";
 	} else if (weekDay == 6) {
-		periodName = "HareketSaatleriCtesi";
+		periodName = "saturdays";
 	} else {
-		periodName = "HareketSaatleriHici";
+		periodName = "weekDays";
 	}
 
 	return periodName;
@@ -28,12 +28,14 @@ function addDataToRow(row, tdData) {
 }
 
 function listNextHours(lineNo) {
-	let tableBody = document.getElementsByTagName("table")[0].getElementsByTagName("tbody")[0];
+	let tableBody = document
+		.getElementsByTagName("table")[0]
+		.getElementsByTagName("tbody")[0];
 	let tr = document.createElement("tr");
 	addDataToRow(tr, lineNo);
 	tableBody.append(tr);
 
-	fetch("https://openapi.izmir.bel.tr/api/eshot/hareketsaatleri/" + lineNo)
+	fetch("./lines/" + lineNo + ".json")
 		.then((res) => res.json())
 		.then((data) => {
 			if (!data) return;
@@ -41,11 +43,9 @@ function listNextHours(lineNo) {
 
 			let nowHoursMins = now.toTimeString().slice(0, 5);
 			let nextExpeditionHours = data[getDayPeriodName()]
-				.map((hour) => hour.DonusSaat)
+				.map((hour) => hour.bwdHour)
 				.filter((hour) => hour >= nowHoursMins)
 				.slice(0, 2);
-
-
 
 			nextExpeditionHours.forEach((hour) => {
 				addDataToRow(tr, hour);
@@ -53,7 +53,9 @@ function listNextHours(lineNo) {
 		});
 }
 function listApproachingBuses(busStopNo) {
-	let tableBody = document.getElementsByTagName("table")[1].getElementsByTagName("tbody")[0];
+	let tableBody = document
+		.getElementsByTagName("table")[1]
+		.getElementsByTagName("tbody")[0];
 
 	function addRow(lineNo, remaningBusStops) {
 		let tr = document.createElement("tr");
@@ -67,23 +69,24 @@ function listApproachingBuses(busStopNo) {
 		tr.append(td1);
 		tr.append(td2);
 
-
 		return tr;
 	}
 
-	fetch("https://openapi.izmir.bel.tr/api/iztek/duragayaklasanotobusler/" + busStopNo)
-		.then(res => res.json())
-		.then(data => {
+	fetch(
+		"https://openapi.izmir.bel.tr/api/iztek/duragayaklasanotobusler/" +
+			busStopNo
+	)
+		.then((res) => res.json())
+		.then((data) => {
 			for (let item of data) {
-				tableBody.append(addRow(item.HatNumarasi, item.KalanDurakSayisi))
+				tableBody.append(addRow(item.HatNumarasi, item.KalanDurakSayisi));
 			}
-		})
+		});
 }
-
 
 listNextHours("152");
 listNextHours("267");
 listNextHours("505");
 listNextHours("847");
 
-listApproachingBuses("30562")
+listApproachingBuses("30562");
