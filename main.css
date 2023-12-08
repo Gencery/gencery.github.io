@@ -1,24 +1,36 @@
 * {
-  font-family: Verdana;
+	font-family: Verdana;
 }
 body {
-  background-color: #000;
-  color: #fff;
-  font-size: 1.25rem;
-  padding: 10px;
+	background-color: #000;
+	color: #000;
+	font-size: 1.25rem;
+	padding: 10px;
 }
 
 p {
-  margin-top: 20px;
-  margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 table {
-  margin: auto;
+	margin: auto;
 }
 
 table * {
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+#tables {
+	width: fit-content;
+	margin: auto;
+	color: #000;
+	background-image: url("https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 15px;
+	.tableContainer {
+	}
 }
