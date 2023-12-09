@@ -6,28 +6,17 @@ body {
 	background-color: #444;
 	color: #fff;
 	font-size: 1.25em;
-	padding: 10px;
 }
 
 #tables {
+	width: max-content;
 	margin: auto;
-	width: fit-content;
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	box-shadow: 0 0 7px 2px #000;
 	table {
-		text-align: center;
-		flex-grow: 1;
 		width: 100%;
-		border-radius: 5px;
-		align-self: stretch;
-
-		* {
-			white-space: nowrap;
-		}
-		td,
-		th {
+		th,
+		td {
+			text-align: center;
+			font-size: 1.25em;
 			padding: 5px;
 		}
 	}
