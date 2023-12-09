@@ -5,17 +5,31 @@
 html {
 }
 body {
-	background-color: #444;
-	color: #fff;
-	box-shadow: 0 0 14px 2px #000;
-	border-radius: 5px;
-	min-height: calc(100vh - 18px);
+	background-color: #000;
+	main {
+	}
 }
 
 #tables {
-	width: 100%;
 	margin: auto;
 	font-size: 20px;
+	max-width: fit-content;
+	box-shadow: 0 0 14px 2px #000;
+	border-radius: 5px;
+	color: #000;
+	min-height: 97.5vh;
+	position: relative;
+	video {
+		background: no-repeat center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		z-index: -1;
+		border-radius: 10px;
+	}
 	table {
 		width: 100%;
 		th,
