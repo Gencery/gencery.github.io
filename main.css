@@ -2,15 +2,20 @@
 	font-family: Verdana;
 	box-sizing: border-box;
 }
+html {
+}
 body {
 	background-color: #444;
 	color: #fff;
-	font-size: 1.25em;
+	box-shadow: 0 0 14px 2px #000;
+	border-radius: 5px;
+	min-height: calc(100vh - 18px);
 }
 
 #tables {
-	width: max-content;
+	width: 100%;
 	margin: auto;
+	font-size: 20px;
 	table {
 		width: 100%;
 		th,
