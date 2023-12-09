@@ -90,7 +90,3 @@ listNextHours("505");
 listNextHours("847");
 
 listApproachingBuses("30562");
-
-document.addEventListener("DOMContentLoaded", () => {
-	alert(getComputedStyle(document.body).width);
-});
