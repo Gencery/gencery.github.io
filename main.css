@@ -11,29 +11,18 @@ body {
   font-size: 20px;
   box-shadow: 0 0 14px 2px #000;
   border-radius: 5px;
-  color: #000;
+  color: #fff;
   min-height: 97.5vh;
   position: relative;
   width: 100%;
   max-width: 375px;
+  background-image: linear-gradient(to bottom, purple 25%, orange);
 }
-#tables video {
-  background: no-repeat center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
-  border-radius: 10px;
-}
-#tables table {
+#tables .tableContainer table {
   width: 100%;
 }
-#tables table th,
-#tables table td {
+#tables .tableContainer table th,
+#tables .tableContainer table td {
   text-align: center;
   font-size: 1.25em;
   padding: 5px;
