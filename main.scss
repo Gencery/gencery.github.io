@@ -20,8 +20,10 @@ body {
 	position: relative;
 	width: 100%;
 	max-width: 375px;
-	background-image: linear-gradient(to bottom, purple 25%, orange);
+	background-image: linear-gradient(to bottom, purple 50%, orange);
+
 	.tableContainer {
+		padding-top: 1rem;
 		table {
 			width: 100%;
 			th,
