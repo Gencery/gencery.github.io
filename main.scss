@@ -7,6 +7,7 @@ html {
 body {
 	background-color: #000;
 	main {
+		height: 97.5vh;
 	}
 }
 
@@ -16,21 +17,29 @@ body {
 	box-shadow: 0 0 14px 2px #000;
 	border-radius: 1rem;
 	color: #fff;
-	min-height: 97.5vh;
 	position: relative;
 	width: 100%;
 	max-width: 375px;
 	background-image: linear-gradient(to bottom, purple 50%, orange);
-
-	.tableContainer {
-		padding-top: 1rem;
-		table {
-			width: 100%;
-			th,
-			td {
-				text-align: center;
-				font-size: 1.25em;
-				padding: 5px;
+	height: 97.5vh;
+	border: 1px solid purple;
+	> div {
+		overflow-y: auto;
+		scrollbar-width: thin;
+		height: 98%;
+		margin: 0.5vw;
+		.tableContainer {
+			table {
+				width: 100%;
+				th,
+				td {
+					text-align: center;
+					font-size: 1.25em;
+					padding: 5px;
+				}
+				th {
+					font-size: 1.125em;
+				}
 			}
 		}
 	}

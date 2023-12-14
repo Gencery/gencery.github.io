@@ -6,27 +6,38 @@
 body {
   background-color: #000;
 }
+body main {
+  height: 97.5vh;
+}
+
 #tables {
   margin: auto;
   font-size: 20px;
   box-shadow: 0 0 14px 2px #000;
   border-radius: 1rem;
   color: #fff;
-  min-height: 97.5vh;
   position: relative;
   width: 100%;
   max-width: 375px;
   background-image: linear-gradient(to bottom, purple 50%, orange);
+  height: 97.5vh;
+  border: 1px solid purple;
 }
-#tables .tableContainer {
-  padding-top: 1rem;
+#tables > div {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  height: 98%;
+  margin: 0.5vw;
 }
-#tables .tableContainer table {
+#tables > div .tableContainer table {
   width: 100%;
 }
-#tables .tableContainer table th,
-#tables .tableContainer table td {
+#tables > div .tableContainer table th,
+#tables > div .tableContainer table td {
   text-align: center;
   font-size: 1.25em;
   padding: 5px;
+}
+#tables > div .tableContainer table th {
+  font-size: 1.125em;
 }/*# sourceMappingURL=main.css.map */
