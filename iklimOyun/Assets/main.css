@@ -4,8 +4,8 @@
 }
 
 html {
-  max-width: 1000px;
   margin: auto;
+  max-width: 80vh;
 }
 
 body {
@@ -66,11 +66,11 @@ body > main > #play > .gridContainer > .card .imgContainer > img {
 body > main > #finish {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 body > main > #finish > * {
-  margin: 5vh;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
 }
 body > main > #finish > div {
   display: flex;
