@@ -61,18 +61,23 @@ body > main > #play > .gridContainer > .card .imgContainer > img {
 body > main > #finish {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+body > main > #finish > * {
+  margin: 5vh;
 }
 body > main > #finish > div {
   display: flex;
 }
-body > main > #finish > div > img {
+body > main > #finish > div > .imgContainer > img {
   width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 body > main > #finish #results {
   color: rgb(81, 170, 81);
-  font-size: 2vh;
+  font-size: 5vw;
 }
 body > footer {
   width: 100%;

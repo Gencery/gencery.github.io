@@ -64,17 +64,23 @@ body {
     > #finish {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+      > * {
+        margin: 5vh;
+      }
       > div {
         display: flex;
-        > img {
-          width: 100%;
+        > .imgContainer {
+          > img {
+            width: 100%;
+            object-fit: scale-down;
+          }
         }
       }
       #results {
         color: rgb(81, 170, 81);
-        font-size: 2vh;
+        font-size: 5vw;
       }
     }
   }
