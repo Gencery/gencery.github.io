@@ -3,6 +3,11 @@
   font-family: Arial;
 }
 
+html {
+  max-width: 1000px;
+  margin: auto;
+}
+
 body {
   height: 100vh;
   padding: 0%;
@@ -14,7 +19,7 @@ body {
   width: 100%;
   background-image: url("./img/imgeler/background-01.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100vh;
 }
 body > header {
   display: flex;
