@@ -19,7 +19,9 @@ body {
   width: 100%;
   background-image: url("./img/imgeler/background-01.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100vh;
+  background-size: 100% 100%;
+  background-position-y: bottom;
+  background-color: #fef3e2;
 }
 body > header {
   display: flex;
@@ -102,7 +104,6 @@ body > footer > p {
 }
 body > footer > img {
   width: 5%;
-  border-radius: 5px;
 }
 
 .hidden {
