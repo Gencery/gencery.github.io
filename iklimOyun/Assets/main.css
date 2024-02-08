@@ -19,7 +19,7 @@ body {
   width: 100%;
   background-image: url("./img/imgeler/background-01.jpg");
   background-repeat: no-repeat;
-  background-size: auto 100vh;
+  background-size: 100% 100vh;
 }
 body > header {
   display: flex;
