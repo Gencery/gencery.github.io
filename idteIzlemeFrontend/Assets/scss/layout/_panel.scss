@@ -1,0 +1,67 @@
+.panel {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  &-menu {
+    padding: 1vh;
+    background-image: linear-gradient(to bottom, $clr0-25, transparent);
+    overflow-y: auto;
+    height: 100%;
+    padding: 1vh;
+  }
+  &-content {
+    padding: 1vh;
+    overflow-y: auto;
+    height: 100%;
+  }
+  //mobile
+  @media only screen and (max-width: $sm) {
+    position: relative;
+
+    &-menu {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      width: 2vh;
+      //border: 1px solid red;
+      background-color: $clr1-75;
+      transition: all 500ms;
+      .handle {
+        display: block;
+        position: absolute;
+        left: -6px;
+        top: calc(50% - 2vh);
+        background-color: transparent;
+        font-size: 4vh;
+        border: none;
+        color: $clr0-50;
+      }
+    }
+    &-menu:focus-within {
+      width: 80%;
+      .handle {
+        opacity: 0;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      overflow-y: auto;
+      padding: 1vh 3vh 1vh 1vh;
+    }
+  }
+  //wide-screen
+  @media only screen and (min-width: $sm) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    //
+    &-menu {
+      .handle {
+        display: none;
+      }
+    }
+    &-content {
+    }
+  }
+}

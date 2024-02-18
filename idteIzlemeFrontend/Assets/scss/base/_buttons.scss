@@ -1,0 +1,45 @@
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 1vh;
+  min-height: 5vh;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: $clr0;
+  font-size: 1.125rem;
+  transition: all 250ms;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.btn-0 {
+  @extend .btn;
+  &:hover {
+    background-color: $clr0-25;
+  }
+  &:active {
+    background-color: $clr0-50;
+  }
+}
+
+.btn-1 {
+  @extend .btn;
+  background-color: $clr1-25;
+  &:hover {
+    background-color: $clr0-25;
+  }
+  &:active {
+    background-color: $clr0-50;
+  }
+}
+.btn-danger {
+  @extend .btn;
+  background-color: $clr-danger-75;
+  &:hover {
+    background-color: $clr-danger;
+  }
+  &:active {
+    background-color: $clr0-50;
+  }
+}

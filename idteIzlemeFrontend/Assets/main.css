@@ -1,0 +1,225 @@
+.w-full-children > * {
+  width: 100%;
+}
+
+:root {
+  /* Track */
+  /* Handle */
+}
+:root ::-webkit-scrollbar {
+  width: 7px;
+}
+:root ::-webkit-scrollbar-track {
+  background: transparent;
+}
+:root ::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+:root * {
+  box-sizing: border-box;
+  font-family: Verdana;
+}
+
+body {
+  height: 100vh;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  background-image: url("./img/bg_earth.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+body * {
+  scrollbar-color: #ddd transparent;
+  scrollbar-width: thin;
+}
+body > header {
+  min-height: 100px;
+}
+body > footer {
+  min-height: 100px;
+  color: white;
+  width: 100%;
+  display: flex;
+}
+body > footer > p {
+  margin: auto;
+  text-align: center;
+}
+body > main {
+  border-radius: 20px;
+  background-color: rgba(153, 153, 153, 0.75);
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px 0px #444;
+}
+
+.bgVideo {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.bgVideo > video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 830px) {
+  .dynamic, body > main {
+    width: 98vw;
+  }
+}
+@media only screen and (min-width: 830px) and (max-width: 1281px) {
+  .dynamic, body > main {
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1367px) {
+  .dynamic, body > main {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 1367px) {
+  .dynamic, body > main {
+    width: 70vw;
+  }
+}
+
+.btn, .btn-danger, .btn-1, .btn-0 {
+  display: flex;
+  align-items: center;
+  padding: 1vh;
+  min-height: 5vh;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 1.125rem;
+  transition: all 250ms;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.btn-0:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.btn-0:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-1 {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.btn-1:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.btn-1:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-danger {
+  background-color: rgba(255, 0, 0, 0.75);
+}
+.btn-danger:hover {
+  background-color: #f00;
+}
+.btn-danger:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tabs > * {
+  margin: 0 1vh 1vh 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  gap: 1vh;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.panel-menu {
+  padding: 1vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), transparent);
+  overflow-y: auto;
+  height: 100%;
+  padding: 1vh;
+}
+.panel-content {
+  padding: 1vh;
+  overflow-y: auto;
+  height: 100%;
+}
+@media only screen and (max-width: 830px) {
+  .panel {
+    position: relative;
+  }
+  .panel-menu {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 2vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: all 500ms;
+  }
+  .panel-menu .handle {
+    display: block;
+    position: absolute;
+    left: -6px;
+    top: calc(50% - 2vh);
+    background-color: transparent;
+    font-size: 4vh;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .panel-menu:focus-within {
+    width: 80%;
+  }
+  .panel-menu:focus-within .handle {
+    opacity: 0;
+  }
+  .panel-content {
+    width: 100%;
+    overflow-y: auto;
+    padding: 1vh 3vh 1vh 1vh;
+  }
+}
+@media only screen and (min-width: 830px) {
+  .panel {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .panel-menu .handle {
+    display: none;
+  }
+}
+
+.sektor {
+  background-color: rgba(68, 68, 68, 0.25);
+  padding: 1vw;
+  border-radius: 20px;
+}
+.sektor-name {
+  color: #fff;
+  font-size: 1.25em;
+}/*# sourceMappingURL=main.css.map */
