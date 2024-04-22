@@ -1,8 +1,0 @@
-//29 Ağustos 2023
-"lg-md-center" isimli class, 3 html sayfasındaki taglerden kaldırıldı.
-css güncellendi.
-veri kaynağı ekleme güncellendi.
-
-//1 Eylül 2023
-css güncellendi
-menu butonu fix
