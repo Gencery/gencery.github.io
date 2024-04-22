@@ -176,7 +176,7 @@ function msgBox(type, msg, secMsg) {
 
   //success, warning, fail pictures
   let infoTypePic = document.createElement("img");
-  let infoTypePicSrc = "/Assets/img/infoPics/";
+  let infoTypePicSrc = "./Assets/img/infoPics/";
 
   if (type == "success") {
     infoTypePicSrc += "success.svg";
@@ -237,7 +237,7 @@ function msgBoxConfirm(event, msg) {
 
   //info icon
   let infoTypePic = document.createElement("img");
-  let infoTypePicSrc = "/Assets/img/infoPics/info.svg";
+  let infoTypePicSrc = "./Assets/img/infoPics/info.svg";
   infoTypePic.setAttribute("src", infoTypePicSrc);
   bildirimBoxInner.append(infoTypePic);
 
@@ -323,7 +323,7 @@ function gFileInput(elem, size) {
       //resimleri card yap oluştur
       let card = document.createElement("img");
       card.setAttribute("title", file.name);
-      if (src) src = "/Assets/img/document_generic.png";
+      if (src) src = "./Assets/img/document_generic.png";
       else src = URL.createObjectURL(file);
       card.setAttribute("src", src);
 
@@ -860,7 +860,7 @@ function validateTcNo(tcNoStr, event) {
 
   //create and load script tag with name of the current page
   let pageScript = document.createElement("script");
-  pageScript.setAttribute("src", "/Assets/scripts/pages/" + page + ".js");
+  pageScript.setAttribute("src", "./Assets/scripts/pages/" + page + ".js");
   pageScript.setAttribute("type", "module");
   //append script to body
   document.body.append(pageScript);

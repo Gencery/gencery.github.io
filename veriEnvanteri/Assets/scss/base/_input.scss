@@ -66,7 +66,7 @@ input[type="file"] {
   }
   .sifreyiGoster {
     position: absolute;
-    content: url("/Assets/img/showPassword.svg");
+    content: url("./Assets/img/showPassword.svg");
     top: 20%;
     right: 2%;
     cursor: pointer;
@@ -95,7 +95,7 @@ input[type="file"] {
 }
 
 .searchIcon {
-  background-image: url("/Assets/img/arama.svg");
+  background-image: url("./Assets/img/arama.svg");
   background-repeat: no-repeat;
   background-position-x: 99%;
   background-position-y: center;

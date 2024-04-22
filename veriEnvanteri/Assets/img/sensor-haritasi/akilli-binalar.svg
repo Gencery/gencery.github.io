@@ -1,19 +1,19 @@
 <svg width="113" height="110" viewBox="0 0 113 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 75H93M28.1111 75V10.1111C28.1111 7.95991 28.9657 5.89682 30.4868 4.37569C32.0079 2.85456 34.071 2 36.2222 2H76.7778C78.929 2 80.9921 2.85456 82.5132 4.37569C84.0343 5.89682 84.8889 7.95991 84.8889 10.1111V75" stroke="#006FD1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20 75V85.9993C20 87.1039 19.1046 87.9993 18 87.9993H7.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"/>
-<path d="M93 75V85.5C93 86.6046 93.8954 87.5 95 87.5H105.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"/>
-<path d="M38.5 74.5V93.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"/>
-<path d="M57 75L57 97" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"/>
-<path d="M75.5 74.5V93.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"/>
-<rect x="39" y="12" width="9" height="10" rx="2" stroke="#006FD1" stroke-width="3"/>
-<rect x="66" y="12" width="9" height="10" rx="2" stroke="#006FD1" stroke-width="3"/>
-<rect x="39" y="33" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"/>
-<rect x="66" y="33" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"/>
-<rect x="39" y="53" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"/>
-<rect x="66" y="53" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"/>
-<circle cx="6" cy="87" r="4" fill="white" stroke="#006FD1" stroke-width="3"/>
-<circle cx="107" cy="87" r="4" fill="white" stroke="#006FD1" stroke-width="3"/>
-<circle cx="38" cy="93" r="4" fill="white" stroke="#006FD1" stroke-width="3"/>
-<circle cx="76" cy="93" r="4" fill="white" stroke="#006FD1" stroke-width="3"/>
-<circle cx="57" cy="102" r="6" fill="white" stroke="#006FD1" stroke-width="3"/>
+<path d="M20 75H93M28.1111 75V10.1111C28.1111 7.95991 28.9657 5.89682 30.4868 4.37569C32.0079 2.85456 34.071 2 36.2222 2H76.7778C78.929 2 80.9921 2.85456 82.5132 4.37569C84.0343 5.89682 84.8889 7.95991 84.8889 10.1111V75" stroke="#006FD1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"./>
+<path d="M20 75V85.9993C20 87.1039 19.1046 87.9993 18 87.9993H7.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"./>
+<path d="M93 75V85.5C93 86.6046 93.8954 87.5 95 87.5H105.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"./>
+<path d="M38.5 74.5V93.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"./>
+<path d="M57 75L57 97" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"./>
+<path d="M75.5 74.5V93.5" stroke="#006FD1" stroke-width="3" stroke-linejoin="round"./>
+<rect x="39" y="12" width="9" height="10" rx="2" stroke="#006FD1" stroke-width="3"./>
+<rect x="66" y="12" width="9" height="10" rx="2" stroke="#006FD1" stroke-width="3"./>
+<rect x="39" y="33" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"./>
+<rect x="66" y="33" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"./>
+<rect x="39" y="53" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"./>
+<rect x="66" y="53" width="9" height="10" rx="2" fill="white" stroke="#006FD1" stroke-width="3"./>
+<circle cx="6" cy="87" r="4" fill="white" stroke="#006FD1" stroke-width="3"./>
+<circle cx="107" cy="87" r="4" fill="white" stroke="#006FD1" stroke-width="3"./>
+<circle cx="38" cy="93" r="4" fill="white" stroke="#006FD1" stroke-width="3"./>
+<circle cx="76" cy="93" r="4" fill="white" stroke="#006FD1" stroke-width="3"./>
+<circle cx="57" cy="102" r="6" fill="white" stroke="#006FD1" stroke-width="3"./>
 </svg>
