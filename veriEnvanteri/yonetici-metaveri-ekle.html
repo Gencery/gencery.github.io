@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div data-page="" class="dynamic">
+        <h2 class="title-1 m-25-t">Meta Veri Ekle</h2>
+        <form action="" class="bg2 p-10 m-25-t br10 form2">
+          <!--form-->
+          <div class="formContainer m-l-0 m-25-t">
+            <!--Kategori-->
+            <div class="inputGroup">
+              <span class="clr1">Kategori<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value="0">Tarım</option>
+                <option value="1">Yaşam</option>
+              </select>
+            </div>
+            <!--Organizasyon-->
+            <div class="inputGroup">
+              <span class="clr1">Organizasyon<b class="clr2"></b></span>
+              <p class="disabled">İzmir Teknoloji</p>
+            </div>
+            <!--Birim-->
+            <div class="inputGroup">
+              <span class="clr1">Birim<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value="0">Yazılım Birimi</option>
+                <option value="1">Dizayn Birimi</option>
+              </select>
+            </div>
+            <!--Süreç-->
+            <div class="inputGroup">
+              <span class="clr1">Süreç<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value="0">Süreç 1</option>
+                <option value="1">Süreç 2</option>
+              </select>
+            </div>
+            <!--İrtibat Kişisi-->
+            <div class="inputGroup">
+              <span class="clr1">İrtibat Kişisi<b class="clr2"></b></span>
+              <p class="disabled">Ekin Can Akın</p>
+            </div>
+            <!--placeholder-->
+            <div class="inputGroup"></div>
+            <!--Proje Kapsamı-->
+            <div class="inputGroup">
+              <span class="clr1">Proje Kapsamı<b class="clr2">*</b></span>
+              <textarea
+                required
+                name=""
+                placeholder="Bu veri hangi projeler kapsamında toplanıyor, virgülle ayırınız."
+                class="textarea"
+              ></textarea>
+            </div>
+            <!--Başlık-->
+            <div class="inputGroup">
+              <span class="clr1">Başlık<b class="clr2">*</b></span>
+              <input required placeholder="" name="" class="input" />
+            </div>
+            <!--Açıklama-->
+            <div class="inputGroup">
+              <span class="clr1">Açıklama<b class="clr2">*</b></span>
+              <textarea required name="" id="" class="textarea"></textarea>
+            </div>
+            <!--Verinin içinde neler var?-->
+            <div class="inputGroup">
+              <span class="clr1">Verinin içinde neler var?<b class="clr2">*</b></span>
+              <textarea
+                required
+                name=""
+                id=""
+                class="textarea"
+                placeholder="Virgülle ayırarak etiket giriniz."
+              ></textarea>
+            </div>
+            <!--Kişisel veri içeriyor mu?-->
+            <div class="inputGroup">
+              <span class="clr1">Kişisel veri içeriyor mu?</span>
+              <label for="" class="checkboxGroup">
+                <input name="" class="input" type="checkbox" />
+                <span class="clr-success bold checked">Evet</span>
+                <span class="clr1 bold unchecked">Hayır</span>
+              </label>
+            </div>
+
+            <!--Kamu Erişim Düzeyi-->
+            <div class="inputGroup">
+              <span class="clr1">Kamu Erişim Düzeyi<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value="0">Halka Açık</option>
+                <option value="1">Kurum İçi - Açık</option>
+                <option value="2">Kurum İçi - Sınırlı</option>
+                <option value="3">Kamu Kurumlarına - Açık</option>
+                <option value="4">Kamu Kurumlarına - Sınırlı</option>
+                <option value="5">Gizli (Hassas)</option>
+              </select>
+            </div>
+            <!--Bakımcı-->
+            <div class="inputGroup">
+              <span class="clr1">Bakımcı<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value="0">Ekin Can Akın</option>
+                <option value="1">Ekin Can Akıncı</option>
+              </select>
+            </div>
+            <!--Eklemek istediğiniz notlar-->
+            <div class="inputGroup">
+              <span class="clr1">Eklemek istediğiniz notlar<b class="clr2">*</b></span>
+              <textarea required name="" id="" class="textarea" placeholder=""></textarea>
+            </div>
+            <!--Veri güncelleme sıklığı-->
+            <div class="inputGroup">
+              <span class="clr1">Veri güncelleme sıklığı<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value="0">Saatlik</option>
+                <option value="1">Günlük</option>
+                <option value="2">Aylık</option>
+                <option value="3">Yıllık</option>
+              </select>
+            </div>
+            <!--Verinin ilk oluşturulma tarihi-->
+            <div class="inputGroup">
+              <span class="clr1">Verinin ilk oluşturulma tarihi<b class="clr2">*</b></span>
+              <input type="date" required placeholder="" name="" class="input" />
+            </div>
+            <!--Veri Tarih Aralığı-->
+            <div class="inputGroup">
+              <span class="clr1">Veri Tarih Aralığı<b class="clr2">*</b></span>
+              <span class="clr2 bold fs-15">Başlangıç</span>
+              <input type="date" required placeholder="" name="" class="input" />
+              <span class="clr2 bold fs-15">Bitiş</span>
+              <input type="date" required placeholder="" name="" class="input" />
+            </div>
+            <!--placeholder-->
+            <div class="inputGroup"></div>
+            <!--Coğrafi veri içeriyor mu?-->
+            <div class="inputGroup">
+              <span class="clr1">Coğrafi veri içeriyor mu?</span>
+              <label for="" class="checkboxGroup">
+                <input name="" class="input" type="checkbox" />
+                <span class="clr-success bold checked">Evet</span>
+                <span class="clr1 bold unchecked">Hayır</span>
+              </label>
+            </div>
+            <!--Verinin Dili-->
+            <div class="inputGroup">
+              <span class="clr1">Verinin Dili<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value="0" selected>Türkçe</option>
+                <option value="1">English</option>
+              </select>
+            </div>
+            <!--Versiyon-->
+            <input required placeholder="" name="" class="input" hidden />
+          </div>
+          <div class="buttonGroup m-50-t">
+            <button class="btn-2 btn-arrow m-0 mlauto" type="submit">Sonraki Adım</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+    <script></script>
+  </body>
+</html>

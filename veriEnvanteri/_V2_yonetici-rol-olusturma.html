@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div data-page="" class="dynamic">
+        <h2 class="title-1 m-25-t">Rol Oluşturma</h2>
+        <!--Nav-->
+        <div class="gflex m-25-t">
+          <a href="./_V2_yonetici-rolTanimlari.html" class="btn-3-passive">Rol Tanımları</a>
+          <a href="./_V2_yonetici-veriKaynagiFormatlari.html" class="btn-3-passive"
+            >Veri Kaynağı Formatları</a
+          >
+          <a href="./_V2_yonetici-veriNasilToplaniyor.html" class="btn-3-passive"
+            >Veri Nasıl Toplanıyor
+          </a>
+          <a href="./_V2_yonetici-veriNeredeTutuluyor.html" class="btn-3-passive"
+            >Veri Nerede Tutuluyor?</a
+          >
+        </div>
+        <form action="" class="bg2 p-10 m-25-t br10 form2">
+          <div class="formContainer m-l-0 m-25-t">
+            <!--Rol Adı-->
+            <div class="inputGroup">
+              <span class="clr1">Rol Adı<b class="clr2">*</b></span>
+              <input required type="text" name="ROL_ADI" class="input" />
+            </div>
+            <!--Rol Kısa Adı-->
+            <div class="inputGroup">
+              <span class="clr1">Rol Kısa Adı<b class="clr2">*</b></span>
+              <input required type="text" name="ROL_KISA_ADI" class="input" />
+            </div>
+            <!--Sorumluluk Alanı-->
+            <div class="inputGroup">
+              <span class="clr1">Sorumluluk Alanı<b class="clr2">*</b></span>
+              <select required class="select2" name="">
+                <option value=""></option>
+                <option value="0">Tüm kurumlar</option>
+                <option value="1">Kurumundaki tüm birimler</option>
+                <option value="2">Kendi birimi</option>
+              </select>
+            </div>
+          </div>
+          <div class="table2">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <h4 class="m-5 textAlignLeft">Sayfalar</h4>
+                  </th>
+                  <th>
+                    <h4 class="m-5">Okuma</h4>
+                  </th>
+                  <th>
+                    <h4 class="m-5">Ekleme</h4>
+                  </th>
+                  <th>
+                    <h4 class="m-5">Düzenleme</h4>
+                  </th>
+                  <th>
+                    <h4 class="m-5">Silme</h4>
+                  </th>
+                  <th>
+                    <h4 class="m-5">Onaylama</h4>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--Kullanıcı İşlemleri-->
+                <tr>
+                  <td>
+                    <div>
+                      <p class="m-5 bold">Kullanıcı İşlemleri</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <input class="block mauto" type="checkbox" />
+                    </div>
+                  </td>
+
+                  <td>
+                    <div><input class="block mauto" type="checkbox" /></div>
+                  </td>
+
+                  <td>
+                    <div><input class="block mauto" type="checkbox" /></div>
+                  </td>
+
+                  <td>
+                    <div>
+                      <input class="block mauto" type="checkbox" />
+                    </div>
+                  </td>
+
+                  <td>
+                    <div>
+                      <input class="block mauto" type="checkbox" />
+                    </div>
+                  </td>
+                </tr>
+                <!--Meta Veri İşlemleri-->
+                <tr>
+                  <td>
+                    <div>
+                      <p class="m-5 bold">Meta Veri İşlemleri</p>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <input class="block mauto" type="checkbox" />
+                    </div>
+                  </td>
+
+                  <td>
+                    <div><input class="block mauto" type="checkbox" /></div>
+                  </td>
+
+                  <td>
+                    <div><input class="block mauto" type="checkbox" /></div>
+                  </td>
+
+                  <td>
+                    <div>
+                      <input class="block mauto" type="checkbox" />
+                    </div>
+                  </td>
+
+                  <td>
+                    <div>
+                      <input class="block mauto" type="checkbox" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="m-50-t m-50-b">
+            <button class="btn-2 btn-arrow toRight" type="submit">Rol Ekle</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+    <script></script>
+  </body>
+</html>

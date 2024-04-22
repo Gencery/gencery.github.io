@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div data-page="" class="dynamic">
+        <h2 class="title-1 m-25-t">Site İşlemleri</h2>
+        <!--Nav-->
+        <div class="gflex m-25-t">
+          <a href="./yonetici-kullanici-listesi.html" class="btn-3-passive">Kullanıcı Listesi</a>
+          <a href="./yonetici-kategori-listesi.html" class="btn-3-passive">Kategori Listesi</a>
+          <a href="./yonetici-organizasyon-listesi.html" class="btn-3-passive"
+            >Organizasyon Listesi</a
+          >
+          <a href="./yonetici-birim-listesi.html" class="btn-3-passive">Birim Listesi</a>
+          <a href="./yonetici-rol-listesi.html" class="btn-3-active">Rol Listesi</a>
+          <a href="./yonetici-istek-oneri-listesi.html" class="btn-3-passive"
+            >İstek ve Öneri Listesi</a
+          >
+        </div>
+        <!--Kategori Sayısı-->
+        <div class="m-25-t">
+          <span class="clr3"><b>1568</b> adet rol bulundu.</span>
+        </div>
+        <!--Rol Ekle-->
+        <div class="m-5-t">
+          <a href="./yonetici-rol-olusturma.html" class="btn-3-passive btn-plus toRight"
+            >Rol ekle</a
+          >
+        </div>
+        <!--Rol Listesi Container-->
+        <div
+          class="container cardContainer bgTransparent gPaginationFS kullaniciListesi m-25-t"
+          data-itemsPerPage="12"
+        >
+          <!--Rol kartı-->
+          <div class="card">
+            <!--Kategori Adı-->
+            <h3 class="title-2 p-10">VG</h3>
+            <h3 class="title-2 p-10">(Veri Görevlisi)</h3>
+            <!--Button container-->
+            <div class="buttonContainer">
+              <a class="btn-3-passive" href="./yonetici-rol-guncelleme.html">
+                <img class="icon" src="./Assets/img/edit.svg" alt="" />
+              </a>
+              <a class="btn-3-passive" href="/api/rolAktif&id=6">
+                <img class="icon" src="./Assets/img/circleEmpty.svg" alt="" />
+              </a>
+              <a
+                onclick="msgBoxConfirm(event,'Rolü silmek istediğinize emin misiniz?')"
+                class="btn-3-passive"
+                href="/api/rolsil&id=6"
+              >
+                <img class="icon" src="./Assets/img/cross.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <!--Rol kartı-->
+          <div class="card">
+            <!--Kategori Adı-->
+            <h3 class="title-2 p-10">VK</h3>
+            <h3 class="title-2 p-10">(Veri Koordinatörü)</h3>
+            <!--Button container-->
+            <div class="buttonContainer">
+              <a class="btn-3-passive" href="/api/rolDuzenle&id=6">
+                <img class="icon" src="./Assets/img/edit.svg" alt="" />
+              </a>
+              <a class="btn-3-passive" href="/api/rolAktif&id=6">
+                <img class="icon" src="./Assets/img/circleFilledGreen.svg" alt="" />
+              </a>
+              <a
+                onclick="msgBoxConfirm(event,'Rolü silmek istediğinize emin misiniz?')"
+                class="btn-3-passive"
+                href="/api/rolsil&id=6"
+              >
+                <img class="icon" src="./Assets/img/cross.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div data-page="" class="dynamic">
+        <!--Veri Kaynağı Adı-->
+        <h2 class="title-1 m-25-t">Bademsu Fabrikası Üretim Verileri</h2>
+
+        <!--Veri Kaynağı Düzenle-->
+        <div class="m-5-t m-25-b">
+          <a href="./yonetici-veriKaynagi-ekle.html" class="btn-1 btn-edit toRight"
+            >Veri Kaynağı Düzenle</a
+          >
+        </div>
+        <!--Veri Kaynağı-->
+        <div class="wrap divideChildren">
+          <!--Açıklama-->
+          <div class="w-65 w-s-100 container boxShadow m-25-b">
+            <!--Açıklama-->
+            <div class="clr1 p-5">
+              <p>
+                Bademsu damacana ve bardak su üretim fabrikamız, tarihi dokusu ve yeraltı su
+                zenginlikleri ile turizm cenneti olan Ödemiş Bademli’de üretimini
+                gerçekleştirmektedir. Tesisimize su sağlayan kaynaklar, tüm insani ve çevresel
+                kirlilikten uzak dağ eteklerinde bulunmaktadır. İzmir halkının beğenerek kullanmakta
+                olduğu Bademsu, gereken tüm hijyenik ve teknik gereklilikler yerine getirilerek
+                kapte (kaptaj) edilmektedir.
+              </p>
+              <p>
+                Kaynağında kapte edilen su, gıdaya ugun borular kullanılarak oluşturulmuş isale
+                hattı ile hiçbir dış etkene maruz kalmadan tamamen dış ortamdan izole edilmiş
+                olarak, girişinde gerekli tüm analizlerin yapılabileceği otomasyon sistemi
+                kontrolünde depolarımızda toplanmaktadır. Avrupa Birliği Direktiflerinde ve İnsani
+                Tüketim Amaçlı Sular Hakkında Yönetmelikte belirtilen sağlık kriterlerine uygun
+                olarak, kaynağından tüketiciye kadar kalite standartlarının korunabilmesi amacı ile
+                tamamen modern otomasyon sistemleri kullanılarak dolumu yapılan 19 litrelik damacana
+                ve 200 ml bardak su üretilerek Grand Plaza tecrübesi ile İzmirlilerin sofrasında
+                yerini almaktadır.
+              </p>
+            </div>
+          </div>
+          <!--Özellikler / lokasyon buton -->
+          <div class="w-33 w-s-100 flex-col w-100Child">
+            <!--Özellikler-->
+            <div class="container-p0 fs-14 flex textAlignCenter m-15-b ai-center p-5-t p-5-b">
+              <!--Nasıl Toplanıyor-->
+              <td>
+                <div class="container flex-col clr2 textAlignCenter w-150px">
+                  <span>
+                    <img src="./Assets/img/drawer-closed.svg" alt="" />
+                  </span>
+                  <p class="bold">Form olarak toplanıyor.</p>
+                </div>
+              </td>
+              <!--Nasıl Tutuluyor-->
+              <td>
+                <div class="container flex-col clr2 textAlignCenter w-150px">
+                  <span>
+                    <img src="./Assets/img/drawer-open.svg" alt="" />
+                  </span>
+                  <p class="bold">Veritabanında tutuluyor.</p>
+                </div>
+              </td>
+            </div>
+            <!--Veri kaynağı lokasyonuna git-->
+            <a href="" class="btn-1 btn-arrow">Veri Kaynağının Belirtildiği Lokasyona Git</a>
+          </div>
+        </div>
+        <!--Ek Veriler-->
+        <h3 class="title-1 m-100-t m-25-b">Ek Veriler</h3>
+        <div class="wrap divideChildren">
+          <!--Kaynak / Yazan / Bakımcı-->
+          <table class="table w-49">
+            <thead>
+              <tr>
+                <th><span>Alan</span></th>
+                <th><span>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--Kaynak-->
+              <tr class="opacOnHover fgrow">
+                <td>
+                  <div class="container">
+                    <span class="clr2 bold">Kaynak</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container">
+                    <a
+                      class="noDecorationLink toRight w-100"
+                      href="https://acikveri.bizizmir.com/dataset/bademsu-fabrikasi-uretim-verileri"
+                      >https://acikveri.bizizmir.com/dataset/bademsu-fabrikasi-uretim-verileri</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <!--Yazan-->
+              <tr class="opacOnHover fgrow">
+                <td>
+                  <div class="container">
+                    <span class="clr2 bold">Yazan</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container">
+                    <span class="clr1">Grand Plaza Müdürlüğü</span>
+                  </div>
+                </td>
+              </tr>
+              <!--Bakımcı-->
+              <tr class="opacOnHover fgrow">
+                <td>
+                  <div class="container">
+                    <span class="clr2 bold">Bakımcı</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container">
+                    <span class="clr1">Grand Plaza Müdürlüğü</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--Son Güncelleme Tarihi / Oluşturma Tarihi / Dil-->
+          <table class="table w-49">
+            <thead>
+              <tr>
+                <th><span>Alan</span></th>
+                <th><span>Değer</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="opacOnHover fgrow">
+                <td>
+                  <div class="container">
+                    <span class="clr2 bold">Son Güncelleme Tarihi</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container">
+                    <span class="clr1">21 Mart 2023, 10:01 (UTC+03:00)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="opacOnHover fgrow">
+                <td>
+                  <div class="container">
+                    <span class="clr2 bold">Oluşturma Tarihi</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container">
+                    <span class="clr1">1 Aralık 2022, 12:39 (UTC+03:00)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="opacOnHover fgrow">
+                <td>
+                  <div class="container">
+                    <span class="clr2 bold">Dil</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="container">
+                    <span class="clr1">Türkçe, English</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Veri Kaynakları-->
+        <h3 class="title-1 m-100-t m-25-b">
+          <span>Veri Sözlüğü</span>
+        </h3>
+        <!--Meta Veri Sayısı-->
+        <div class="m-25-t">
+          <span class="clr3"><b>1568</b> adet veri sözlüğü bulundu.</span>
+        </div>
+        <!--Meta Veri Düzenle-->
+        <div class="m-5-t m-25-b flex w-fit toRight divideChildren">
+          <a href="./yonetici-verisozlugune-ekle.html" class="btn-1 btn-plus m-15-r"
+            >Veri Sözlüğü Ekle</a
+          >
+          <a href="" class="btn-2">Tümünü Gör</a>
+        </div>
+        <div
+          class="container cardContainer bgTransparent gPaginationFS kullaniciListesi m-25-t"
+          data-itemsPerPage="12"
+        >
+          <!--Veri Sözlüğü kartı-->
+          <div class="card">
+            <!--Tarih-->
+            <p class="fs-16 m-10 mlauto">16 Mayıs 2023</p>
+            <!--Veri Tipi-->
+            <p class="clr2 m-10 underline">Veri Tipi</p>
+            <!--Başlık-->
+            <h4 class="title-2 m-10 textJustify capitalize">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua
+            </h4>
+            <!--Açıklama-->
+            <div class="m-10 overflow-y-auto maxh-125px p-5 boxShadow">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <div class="m-5 flex jc-center showOnHover">
+              <a title="Düzenle" href="verikaynagiDuzenle?id=1506" class="btn-1-fit m-5"
+                ><span class="icon-edit"></span
+              ></a>
+              <a
+                title="Sil"
+                href="verisozlugusil?id=1506"
+                class="btn-1-fit m-5"
+                onclick="msgBoxConfirm(event,'Veri sözlüğünü silmek istediğinize emin misiniz?')"
+                ><span class="btn-cross"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+  </body>
+</html>

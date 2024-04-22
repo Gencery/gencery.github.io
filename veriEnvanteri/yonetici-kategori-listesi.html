@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div data-page="" class="dynamic">
+        <h2 class="title-1 m-25-t">Site İşlemleri</h2>
+        <!--Nav-->
+        <div class="gflex m-25-t">
+          <a href="./yonetici-kullanici-listesi.html" class="btn-3-passive">Kullanıcı Listesi</a>
+          <a href="./yonetici-kategori-listesi.html" class="btn-3-active">Kategori Listesi</a>
+          <a href="./yonetici-organizasyon-listesi.html" class="btn-3-passive"
+            >Organizasyon Listesi</a
+          >
+          <a href="./yonetici-birim-listesi.html" class="btn-3-passive">Birim Listesi</a>
+          <a href="./yonetici-rol-listesi.html" class="btn-3-passive">Rol Listesi</a>
+          <a href="./yonetici-istek-oneri-listesi.html" class="btn-3-passive"
+            >İstek ve Öneri Listesi</a
+          >
+        </div>
+        <!--Kategori Sayısı-->
+        <div class="m-25-t">
+          <span class="clr3"><b>1568</b> adet kategori bulundu.</span>
+        </div>
+        <!--Kategori Ekle-->
+        <div class="m-5-t">
+          <a href="yonetici-kategori-olusturma.html" class="btn-3-passive btn-plus toRight"
+            >Kategori ekle</a
+          >
+        </div>
+        <!--Kullanıcı Listesi Container-->
+        <div
+          class="container cardContainer bgTransparent gPaginationFS kullaniciListesi m-25-t"
+          data-itemsPerPage="12"
+        >
+          <!--Kategori kartı-->
+          <div class="card">
+            <!--Kategori Adı-->
+            <h3 class="title-2 p-10" data-filter="Kategori adı...">Yaşam Kategorisi</h3>
+            <!--Logosu-->
+            <div class="picContainer h-100px w-100px">
+              <img src="./Assets/img/kategoriler/yasam.svg" alt="yaşam kategorisi logo" />
+            </div>
+            <!--Button container-->
+            <div class="buttonContainer">
+              <a class="btn-3-passive" href="./yonetici-kategori-guncelleme.html">
+                <span class="optionName">Düzenle</span>
+                <img class="icon" src="./Assets/img/edit.svg" alt="" />
+              </a>
+              <a class="btn-3-passive" href="/api/kategoriAktif&id=6">
+                <span class="optionName">Pasif</span>
+                <img class="icon" src="./Assets/img/circleEmpty.svg" alt="" />
+              </a>
+              <a
+                onclick="msgBoxConfirm(event,'Kategoriyi silmek istediğinize emin misiniz?')"
+                class="btn-3-passive"
+                href="/api/kategorisil&id=6"
+              >
+                <span class="optionName">Sil</span>
+                <img class="icon" src="./Assets/img/cross.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <!--Kategori kartı-->
+          <div class="card">
+            <!--Kategori Adı-->
+            <h3 class="title-2 p-10" data-filter="Kategori adı...">Tarım Kategorisi</h3>
+            <!--Button container-->
+            <div class="buttonContainer">
+              <a class="btn-3-passive" href="/api/kategoriDuzenle&id=6">
+                <span class="optionName">Düzenle</span>
+                <img class="icon" src="./Assets/img/edit.svg" alt="" />
+              </a>
+              <a class="btn-3-passive" href="/api/kategoriAktif&id=6">
+                <span class="optionName">Aktif</span>
+                <img class="icon" src="./Assets/img/circleFilledGreen.svg" alt="" />
+              </a>
+              <a
+                onclick="msgBoxConfirm(event,'Kategoriyi silmek istediğinize emin misiniz?')"
+                class="btn-3-passive"
+                href="/api/kategorisil&id=6"
+              >
+                <span class="optionName">Sil</span>
+                <img class="icon" src="./Assets/img/cross.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+  </body>
+</html>

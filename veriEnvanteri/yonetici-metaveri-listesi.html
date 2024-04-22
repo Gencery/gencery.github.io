@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div data-page="metaVeriListesi" class="dynamic">
+        <!--Meta veri reddetme formu-->
+        <div class="gPopup" id="metaVeriReddetFormPopup">
+          <div class="gPopup-inner container">
+            <!--Pencere kapat Butonu-->
+            <div class="">
+              <span class="icon-deny toRight block gPopup-closeButton"></span>
+            </div>
+            <!--Meta Veri Red Formu-->
+            <form action="" class="form1">
+              <!--kullanıcı herhangi bir metaveri reddet butonuna tıkladığında, o metaverinin id'si asagidaki inputa value olarak atılır (metaVeriListesi.js)-->
+              <!--Reddedilen Meta Veri Id no-->
+              <input type="text" name="META_VERI_ID" hidden class="metaVeriIdInput" />
+              <!--Reddetme Nedeni-->
+              <div class="inputGroup">
+                <span class="clr-danger">Reddetme Nedeni</span>
+                <textarea class="textarea" required></textarea>
+              </div>
+              <!--Reddet Butonu-->
+              <div>
+                <button class="btn btn-danger-active btn-arrow border1red toRight">Gönder</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="gPopup-exit"></div>
+        </div>
+
+        <h2 class="title-1 m-25-t">Meta Veriler</h2>
+
+        <!--Meta Veri Sayısı-->
+        <div class="m-25-t">
+          <span class="clr3"><b>1568</b> adet meta veri içeriği bulundu.</span>
+        </div>
+        <!--Meta Veri Ekle-->
+        <div class="m-5-t m-25-b">
+          <a href="yonetici-kategori-olusturma.html" class="btn-3-passive btn-plus toRight"
+            >Meta Veri Ekle</a
+          >
+        </div>
+        <!--Meta Veri Listesi Container-->
+        <div class="gPaginationFS m-0 w-100" data-itemsPerPage="12">
+          <div class="tableContainer">
+            <table class="table w-99">
+              <thead>
+                <tr>
+                  <th><span>Organizasyon Birim</span></th>
+                  <th><span>Kategori</span></th>
+                  <th><span>Başlık</span></th>
+                  <th><span></span></th>
+                  <th><span></span></th>
+                  <th><span></span></th>
+                  <th><span></span></th>
+                  <th><span></span></th>
+                  <th><span></span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="opacOnHover">
+                  <!--Organizasyon - Birim-->
+                  <td>
+                    <div class="container">
+                      <!--Şirket bilgileri-->
+                      <div class="p-5 maxw-150px">
+                        <div class="picContainer maxw-70px m-5 mauto">
+                          <img src="./Assets/img/ibbLogo.svg" alt="" />
+                        </div>
+                        <hr />
+                        <div class="sirketBirimAdi m-0">
+                          <!--Şirket Adı-->
+                          <h3
+                            data-maxChar="17"
+                            title="İzmir Büyükşehir Belediyesi"
+                            class="clr1 whiteSpaceNoWrap fs-18 textAlignCenter"
+                          >
+                            İBB
+                          </h3>
+                          <!--Birim Adı-->
+                          <h4
+                            data-maxChar="17"
+                            title="Yazılım Birimi"
+                            class="clr2 whiteSpaceNoWrap fs-16 textAlignCenter"
+                          >
+                            Yazılım Birimi
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <!--Kategori-->
+                  <td>
+                    <div class="container minw-150px">
+                      <span class="clr2 textAlignCenter bold" data-maxChar="40"
+                        >Otobüs Durak Veri Setine Dair Kelime Grubu Başlık</span
+                      >
+                    </div>
+                  </td>
+                  <!--Başlık-->
+                  <td>
+                    <div class="container minw-150px">
+                      <span class="clr2 bold textAlignCenter" data-maxChar="40">
+                        Otobüs Durak Veri Seti
+                      </span>
+                    </div>
+                  </td>
+                  <!--Güncelleme Sıklığı-->
+                  <td>
+                    <div class="container clr-info flex-col textAlignCenter">
+                      <span class="icon-clock"></span>
+                      <p class="bold">Aylık Güncelleme</p>
+                    </div>
+                  </td>
+                  <!--Kişisel Veri-->
+                  <td>
+                    <div class="container clr-success flex-col textAlignCenter">
+                      <span class="icon-ok"></span>
+                      <p class="bold">Kişisel veri içeriyor</p>
+                    </div>
+                  </td>
+                  <!--Coğrafi Veri-->
+                  <td>
+                    <div class="container flex-col textAlignCenter">
+                      <span class="icon-deny m-5"></span>
+                      <p class="clr-danger bold">Coğrafi veri içermiyor</p>
+                    </div>
+                  </td>
+                  <!--UBY Onayı-->
+                  <td>
+                    <div class="container flex-col textAlignCenter">
+                      <span class="icon-wait m-5"></span>
+                      <p class="clr-info bold">UBY onayı bekleniyor</p>
+                    </div>
+                  </td>
+                  <!--Detay-->
+                  <td>
+                    <div class="container">
+                      <a class="btn-2 whiteSpaceNoWrap" href="./yonetici-metaveri-detay.html"
+                        >Detayını Gör</a
+                      >
+                    </div>
+                  </td>
+                  <!--Onayla / Reddet-->
+                  <td>
+                    <div class="m-5 flex jc-center container">
+                      <div class="showOnHover">
+                        <a title="Onayla" href="onayla?id=1506" class="btn-1-fit m-5"
+                          ><span class="icon-check"></span
+                        ></a>
+                        <button title="Reddet" class="btn-1-fit m-5" data-metaVeriReddetId="1506">
+                          <span class="icon-cross"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="opacOnHover">
+                  <!--Organizasyon - Birim-->
+                  <td>
+                    <div class="container">
+                      <!--Şirket bilgileri-->
+                      <div class="p-5 maxw-150px">
+                        <div class="picContainer maxw-70px m-5 mauto">
+                          <img src="./Assets/img/sirketLogo.svg" alt="" />
+                        </div>
+                        <hr />
+                        <div class="sirketBirimAdi m-0">
+                          <!--Şirket Adı-->
+                          <h3
+                            data-maxChar="17"
+                            title="İzmir Teknoloji"
+                            class="clr1 whiteSpaceNoWrap fs-17 textAlignCenter"
+                          >
+                            İzmir Teknoloji
+                          </h3>
+                          <!--Birim Adı-->
+                          <h4
+                            data-maxChar="17"
+                            title="Yazılım Birimi"
+                            class="clr2 whiteSpaceNoWrap fs-15 textAlignCenter"
+                          >
+                            Yazılım Birimi
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <!--Kategori-->
+                  <td>
+                    <div class="container minw-150px">
+                      <span class="clr2 textAlignCenter bold" data-maxChar="40"
+                        >Otobüs Durak Veri Setine Dair Kelime Grubu Başlık</span
+                      >
+                    </div>
+                  </td>
+                  <!--Başlık-->
+                  <td>
+                    <div class="container minw-150px">
+                      <span class="clr2 bold textAlignCenter" data-maxChar="40">
+                        Otobüs Durak Veri Seti
+                      </span>
+                    </div>
+                  </td>
+                  <!--Güncelleme Sıklığı-->
+                  <td>
+                    <div class="container clr-info flex-col textAlignCenter">
+                      <span class="icon-clock"></span>
+                      <p class="bold">Yıllık Güncelleme</p>
+                    </div>
+                  </td>
+                  <!--Kişisel Veri-->
+                  <td>
+                    <div class="container clr-danger flex-col textAlignCenter">
+                      <span class="icon-deny"></span>
+                      <p class="bold">Kişisel veri içermiyor</p>
+                    </div>
+                  </td>
+                  <!--Coğrafi Veri-->
+                  <td>
+                    <div class="container flex-col textAlignCenter">
+                      <span class="icon-ok m-5"></span>
+                      <p class="clr-success bold">Coğrafi veri içeriyor</p>
+                    </div>
+                  </td>
+                  <!--UBY Onayı-->
+                  <td>
+                    <div class="container flex-col textAlignCenter">
+                      <span class=""></span>
+                      <p class="clr-success bold">Yayında</p>
+                    </div>
+                  </td>
+                  <!--Detay-->
+                  <td>
+                    <div class="container">
+                      <a class="btn-2 whiteSpaceNoWrap">Detayını Gör</a>
+                    </div>
+                  </td>
+                  <!--Onayla / Reddet-->
+                  <td>
+                    <div class="m-5 flex jc-center container">
+                      <div class="showOnHover">
+                        <a title="Onayla" href="onayla?id=1506" class="btn-1-fit m-5"
+                          ><span class="icon-check"></span
+                        ></a>
+                        <button
+                          title="Reddet"
+                          href="reddet?id=1506"
+                          class="btn-1-fit m-5"
+                          data-metaVeriReddetId="1507"
+                        >
+                          <span class="icon-cross"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+  </body>
+</html>

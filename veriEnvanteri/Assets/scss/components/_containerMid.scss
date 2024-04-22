@@ -1,0 +1,10 @@
+.containerMid {
+  max-width: 80vw;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  height: fit-content;
+  > * {
+    margin-bottom: 15px !important;
+  }
+}

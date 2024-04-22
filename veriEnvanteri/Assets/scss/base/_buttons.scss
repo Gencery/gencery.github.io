@@ -1,0 +1,174 @@
+.btn {
+  @extend .noDecorationLink;
+  padding: 13px 30px 13px 30px;
+  min-height: 45px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+  //tip-1
+  &-cross {
+    border: 1px solid red;
+  }
+  &-1 {
+    @extend .btn;
+    color: $clr2;
+    border: 2px solid $clr2;
+    background-color: $clr3;
+    box-shadow: 0 5px 10px -5px $clr1;
+  }
+  &-1-fit {
+    @extend .btn-1;
+    min-height: 40px;
+    max-height: 40px;
+    width: 40px;
+    padding: 0%;
+  }
+  &-1:hover {
+    background-color: $clr2;
+    color: $clr3;
+  }
+
+  //tip-2
+  &-2 {
+    @extend .btn;
+    background-color: $clr2;
+    color: $clr3;
+    border: 2px solid $clr2;
+    box-shadow: 0 5px 10px -5px $clr1;
+  }
+  &-2:hover {
+  }
+  &-arrow {
+    position: relative;
+    padding-left: 10px;
+  }
+
+  &-arrow::after {
+    content: "❯";
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    transition: right 500ms;
+  }
+  &-arrow:hover::after {
+    right: 5px;
+  }
+
+  &-plus {
+    position: relative;
+    padding-left: 10px;
+  }
+  &-plus::after {
+    content: "+";
+    font-size: 1.5rem;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+  }
+  &-edit {
+    position: relative;
+    padding-left: 10px;
+  }
+  &-edit::after {
+    content: "🖉";
+    position: absolute;
+    right: 3px;
+    top: 25%;
+    font-size: 1.25rem;
+  }
+
+  //tip-3
+  &-3 {
+    &-active {
+      @extend .btn;
+      background-color: $clr4;
+      color: $clr3;
+      border: 2px solid $clr4;
+    }
+    &-active:hover {
+      box-shadow: 0 5px 15px -5px $clr4;
+    }
+    &-passive {
+      @extend .btn;
+      background-color: $clr3;
+      color: $clr4;
+      border: 2px solid $clr4;
+    }
+    &-passive:hover {
+      box-shadow: 0 5px 15px -5px $clr4;
+      background-color: $clr4;
+      color: $clr3;
+      border: 2px solid $clr4;
+    }
+  }
+  //btn danger
+  &-danger {
+    &-active {
+      @extend .btn;
+      background-color: $clr-danger;
+      color: $clr3;
+      border: 2px solid $clr-danger;
+      box-shadow: 0 5px 10px -5px $clr1;
+    }
+    &-active:hover {
+      box-shadow: 0 5px 15px -5px $clr-danger;
+    }
+    &-passive {
+      @extend .btn;
+      background-color: $clr3;
+      color: $clr-danger;
+      border: 2px solid $clr-danger;
+      box-shadow: 0 5px 10px -5px $clr1;
+    }
+    &-passive:hover {
+      //box-shadow: 0 5px 15px -5px $clr-danger;
+      color: $clr3;
+      background-color: $clr-danger;
+    }
+  }
+  &-disabled {
+    @extend .btn;
+    border: 2px solid transparent;
+    color: $clr1;
+    user-select: none;
+    cursor: not-allowed;
+  }
+  &-transparent {
+    @extend .btn;
+    background-color: transparent;
+    color: $clr3;
+    border: 2px solid $clr3;
+  }
+  &-transparent:hover {
+    box-shadow: 0 5px 15px -5px $clr3;
+  }
+}
+
+.btn:hover {
+  box-shadow: 0 5px 15px -5px #333;
+  transition: box-shadow 200ms;
+}
+
+.btn-cross {
+  @extend .noDecorationButton;
+  @extend .noDecorationLink;
+  @extend .icon-cross;
+  @extend .circle;
+  border: none;
+  background: none;
+  font-size: 1.125rem;
+  cursor: pointer;
+  opacity: 0.75;
+  display: flex;
+}
+.btn-cross:hover {
+  transition: all 250ms;
+  opacity: 1;
+}

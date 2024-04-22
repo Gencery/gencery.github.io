@@ -1,0 +1,27 @@
+footer {
+  width: 100vw;
+  background-color: transparent;
+  z-index: 1;
+  .dynamic {
+    display: flex;
+    min-height: 135px;
+    align-items: center;
+    > * {
+      //border: 1px solid red;
+    }
+    .logoContainer {
+      margin-right: 1vw;
+      width: 11vw;
+      > img {
+        width: 100%;
+      }
+    }
+    .linksContainer {
+      > * {
+        //border: 1px solid red;
+        margin-right: 0%;
+        margin-left: 2%;
+      }
+    }
+  }
+}

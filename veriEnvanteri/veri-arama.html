@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="./Assets/img/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="./Assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./Assets/fonts/izmir/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/scss/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div data-page="" class="dynamic arama-sayfasi">
+        <h2 class="title-1 m-25-t">Arama Sonuçları</h2>
+        <!--Kullanıcı Sayısı / Yeni kullanıcı getir-->
+        <div class="m-25-t">
+          <span class="clr3 block"><b>1568</b> adet veri içeriği bulundu.</span>
+        </div>
+        <div class="wrap m-25-t">
+          <!--Filtreler-->
+          <div class="w-24 w-s-100 m-10-t">
+            <form action="">
+              <!--Nasıl Yardımcı Olabiliriz-->
+              <input
+                type="text"
+                class="input w-100 fs-16"
+                placeholder="Nasıl yardımcı olabiliriz?"
+              />
+              <!--Kategori Select-->
+              <div class="m-15-t">
+                <select class="select2 m-25-t w-100" name="" placeholder="Kategori seçiniz.">
+                  <option value=""></option>
+                  <option value="0">opt1</option>
+                  <option value="1">opt2</option>
+                </select>
+              </div>
+              <!--Birim Select-->
+              <div class="m-15-t">
+                <select class="select2 w-100 m-25-t" name="" placeholder="Birim Seçiniz.">
+                  <option value=""></option>
+                  <option value="0">opt1</option>
+                  <option value="1">opt2</option>
+                </select>
+              </div>
+              <!--Erişim Düzeyi Select-->
+              <div class="m-15-t">
+                <select class="select2 w-100 m-25-t" name="" placeholder="Erişim Düzeyini seçiniz.">
+                  <option value=""></option>
+                  <option value="0">opt1</option>
+                  <option value="1">opt2</option>
+                </select>
+              </div>
+              <!--Etiket Select-->
+              <div class="m-15-t">
+                <select
+                  multiple
+                  class="select2 w-100 m-25-t"
+                  name=""
+                  placeholder="Etiket belirtiniz."
+                >
+                  <option value="0">opt1</option>
+                  <option value="1">opt2</option>
+                </select>
+              </div>
+              <!--Kaynak ve Başlık filter-->
+              <input
+                type="text"
+                class="input w-100 m-15-t fs-16"
+                placeholder="Kaynak ve başlık..."
+              />
+              <!--Cografik Veri Filter-->
+              <input type="text" class="input w-100 m-15-t fs-16" placeholder="Coğrafik veri..." />
+              <!--Meta Veri Listesi-->
+              <input
+                type="text"
+                class="input w-100 m-15-t fs-16"
+                placeholder="Meta veri listesi..."
+              />
+              <!--Arama Butonu-->
+              <button class="btn-2 w-100 m-15-t">Arama Yap</button>
+            </form>
+          </div>
+          <!--Sonuç kartları-->
+          <div class="w-75 w-s-100">
+            <div
+              class="container bgTransparent gPaginationFS kullaniciListesi cardContainer2"
+              data-itemsPerPage="12"
+            >
+              <!--Veri kartı-->
+              <div class="card">
+                <!--Kısıt / Tarih-->
+                <div class="flex jc-spacebetween w-100 p-10">
+                  <!--Kısıt-->
+                  <span class="fs-14 clr2 underline m-0">Kamu Kurumlarına Sınırlı</span>
+                  <!--Tarih-->
+                  <span class="fs-14 m-0">16 Mayıs 2023</span>
+                </div>
+                <!--Başlık-->
+                <p class="clr2 bold m-10 textOverFlow3 maxLine-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do...
+                </p>
+                <!--Özet-->
+                <p class="clr5 fs-14 m-10 maxLine-3" data-maxChar="100">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna. incididunt ut labore et dolore...
+                </p>
+                <!--Şirket / birim / kullanıcı bilgileri-->
+                <div class="sirketBilgileri">
+                  <div class="sirketLogo">
+                    <img src="./Assets/img/sirketLogo.svg" alt="" />
+                  </div>
+                  <span class="divider"></span>
+                  <div class="sirketBirimAdi">
+                    <h3 class="clr1">Ekin Can Akın</h3>
+                    <h4 class="clr2">Yazılım Birimi</h4>
+                  </div>
+                </div>
+                <!--Detay Butonu-->
+                <a href="/veriler/id=1568" class="btn-2 m-10">Detayları Gör</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./Assets/scripts/main.js"></script>
+  </body>
+</html>
