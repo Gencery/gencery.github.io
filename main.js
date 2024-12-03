@@ -35,14 +35,14 @@ function listNextHours(lineNo) {
 	addDataToRow(tr, lineNo);
 	tableBody.append(tr);
 
-	fetch("./lines/" + lineNo + ".json")
+	fetch(`https://acikveri.bizizmir.com/tr/api/3/action/datastore_search?resource_id=c6fa6046-f755-47d7-b69e-db6bb06a8b5a&filters={"HAT_NO":"${lineNo}","TARIFE_ID":"1"}&fields=HAT_NO,TARIFE_ID,GIDIS_SAATI,DONUS_SAATI,SIRA`)
 		.then((res) => res.json())
 		.then((data) => {
 			if (!data) return;
 			if (!data[getDayPeriodName()]) return;
 
 			let nowHoursMins = now.toTimeString().slice(0, 5);
-			let nextExpeditionHours = data[getDayPeriodName()]
+			let nextExpeditionHours = data.result.records[getDayPeriodName()]
 				.map((hour) => hour.bwdHour)
 				.filter((hour) => hour >= nowHoursMins)
 				.slice(0, 2);
