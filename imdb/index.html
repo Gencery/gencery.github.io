@@ -22,12 +22,14 @@
 
       * {
         font-size: 1.25rem;
-        margin: 1vw;
-        padding: 1vw 2vw;
-        border-radius: 1vw;
+        margin: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
       }
 
-
+      button {
+        cursor: pointer;
+      }
 
       #searchGroup {
         padding: 2vw;
@@ -69,6 +71,10 @@
       }
 
       #results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
         >button {
           background: none;
           border: none;
@@ -76,6 +82,7 @@
           color: var(--btnColor);
           font-weight: bold;
           border: 1px solid var(--btnColor);
+          font-size: 1rem;
         }
       }
     }
