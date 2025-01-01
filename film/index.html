@@ -14,6 +14,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
@@ -28,7 +29,20 @@
       }
 
       button {
+        background: none;
+        border: none;
+        --btnColor: #fff;
+        color: var(--btnColor);
+        font-weight: bold;
+        border: 1px solid var(--btnColor);
+        font-size: 1rem;
+        box-shadow: 0px 5px 10px -2px orchid;
         cursor: pointer;
+      }
+
+      button:hover {
+        box-shadow: 0px 8px 10px -2px orchid;
+        transition: box-shadow 250ms;
       }
 
       #searchGroup {
@@ -37,36 +51,26 @@
         width: fit-content;
         margin: auto;
 
-        >* {
-          box-shadow: 0px 4px 15px -7px #ddd;
-        }
-
         >input {
           outline: none;
           border: none;
-        }
-
-        >button {
-          background: none;
-          background-image: linear-gradient(to bottom, purple, red, orangered);
-          border: none;
-          color: #fff;
-          font-weight: bold;
         }
       }
 
       #video {
 
-        box-shadow: 0px 4px 15px -7px #ddd;
+        box-shadow: 0px 4px 15px -2px #ddd;
         min-height: 0;
         padding: 0;
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 2vh;
 
         iframe {
-          display: block;
-          width: 50vw;
-          height: 25vw;
-          margin: auto;
           border: none;
+          width: 100%;
+          height: 40vw;
+          margin: auto;
         }
       }
 
@@ -81,21 +85,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
-        >button {
-          background: none;
-          border: none;
-          --btnColor: #fff;
-          color: var(--btnColor);
-          font-weight: bold;
-          border: 1px solid var(--btnColor);
-          font-size: 1rem;
-        }
-
-        >button:hover {
-          transform: scale(1.05);
-          transition: all 0.125s;
-        }
       }
     }
   </style>
