@@ -1,8 +1,14 @@
 function toGoogle(str) {
-  return str.split(" ").join("+");
+  return str.split(" ").join("+") + "movie+imdb";
+}
+
+function msg(msg) {
+  document.getElementById("msg").innerText = msg;
 }
 
 function search(query) {
+  msg("Aranıyor...");
+
   fetch(`https://api.cors.lol/?url=https://www.google.com/search?q=${encodeURIComponent(toGoogle(query))}`)
     .then(res => res.text())
     .then(data => {
@@ -11,11 +17,11 @@ function search(query) {
       if (results && results.length) {
         let id = results[0].slice(results[0].indexOf("tt") + 2,
           - 1);
-        document.getElementById("movieId").innerText = id;
+        msg(id);
         document.getElementById("video").setAttribute("src", `https://vidsrc.vc/embed/movie/tt${id}`)
       }
       else {
-        document.getElementById("movieId").innerText = "Bulunamadı :(";
+        msg("Bulunamadı :(");
       }
     });
 }

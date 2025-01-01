@@ -32,6 +32,10 @@
           padding: 1vw 2vw;
           border-radius: 1vw;
         }
+
+        >input {
+          outline: none;
+        }
       }
 
       #video {
@@ -57,7 +61,7 @@
     <input type="text" id="input" onkeyup="event.key == 'Enter'? search(input.value) : ''">
     <button onclick="search(input.value)">Ara</button>
   </div>
-  <p id="movieId"></p>
+  <p id="msg"></p>
   <iframe id="video" src=""></iframe>
   <script src="./main.js"></script>
 </body>
