@@ -20,6 +20,15 @@
       background-color: black;
       color: #ddd;
 
+      * {
+        font-size: 1.25rem;
+        margin: 1vw;
+        padding: 1vw 2vw;
+        border-radius: 1vw;
+      }
+
+
+
       #searchGroup {
         padding: 2vw;
         display: flex;
@@ -27,18 +36,24 @@
         margin: auto;
 
         >* {
-          font-size: 2vw;
-          margin: 1vw;
-          padding: 1vw 2vw;
-          border-radius: 1vw;
+          box-shadow: 0px 4px 15px -7px #ddd;
         }
 
         >input {
           outline: none;
+          border: none;
+        }
+
+        >button {
+          background: none;
+          background-image: linear-gradient(to bottom, purple, red, orangered);
+          border: none;
+          color: #fff;
+          font-weight: bold;
         }
       }
 
-      #video {
+      #video>iframe {
         display: block;
         width: 50vw;
         height: 25vw;
@@ -46,11 +61,22 @@
         border: none;
       }
 
-      p {
+      #msg {
         width: 50vw;
         margin: auto;
         font-size: 2rem;
         text-align: center;
+      }
+
+      #results {
+        >button {
+          background: none;
+          border: none;
+          --btnColor: #fff;
+          color: var(--btnColor);
+          font-weight: bold;
+          border: 1px solid var(--btnColor);
+        }
       }
     }
   </style>
@@ -58,11 +84,15 @@
 
 <body>
   <div id="searchGroup">
-    <input type="text" id="input" onkeyup="event.key == 'Enter'? search(input.value) : ''">
+    <input type="text" id="input" onkeyup="event.key == 'Enter'? search(input.value) : ''" list="films">
+
     <button onclick="search(input.value)">Ara</button>
   </div>
   <p id="msg"></p>
-  <iframe id="video" src=""></iframe>
+  <div id="results"></div>
+  <div id="video">
+
+  </div>
   <script src="./main.js"></script>
 </body>
 
