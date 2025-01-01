@@ -24,6 +24,7 @@ function loadMovie(movieId) {
 }
 
 function search(query) {
+  if (!query) return
   video.innerHTML = "";
   msg("Aranıyor...");
 

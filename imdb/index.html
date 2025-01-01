@@ -22,9 +22,9 @@
 
       * {
         font-size: 1.25rem;
-        margin: 1rem;
-        padding: 1rem 2rem;
-        border-radius: 1rem;
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
       }
 
       button {
@@ -84,6 +84,11 @@
           border: 1px solid var(--btnColor);
           font-size: 1rem;
         }
+
+        >button:hover {
+          transform: scale(1.05);
+          transition: all 0.25s;
+        }
       }
     }
   </style>
@@ -91,7 +96,8 @@
 
 <body>
   <div id="searchGroup">
-    <input type="text" id="input" onkeyup="event.key == 'Enter'? search(input.value) : ''" list="films">
+    <input placeholder="Film adı..." type="text" id="input" onkeyup="event.key == 'Enter'? search(input.value) : ''"
+      list="films">
 
     <button onclick="search(input.value)">Ara</button>
   </div>
