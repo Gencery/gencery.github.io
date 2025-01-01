@@ -28,12 +28,13 @@ function search(query) {
   video.innerHTML = "";
   msg("Aranıyor...");
 
+
   fetch(`https://api.cors.lol/?url=https://www.google.com/search?q=${encodeURIComponent(toGoogle(query))}`)
     .then(res => res.text())
     .then(data => {
       let links = data.match(/<a.*?<\/a/ig);
       let movies = links.map(link => extractMovieDetails(link)).filter(movie => movie);
-      console.log(movies);
+      //console.log(movies);
 
       let resultButtons = "";
       movies.forEach(movie =>
@@ -41,5 +42,9 @@ function search(query) {
       results.innerHTML = resultButtons;
       msg(`${movies.length} sonuç bulundu.`);
     });
+
+
 }
 
+
+//msg("Bir hata oldu. Tekrar deneyiniz.");
