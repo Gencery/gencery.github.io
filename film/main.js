@@ -29,7 +29,7 @@ function search(query) {
   msg("Aranıyor...");
 
 
-  fetch(`https://corsproxy.io/?url=https://www.google.com/search?q=${encodeURIComponent(toGoogle(query))}`)
+  fetch(`https://api.codetabs.com/v1/proxy?quest=https://www.google.com/search?q=${encodeURIComponent(toGoogle(query))}`)
     .then(res => res.text())
     .then(data => {
       let links = data.match(/<a.*?<\/a/ig);
