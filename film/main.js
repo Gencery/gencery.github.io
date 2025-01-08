@@ -1,21 +1,7 @@
-function toGoogle(str) {
-  return str.split(" ").join("+") + "+movie+imdb";
-}
-
 function msg(msg) {
   document.getElementById("msg").innerText = msg;
 }
 
-function extractMovieDetails(link) {
-  const regex = /href="https:\/\/www\.imdb\.com\/title\/(tt\d+)\/".*?<h3.*?>(.*?)<\/h3>/;
-  const match = link.match(regex);
-
-  if (match) {
-    const movieId = match[1]; // The IMDb ID (e.g., tt0371746)
-    const movieName = match[2]; // The movie name (e.g., Iron Man (2008) - IMDb)
-    return { movieId, movieName };
-  }
-}
 
 function loadMovie(movieId) {
   video.innerHTML = /*html*/`
@@ -29,16 +15,18 @@ function search(query) {
   msg("Aranıyor...");
 
 
-  fetch(`https://api.codetabs.com/v1/proxy?quest=https://www.google.com/search?q=${encodeURIComponent(toGoogle(query))}`)
-    .then(res => res.text())
+  fetch(`https://www.omdbapi.com/?apikey=a4285afa&s=${query}`)
+    .then(res => res.json())
     .then(data => {
-      let links = data.match(/<a.*?<\/a/ig);
-      let movies = links.map(link => extractMovieDetails(link)).filter(movie => movie);
-      //console.log(movies);
+      let movies = data.Search;
 
       let resultButtons = "";
       movies.forEach(movie =>
-        resultButtons += `<button onclick="loadMovie('${movie.movieId}')">${movie.movieName}</button>`)
+        resultButtons += /*html*/`
+          <button onclick="loadMovie('${movie.imdbID}')">
+            <img src='${movie.Poster}' alt="movie poster">
+            <span>${movie.Title} - ${movie.Year}</span>
+          </button>`)
       results.innerHTML = resultButtons;
       msg(`${movies.length} sonuç bulundu.`);
     });

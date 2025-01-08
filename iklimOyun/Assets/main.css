@@ -19,9 +19,7 @@ body {
   width: 100%;
   background-image: url("./img/imgeler/background-01.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position-y: bottom;
-  background-color: #fef3e2;
+  background-size: auto 100vh;
 }
 body > header {
   display: flex;
@@ -104,6 +102,7 @@ body > footer > p {
 }
 body > footer > img {
   width: 5%;
+  border-radius: 5px;
 }
 
 .hidden {
@@ -145,4 +144,4 @@ a:visited {
 
 .button-1:hover {
   box-shadow: 0 0px 10px -2px #888;
-}
+}/*# sourceMappingURL=main.css.map */

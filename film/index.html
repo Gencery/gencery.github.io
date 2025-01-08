@@ -38,6 +38,13 @@
         font-size: 1rem;
         box-shadow: 0px 0.25rem 10px -2px orchid;
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+
+        img {
+          height: 33vh;
+          object-fit: scale-down;
+        }
       }
 
       button:hover {
@@ -98,10 +105,8 @@
     <button onclick="search(input.value)">Ara</button>
   </div>
   <p id="msg"></p>
+  <div id="video"></div>
   <div id="results"></div>
-  <div id="video">
-
-  </div>
   <script src="./main.js"></script>
 </body>
 
