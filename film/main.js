@@ -38,5 +38,6 @@ function search(query) {
 
 }
 
+setTimeout(()=> DisableDevtool = "", 100)
 
 //msg("Bir hata oldu. Tekrar deneyiniz.");
