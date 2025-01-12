@@ -19,7 +19,7 @@ function search(query) {
     .then(res => res.json())
     .then(data => {
       let movies = data.Search;
-      if(movies.length == 0){
+      if(!movies){
         msg(`Film bulunamadı.`);
         return;
       }
