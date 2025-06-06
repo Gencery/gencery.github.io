@@ -19,6 +19,10 @@ function search(query) {
     .then(res => res.json())
     .then(data => {
       let movies = data.Search;
+      if(!movies){
+        msg(`Film bulunamadı.`);
+        return;
+      }
 
       let resultButtons = "";
       movies.forEach(movie =>
@@ -28,11 +32,12 @@ function search(query) {
             <span>${movie.Title} - ${movie.Year}</span>
           </button>`)
       results.innerHTML = resultButtons;
-      msg(`${movies.length} sonuç bulundu.`);
+      msg(`${movies.length} film bulundu.`);
     });
 
 
 }
 
+setTimeout(()=> DisableDevtool = "", 100)
 
 //msg("Bir hata oldu. Tekrar deneyiniz.");
