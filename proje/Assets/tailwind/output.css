@@ -7,8 +7,8 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
-    --color-red-50: oklch(97.1% 0.013 17.38);
     --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-slate-500: oklch(55.4% 0.046 257.417);
@@ -173,9 +173,6 @@
   }
 }
 @layer utilities {
-  .relative {
-    position: relative;
-  }
   .flex {
     display: flex;
   }
@@ -190,6 +187,9 @@
   }
   .w-\[35px\] {
     width: 35px;
+  }
+  .max-w-\[350px\] {
+    max-width: 350px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -241,17 +241,23 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-slate-50 {
-    border-color: var(--color-slate-50);
-  }
-  .border-slate-400 {
-    border-color: var(--color-slate-400);
-  }
   .border-slate-500 {
     border-color: var(--color-slate-500);
   }
   .bg-slate-50 {
     background-color: var(--color-slate-50);
+  }
+  .bg-slate-100 {
+    background-color: var(--color-slate-100);
+  }
+  .bg-slate-200 {
+    background-color: var(--color-slate-200);
+  }
+  .bg-slate-400 {
+    background-color: var(--color-slate-400);
+  }
+  .bg-slate-700 {
+    background-color: var(--color-slate-700);
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
@@ -315,27 +321,6 @@
       cursor: pointer;
     }
   }
-  .\*\:border-2 {
-    :is(& > *) {
-      border-style: var(--tw-border-style);
-      border-width: 2px;
-    }
-  }
-  .\*\:border-red-50 {
-    :is(& > *) {
-      border-color: var(--color-red-50);
-    }
-  }
-  .\*\:border-slate-50 {
-    :is(& > *) {
-      border-color: var(--color-slate-50);
-    }
-  }
-  .\*\:border-slate-200 {
-    :is(& > *) {
-      border-color: var(--color-slate-200);
-    }
-  }
   .\*\:text-start {
     :is(& > *) {
       text-align: start;
@@ -377,72 +362,11 @@
       transition-timing-function: var(--ease-in-out);
     }
   }
-  .group-hover\:translate-y-2 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * 2);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
   .hover\:-translate-y-1 {
     &:hover {
       @media (hover: hover) {
         --tw-translate-y: calc(var(--spacing) * -1);
         translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
-  .hover\:-translate-y-2 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * -2);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
-  .hover\:translate-y-2 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * 2);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
-    }
-  }
-  .\*\:hover\:bottom-4 {
-    :is(& > *) {
-      &:hover {
-        @media (hover: hover) {
-          bottom: calc(var(--spacing) * 4);
-        }
-      }
-    }
-  }
-  .\*\:hover\:bottom-8 {
-    :is(& > *) {
-      &:hover {
-        @media (hover: hover) {
-          bottom: calc(var(--spacing) * 8);
-        }
-      }
-    }
-  }
-  .\*\:hover\:mb-4 {
-    :is(& > *) {
-      &:hover {
-        @media (hover: hover) {
-          margin-bottom: calc(var(--spacing) * 4);
-        }
-      }
-    }
-  }
-  .\*\:hover\:text-xl {
-    :is(& > *) {
-      &:hover {
-        @media (hover: hover) {
-          font-size: var(--text-xl);
-          line-height: var(--tw-leading, var(--text-xl--line-height));
-        }
       }
     }
   }
@@ -454,11 +378,6 @@
   .sm\:hidden {
     @media (width >= 40rem) {
       display: none;
-    }
-  }
-  .sm\:max-h-\[0px\] {
-    @media (width >= 40rem) {
-      max-height: 0px;
     }
   }
   .sm\:max-h-none {
