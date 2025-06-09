@@ -2367,14 +2367,14 @@ function removeFirmCard(removeButton, firmId) {
   firmId = parseInt(firmId);
   userFirmCompList = userFirmCompList.filter(item => item != firmId);
   removeButton.closest('.firmCard').remove();
-  document.getElementsByTagName("main")[0].innerHTML = FirmComparison();
+  loadPage(FirmComparison(), 'Firma Karşılaştırmaları')
 }
 
 function addFirmToUserCompList(firmId) {
   firmId = parseInt(firmId);
   if (userFirmCompList.indexOf(firmId) == -1) {
     userFirmCompList.push(firmId);
-    document.getElementsByTagName("main")[0].innerHTML = FirmComparison();
+    loadPage(FirmComparison(), 'Firma Karşılaştırmaları')
   } else {
     alert("Firma zaten listenizde mevcut!");
   }
@@ -2384,7 +2384,7 @@ function addFirmToUserCompList(firmId) {
 function FirmComparison() {
   //console.log(data, userFirmCompList);
   //Cards
-  let cards = userFirmCompList.reduce((acc, curVal) =>
+  let cards = userFirmCompList.sort().reduce((acc, curVal) =>
     acc +/*html*/`
       <div class="firmCard flex flex-col *:first:grow rounded-lg overflow-hidden">
         ${firmCard(data.filter(item => item.ID == curVal)[0])}
