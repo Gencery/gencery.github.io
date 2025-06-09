@@ -2121,7 +2121,7 @@ function firmCard(props) {
     <p class="min-h-[50px] flex items-start *:m-1">
       <span class="hidden">FIRM</span>
       <span class="min-h-[80px] min-w-[80px] max-h-[80px] max-w-[80px] rounded-xl overflow-hidden">
-        <img src="./Assets/logos.png" alt="" style="transform: translate(0, -${(props["ID"] - 1) * 80}px)">
+        <img src="./Assets/logos.png" alt="${props["FIRM"]} logosu" style="transform: translate(0, -${(props["ID"] - 1) * 80}px)">
         <!--
         <img class="min-h-full min-w-full " alt="${props["FIRM"]} sirket logosu">
         -->
@@ -2337,7 +2337,7 @@ function TechInfo() {
   `
 }
 
-//Teknik Bilgiler
+//Hakkımızda
 function AboutUs() {
   return /*html*/`
     <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 *:rounded-lg *:shadow-md">
