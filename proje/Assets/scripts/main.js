@@ -2363,28 +2363,18 @@ function AboutUs() {
 
 let userFirmCompList = [];
 
-function removeFirmCard(removeButton, id) {
-  userFirmCompList = userFirmCompList.filter(item => item != id);
+function removeFirmCard(removeButton, firmId) {
+  firmId = parseInt(firmId);
+  userFirmCompList = userFirmCompList.filter(item => item != firmId);
   removeButton.closest('.firmCard').remove();
-  renderFirmCompList();
-}
-
-function renderFirmCompList() {
-  let firmCompContainer = document.getElementById("firmCompContainer");
-  firmCompContainer.innerHTML = userFirmCompList.reduce((acc, curVal) =>
-    acc +/*html*/`
-      <div class="firmCard flex flex-col *:first:grow rounded-lg overflow-hidden">
-        ${firmCard(data.filter(item => item.ID == curVal)[0])}
-        <button class="w-full  bg-red-500 p-2  text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none" onclick="removeFirmCard(this, ${curVal})">Kaldır</button>
-      </div>`, "")
-
-  console.log(userFirmCompList);
+  document.getElementsByTagName("main")[0].innerHTML = FirmComparison();
 }
 
 function addFirmToUserCompList(firmId) {
+  firmId = parseInt(firmId);
   if (userFirmCompList.indexOf(firmId) == -1) {
     userFirmCompList.push(firmId);
-    renderFirmCompList();
+    document.getElementsByTagName("main")[0].innerHTML = FirmComparison();
   } else {
     alert("Firma zaten listenizde mevcut!");
   }
@@ -2392,29 +2382,46 @@ function addFirmToUserCompList(firmId) {
 
 //Şirket Karşılaştırmaları
 function FirmComparison() {
-  return /*html*/`
-    <div class="p-2">
-      <p>Aşağıdaki menüden verilerini karşılaştırmak istediğiniz şirketleri seçip, ekle butonuna tıklayabilirsiniz.</p>
-      <div class="*:mt-2">
-        <select class="border-2 p-2 rounded-lg border-slate-600 mt-5 sm:max-w-[340px] max-w-full">
-          <option hidden value="">Şirket seçiniz</option>
-          ${data.reduce((acc, curVal) => acc + `<option value="${curVal.ID}">${curVal.FIRM}</option>`, "")}
-        </select>
-        <button
-          type="button"
-          class="w-full sm:max-w-16 min-w-16 bg-blue-500 p-2 rounded-lg text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none"
-          onclick="addFirmToUserCompList(this.previousElementSibling.value)"
-        >Ekle</button>
-      </div>
-      <div id="firmCompContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-lg">
+  //console.log(data, userFirmCompList);
+  //Cards
+  let cards = userFirmCompList.reduce((acc, curVal) =>
+    acc +/*html*/`
+      <div class="firmCard flex flex-col *:first:grow rounded-lg overflow-hidden">
+        ${firmCard(data.filter(item => item.ID == curVal)[0])}
+        <button class="w-full  bg-red-500 p-2  text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none" onclick="removeFirmCard(this, ${curVal})">Kaldır</button>
+      </div>`, "");
 
-      </div>
+  //Result HTML
+  let result = /*html*/`
+    <p>Aşağıdaki menüden verilerini karşılaştırmak istediğiniz şirketleri seçip, ekle butonuna tıklayabilirsiniz.</p>
+    <div class="*:mt-2">
+      <!--Form-->
+      <select class="border-2 p-2 rounded-lg border-slate-600 mt-5 sm:max-w-[340px] max-w-full">
+        <option hidden value="">Şirket seçiniz</option>
+        ${data.filter(item => userFirmCompList.indexOf(item.ID) == -1).reduce((acc, curVal) => acc + /*html*/`<option value="${curVal.ID}">${curVal.FIRM}</option>`, "")}
+      </select>
+      <button
+        type="button"
+        class="w-full sm:max-w-fit  bg-blue-500 p-2 rounded-lg text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none"
+        onclick="addFirmToUserCompList(this.previousElementSibling.value)"
+      >Ekle (${userFirmCompList.length} / ${data.length})</button>
+    </div>
+    <!--Cards-->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-lg">
+      ${cards}
+    </div>
+  `
+
+
+  return /*html*/`
+    <div class="p-2" id="firmCompContainer">
+      ${result}
     </div >
   `
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadPage(Main(), "Şirketler");
-  //loadPage(FirmComparison(), "x");
+  //loadPage(Main(), "Şirketler");
+  loadPage(FirmComparison(), "x");
 })
