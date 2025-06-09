@@ -11,9 +11,9 @@ function toggleMenu(hamMenu) {
 
 
   //toggle hamMenu Classlists
-  "-rotate-45 translate-x-[5px] translate-y-[8px]".split(" ").forEach(className => hamMenuFirstDash.classList.toggle(className));
+  "-rotate-45 translate-y-4".split(" ").forEach(className => hamMenuFirstDash.classList.toggle(className));
   "opacity-0".split(" ").forEach(className => hamMenuSecondDash.classList.toggle(className));
-  "rotate-45 translate-x-[5px] -translate-y-[14px]".split(" ").forEach(className => hamMenuThirdDash.classList.toggle(className));
+  "rotate-45 -translate-y-1.25".split(" ").forEach(className => hamMenuThirdDash.classList.toggle(className));
 
   //toggle Nav menu classes
   if (state == "off") {
@@ -2110,13 +2110,19 @@ function loadPage(pageHTMLStr, pageName) {
     ${pageHTMLStr}`;
 
   document.getElementsByTagName("main")[0].innerHTML = result;
+
+  //ham menu
+  let hamMenu = document.querySelectorAll(".hamMenu")[0];
+  let state = hamMenu.getAttribute("data-state");
+  state == "off" ? "" : toggleMenu(hamMenu);
+
 }
 
 
 function firmCard(props) {
 
   return /*html*/`
-  <div class="bg-slate-200 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
+  <div class="bg-slate-300 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
     <!--MAIN PART-->
     <p class="min-h-[50px] flex items-start *:m-1">
       <span class="hidden">FIRM</span>
@@ -2128,7 +2134,7 @@ function firmCard(props) {
       </span>
       <span class="font-bold text-lg">${props["FIRM"]}</span>
     <p>
-    <p class="min-h-[80px]">
+    <p class="min-h-[125px]">
       <span class="font-bold text-lg">INDUSTRY: </span>
       <span>${props["INDUSTRY"]}</span>
     <p>
@@ -2320,7 +2326,7 @@ function firmCard(props) {
 //Anasayfa
 function Main() {
   let result = /*html*/`
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-lg">
       ${data.reduce((acc, currentVal) => acc + firmCard(currentVal), "")}
     </div>  
   `;
@@ -2340,6 +2346,7 @@ function TechInfo() {
 //Hakkımızda
 function AboutUs() {
   return /*html*/`
+    <h2 class="p-2 font-bold text-lg">Proje Ekibimiz</h2>
     <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 *:rounded-lg *:shadow-md">
       <div class="bg-slate-200 p-1 *:m-1 *:mb-4">
         <span>Emir Moralıoğlu</span>
@@ -2354,12 +2361,55 @@ function AboutUs() {
   `
 }
 
+let userFirmCompList = [];
+
+function removeFirmCard(removeButton, id) {
+  userFirmCompList = userFirmCompList.filter(item => item != id);
+  removeButton.closest('.firmCard').remove();
+  renderFirmCompList();
+}
+
+function renderFirmCompList() {
+  let firmCompContainer = document.getElementById("firmCompContainer");
+  firmCompContainer.innerHTML = userFirmCompList.reduce((acc, curVal) =>
+    acc +/*html*/`
+      <div class="firmCard flex flex-col *:first:grow rounded-lg overflow-hidden">
+        ${firmCard(data.filter(item => item.ID == curVal)[0])}
+        <button class="w-full  bg-red-500 p-2  text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none" onclick="removeFirmCard(this, ${curVal})">Kaldır</button>
+      </div>`, "")
+
+  console.log(userFirmCompList);
+}
+
+function addFirmToUserCompList(firmId) {
+  if (userFirmCompList.indexOf(firmId) == -1) {
+    userFirmCompList.push(firmId);
+    renderFirmCompList();
+  } else {
+    alert("Firma zaten listenizde mevcut!");
+  }
+}
+
 //Şirket Karşılaştırmaları
 function FirmComparison() {
   return /*html*/`
     <div class="p-2">
-      Aşağıdaki menüden verilerini karşılaştırmak istediğiniz şirketleri seçebilirsiniz. 
-    </div>
+      <p>Aşağıdaki menüden verilerini karşılaştırmak istediğiniz şirketleri seçip, ekle butonuna tıklayabilirsiniz.</p>
+      <div class="*:mt-2">
+        <select class="border-2 p-2 rounded-lg border-slate-600 mt-5 sm:max-w-[340px] max-w-full">
+          <option hidden value="">Şirket seçiniz</option>
+          ${data.reduce((acc, curVal) => acc + `<option value="${curVal.ID}">${curVal.FIRM}</option>`, "")}
+        </select>
+        <button
+          type="button"
+          class="w-full sm:max-w-16 min-w-16 bg-blue-500 p-2 rounded-lg text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none"
+          onclick="addFirmToUserCompList(this.previousElementSibling.value)"
+        >Ekle</button>
+      </div>
+      <div id="firmCompContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-lg">
+
+      </div>
+    </div >
   `
 }
 

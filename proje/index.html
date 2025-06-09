@@ -12,16 +12,15 @@
 
 </head>
 
-<body class="">
+<body>
   <header class="bg-slate-100 p-1 *:m-2 md:flex flex-col sm:flex-row sm:justify-between items-center shadow-md">
     <!--Logo / Website name-->
     <div class="flex justify-between">
-      <button onclick="loadPage(Main(), 'Şirketler')" class="cursor-pointer">
-        <img src="" />
+      <button type="button" onclick="loadPage(Main(), 'Şirketler')" class="cursor-pointer">
         <span class="text-xl text-slate-700 font-bold">📈 {Proje Adı}</span>
       </button>
-      <span class="flex flex-col *:m-[0.5vh] mr-2 sm:hidden *:transition *:duration-300 *:ease-in-out" data-state="off"
-        tabindex="0" onclick="toggleMenu(this)">
+      <span class="hamMenu flex flex-col *:m-[0.5vh] mr-2 sm:hidden *:transition *:duration-300 *:ease-in-out"
+        data-state="off" tabindex="0" onclick="toggleMenu(this)">
         <p class="w-[35px] border-2 rounded-lg border-slate-500"></p>
         <p class="w-[35px] border-2 rounded-lg border-slate-500"></p>
         <p class="w-[35px] border-2 rounded-lg border-slate-500"></p>
