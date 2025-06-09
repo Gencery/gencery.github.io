@@ -2422,6 +2422,6 @@ function FirmComparison() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  //loadPage(Main(), "Şirketler");
-  loadPage(FirmComparison(), "x");
+  loadPage(Main(), "Şirketler");
+  //loadPage(FirmComparison(), "x");
 })
