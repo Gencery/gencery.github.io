@@ -2105,9 +2105,10 @@ console.log(data[0]);
 function loadPage(pageHTMLStr, pageName) {
 
   let result = /*html*/`
-    <h1 class="font-bold m-3 text-2xl">
+    <h1 class="font-bold m-2 text-2xl">
       ${pageName}
     </h1>
+    <hr class="m-2 opacity-25"/>
     ${pageHTMLStr}`;
 
   document.getElementsByTagName("main")[0].innerHTML = result;
@@ -2117,12 +2118,12 @@ function loadPage(pageHTMLStr, pageName) {
 function firmCard(props) {
 
   return /*html*/`
-  <div class="bg-slate-100 max-w-[350px] p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
-    <p class="h-[50px]">
+  <div class="bg-slate-100 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
+    <p class="min-h-[50px]">
       <span class="hidden">FIRM</span>
       <span class="font-bold">${props["FIRM"]}</span>
     <p>
-    <p>
+    <p class="min-h-[80px]">
       <span class="font-bold">INDUSTRY: </span>
       <span>${props["INDUSTRY"]}</span>
     <p>
@@ -2216,11 +2217,11 @@ function firmCard(props) {
     <p>
     <p>
       <span class="font-bold">TOTAL CURRENT ASSETS: </span>
-      <span>${props["TOTAL CURRENT ASSETS"]}</span>
+      <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL CURRENT ASSETS"])}</span>
     <p>
     <p>
       <span class="font-bold">TOTAL ASSETS: </span>
-      <span>${props["TOTAL ASSETS"]}</span>
+      <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL ASSETS"])}</span>
     <p>
     <p>
       <span class="font-bold">TOTAL CURRENT LIABILITIES: </span>
@@ -2288,7 +2289,7 @@ function firmCard(props) {
 
 function Main() {
   let result = /*html*/`
-    <div class="p-1 flex flex-wrap *:m-2 *:rounded-lg *:shadow-md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-md">
       ${data.reduce((acc, currentVal) => acc + firmCard(currentVal), "")}
     </div>  
   `;
