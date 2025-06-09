@@ -2103,7 +2103,7 @@ let data = JSON.parse(`[
 function loadPage(pageHTMLStr, pageName) {
 
   let result = /*html*/`
-    <h1 class="font-bold m-2 text-2xl">
+    <h1 class="font-bold m-2 mt-5 text-2xl">
       ${pageName}
     </h1>
     <hr class="m-2 opacity-25"/>
