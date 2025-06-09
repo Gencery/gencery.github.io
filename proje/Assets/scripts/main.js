@@ -13,7 +13,7 @@ function toggleMenu(hamMenu) {
   //toggle hamMenu Classlists
   "-rotate-45 translate-x-[5px] translate-y-[8px]".split(" ").forEach(className => hamMenuFirstDash.classList.toggle(className));
   "opacity-0".split(" ").forEach(className => hamMenuSecondDash.classList.toggle(className));
-  "rotate-45 translate-x-[5px] -translate-y-[12px]".split(" ").forEach(className => hamMenuThirdDash.classList.toggle(className));
+  "rotate-45 translate-x-[5px] -translate-y-[14px]".split(" ").forEach(className => hamMenuThirdDash.classList.toggle(className));
 
   //toggle Nav menu classes
   if (state == "off") {
@@ -2100,8 +2100,6 @@ let data = JSON.parse(`[
   }
 ]`)
 
-console.log(data[0]);
-
 function loadPage(pageHTMLStr, pageName) {
 
   let result = /*html*/`
@@ -2118,175 +2116,201 @@ function loadPage(pageHTMLStr, pageName) {
 function firmCard(props) {
 
   return /*html*/`
-  <div class="bg-slate-100 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
+  <div class="bg-slate-200 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
+    <!--MAIN PART-->
     <p class="min-h-[50px]">
       <span class="hidden">FIRM</span>
-      <span class="font-bold">${props["FIRM"]}</span>
+      <span class="font-bold text-lg">${props["FIRM"]}</span>
     <p>
     <p class="min-h-[80px]">
-      <span class="font-bold">INDUSTRY: </span>
+      <span class="font-bold text-lg">INDUSTRY: </span>
       <span>${props["INDUSTRY"]}</span>
     <p>
     <p>
-      <span class="font-bold">YEAR: </span>
+      <span class="font-bold text-lg">YEAR: </span>
       <span>${props["YEAR"]}</span>
     <p>
     <p>
-      <span class="font-bold">INDEX 1: </span>
+      <span class="font-bold text-lg">INDEX 1: </span>
       <span>${props["INDEX 1"]}</span>
     <p>
     <p>
-      <span class="font-bold">INDEX 2: </span>
+      <span class="font-bold text-lg">INDEX 2: </span>
       <span>${props["INDEX 2"]}</span>
     <p>
-    <p>
-      <span class="font-bold">CG RATING OVERALL: </span>
-      <span>${props["CG RATING OVERALL"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Shareholders: </span>
-      <span>${props["Shareholders"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Disclosure and Transparency: </span>
-      <span>${props["Disclosure and Transparency"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Stakeholders: </span>
-      <span>${props["Stakeholders"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Board of Directors: </span>
-      <span>${props["Board of Directors"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">ESG SCORE: </span>
-      <span>${props["ESG SCORE"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">ENVIRONMENT: </span>
-      <span>${props["ENVIRONMENT"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Emissions: </span>
-      <span>${props["Emissions"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Resource Use: </span>
-      <span>${props["Resource Use"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Innovation: </span>
-      <span>${props["Innovation"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">SOCIAL: </span>
-      <span>${props["SOCIAL"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Human Rights: </span>
-      <span>${props["Human Rights"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Product Responsibility: </span>
-      <span>${props["Product Responsibility"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Workforce: </span>
-      <span>${props["Workforce"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Community: </span>
-      <span>${props["Community"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">GOVERNANCE: </span>
-      <span>${props["GOVERNANCE"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Management: </span>
-      <span>${props["Management"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">Shareholders__1: </span>
-      <span>${props["Shareholders__1"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">CSR Strategy: </span>
-      <span>${props["CSR Strategy"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">TOTAL CURRENT ASSETS: </span>
-      <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL CURRENT ASSETS"])}</span>
-    <p>
-    <p>
-      <span class="font-bold">TOTAL ASSETS: </span>
-      <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL ASSETS"])}</span>
-    <p>
-    <p>
-      <span class="font-bold">TOTAL CURRENT LIABILITIES: </span>
-      <span>${props["TOTAL CURRENT LIABILITIES"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">TOTAL LIABILITIES: </span>
-      <span>${props["TOTAL LIABILITIES"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">TOTAL EQUITY: </span>
-      <span>${props["TOTAL EQUITY"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">OPERATING PROFIT: </span>
-      <span>${props["OPERATINF PROFIT"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">NET PROFIT: </span>
-      <span>${props["NET PROFIT"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">ROA: </span>
-      <span>${props["ROA"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">ROE: </span>
-      <span>${props["ROE"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">OPERATING MARGIN: </span>
-      <span>${props["OPERATING MARGIN"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">NET PROFIT MARGIN: </span>
-      <span>${props["NET PROFIT MARGIN"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">CURRENT RATIO: </span>
-      <span>${props["CURRENT RATIO"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">ASSET TURNOVER: </span>
-      <span>${props["ASSET TURNOVER"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">INVENTORY TURNOVER: </span>
-      <span>${props["INVENTORY TURNOVER"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">RECEIVABLE TURNOVER: </span>
-      <span>${props["RECEIVABLE TURNOVER"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">DEBT TO EQUITY: </span>
-      <span>${props["DEBT TO EQUITY"]}</span>
-    <p>
-    <p>
-      <span class="font-bold">DEBT TO ASSET: </span>
-      <span>${props["DEBT TO ASSET"]}</span>
-    <p>
+    <!--NON-FINANCIAL INDICATORS-->
+    <details>
+      <summary class="cursor-pointer font-bold text-lg">NON-FINANCIAL INDICATORS</summary>
+      <div class="*:m-2">
+        <p>
+          <span class="font-bold">CG RATING OVERALL: </span>
+          <span>${props["CG RATING OVERALL"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Shareholders: </span>
+          <span>${props["Shareholders"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Disclosure and Transparency: </span>
+          <span>${props["Disclosure and Transparency"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Stakeholders: </span>
+          <span>${props["Stakeholders"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Board of Directors: </span>
+          <span>${props["Board of Directors"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">ESG SCORE: </span>
+          <span>${props["ESG SCORE"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">ENVIRONMENT: </span>
+          <span>${props["ENVIRONMENT"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Emissions: </span>
+          <span>${props["Emissions"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Resource Use: </span>
+          <span>${props["Resource Use"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Innovation: </span>
+          <span>${props["Innovation"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">SOCIAL: </span>
+          <span>${props["SOCIAL"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Human Rights: </span>
+          <span>${props["Human Rights"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Product Responsibility: </span>
+          <span>${props["Product Responsibility"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Workforce: </span>
+          <span>${props["Workforce"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Community: </span>
+          <span>${props["Community"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">GOVERNANCE: </span>
+          <span>${props["GOVERNANCE"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Management: </span>
+          <span>${props["Management"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">Shareholders: </span>
+          <span>${props["Shareholders__1"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">CSR Strategy: </span>
+          <span>${props["CSR Strategy"]}</span>
+        <p>
+      </div>
+    </details>
+    <!--PRIMARY FINANCIAL DATA-->
+    <details>
+      <summary class="cursor-pointer font-bold text-lg">PRIMARY FINANCIAL DATA</summary>
+      <div class="*:m-2">
+        <p>
+          <span class="font-bold">TOTAL CURRENT ASSETS: </span>
+          <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL CURRENT ASSETS"])}</span>
+        <p>
+        <p>
+          <span class="font-bold">TOTAL ASSETS: </span>
+          <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL ASSETS"])}</span>
+        <p>
+        <p>
+          <span class="font-bold">TOTAL CURRENT LIABILITIES: </span>
+          <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL CURRENT LIABILITIES"])}</span>
+        <p>
+        <p>
+          <span class="font-bold">TOTAL LIABILITIES: </span>
+          <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL LIABILITIES"])}</span>
+        <p>
+        <p>
+          <span class="font-bold">TOTAL EQUITY: </span>
+          <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["TOTAL EQUITY"])}</span>
+        <p>
+        <p>
+          <span class="font-bold">OPERATING PROFIT: </span>
+          <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["OPERATINF PROFIT"])}</span>
+        <p>
+        <p>
+          <span class="font-bold">NET PROFIT: </span>
+          <span>${new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(props["NET PROFIT"])}</span>
+        <p>
+      </div>
+    </details>
+    <!--FINANCIAL RATIOS-->
+    <details>
+      <summary class="cursor-pointer font-bold text-lg">FINANCIAL RATIOS</summary>
+      <div class="*:m-3">
+        <!--Profitability Ratios-->
+        <h4 class="font-bold text-lg underline">Profitability Ratios</h4>
+        <p>
+          <span class="font-bold">ROA: </span>
+          <span>${props["ROA"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">ROE: </span>
+          <span>${props["ROE"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">OPERATING MARGIN: </span>
+          <span>${props["OPERATING MARGIN"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">NET PROFIT MARGIN: </span>
+          <span>${props["NET PROFIT MARGIN"]}</span>
+        <p>
+        <!--Liquidity Ratios-->
+        <h4 class="font-bold text-lg underline">Liquidity Ratios</h4>
+        <p>
+          <span class="font-bold">CURRENT RATIO: </span>
+          <span>${props["CURRENT RATIO"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">ASSET TURNOVER: </span>
+          <span>${props["ASSET TURNOVER"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">INVENTORY TURNOVER: </span>
+          <span>${props["INVENTORY TURNOVER"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">RECEIVABLE TURNOVER: </span>
+          <span>${props["RECEIVABLE TURNOVER"]}</span>
+        <p>
+        <!--Solvency Ratios-->
+        <h4 class="font-bold text-lg underline">Solvency Ratios</h4>
+        <p>
+          <span class="font-bold">DEBT TO EQUITY: </span>
+          <span>${props["DEBT TO EQUITY"]}</span>
+        <p>
+        <p>
+          <span class="font-bold">DEBT TO ASSET: </span>
+          <span>${props["DEBT TO ASSET"]}</span>
+        <p>
+      </div>
+    </details>
   </div>
 `
 }
 
+//Anasayfa
 function Main() {
   let result = /*html*/`
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-md">
@@ -2296,6 +2320,33 @@ function Main() {
 
   return result;
 }
+
+//Teknik Bilgiler
+function TechInfo() {
+  return /*html*/`
+    <div class="p-2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur commodi culpa impedit sapiente, quas soluta! Quasi consequatur harum molestias eos debitis tempora facere aut amet, ab delectus vitae! Eveniet, quas?
+    </div>
+  `
+}
+
+//Teknik Bilgiler
+function AboutUs() {
+  return /*html*/`
+    <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 *:rounded-lg *:shadow-md">
+      <div class="bg-slate-200 p-1 *:m-1 *:mb-4">
+        <span>Emir Moralıoğlu</span>
+      </div>
+      <div class="bg-slate-200 p-1 *:m-1 *:mb-4">
+        <span>Halil Emre Şaşmazel</span>
+      </div>
+      <div class="bg-slate-200 p-1 *:m-1 *:mb-4">
+        <span>Yiğit Yüksel</span>
+      </div>
+    </div>
+  `
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   loadPage(Main(), "Şirketler");

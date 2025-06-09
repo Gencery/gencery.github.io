@@ -16,11 +16,11 @@
   <header class="bg-slate-50 p-1 *:m-2 md:flex flex-col sm:flex-row sm:justify-between items-center">
     <!--Logo / Website name-->
     <div class="flex justify-between">
-      <a class="" href="./index.html">
+      <button onclick="loadPage(Main(), 'Şirketler')" class="cursor-pointer">
         <img src="" />
         <span class="text-xl text-slate-700 font-bold">📈 {Proje Adı}</span>
-      </a>
-      <span class="flex flex-col *:m-[0.5vh] sm:hidden *:transition *:duration-300 *:ease-in-out" data-state="off"
+      </button>
+      <span class="flex flex-col *:m-[0.5vh] mr-2 sm:hidden *:transition *:duration-300 *:ease-in-out" data-state="off"
         tabindex="0" onclick="toggleMenu(this)">
         <p class="w-[35px] border-2 rounded-lg border-slate-500"></p>
         <p class="w-[35px] border-2 rounded-lg border-slate-500"></p>
@@ -34,11 +34,11 @@
         <img src="" />
         <span>Karşılaştırmalar</span>
       </button>
-      <button class="hover:-translate-y-1 transition-transform">
+      <button class="hover:-translate-y-1 transition-transform" onclick="loadPage(TechInfo(), 'Teknik Bilgiler')">
         <img src="" />
         <span>Teknik Bilgiler</span>
       </button>
-      <button class="hover:-translate-y-1 transition-transform">
+      <button class=" hover:-translate-y-1 transition-transform" onclick="loadPage(AboutUs(), 'Hakkımızda')">
         <img src="" />
         <span>Hakkımızda</span>
       </button>
