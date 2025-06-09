@@ -2118,8 +2118,14 @@ function firmCard(props) {
   return /*html*/`
   <div class="bg-slate-200 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
     <!--MAIN PART-->
-    <p class="min-h-[50px]">
+    <p class="min-h-[50px] flex items-start *:m-1">
       <span class="hidden">FIRM</span>
+      <span class="min-h-[80px] min-w-[80px] max-h-[80px] max-w-[80px] rounded-xl overflow-hidden">
+        <img src="./Assets/logos.png" alt="" style="transform: translate(0, -${(props["ID"] - 1) * 80}px)">
+        <!--
+        <img class="min-h-full min-w-full " alt="${props["FIRM"]} sirket logosu">
+        -->
+      </span>
       <span class="font-bold text-lg">${props["FIRM"]}</span>
     <p>
     <p class="min-h-[80px]">
@@ -2310,6 +2316,7 @@ function firmCard(props) {
 `
 }
 
+
 //Anasayfa
 function Main() {
   let result = /*html*/`
@@ -2347,7 +2354,17 @@ function AboutUs() {
   `
 }
 
+//Şirket Karşılaştırmaları
+function FirmComparison() {
+  return /*html*/`
+    <div class="p-2">
+      Aşağıdaki menüden verilerini karşılaştırmak istediğiniz şirketleri seçebilirsiniz. 
+    </div>
+  `
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   loadPage(Main(), "Şirketler");
+  //loadPage(FirmComparison(), "x");
 })
