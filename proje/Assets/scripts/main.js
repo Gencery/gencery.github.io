@@ -2369,6 +2369,10 @@ function removeFirmCard(removeButton, firmId) {
 }
 
 function addFirmToUserCompList(firmId) {
+  if (!firmId) {
+    alert("Lütfen bir firma seçiniz");
+    return;
+  }
   firmId = parseInt(firmId);
   if (userFirmCompList.indexOf(firmId) == -1) {
     userFirmCompList.push(firmId);
@@ -2378,7 +2382,7 @@ function addFirmToUserCompList(firmId) {
   }
 }
 
-//Şirket Karşılaştırmaları
+//Firma Karşılaştırmaları
 function FirmComparison() {
   //console.log(data, userFirmCompList);
   //Cards
@@ -2391,11 +2395,11 @@ function FirmComparison() {
 
   //Result HTML
   let result = /*html*/`
-    <p>Aşağıdaki menüden verilerini karşılaştırmak istediğiniz şirketleri seçip, ekle butonuna tıklayabilirsiniz.</p>
+    <p>Aşağıdaki menüden verilerini karşılaştırmak istediğiniz firmaları seçip, ekle butonuna tıklayabilirsiniz.</p>
     <div class="*:mt-2">
       <!--Form-->
       <select class="border-2 p-2 rounded-lg border-slate-600 mt-5 sm:max-w-[340px] max-w-full">
-        <option hidden value="">Şirket seçiniz</option>
+        <option hidden value="">Firma seçiniz</option>
         ${data.filter(item => userFirmCompList.indexOf(item.ID) == -1).reduce((acc, curVal) => acc + /*html*/`<option value="${curVal.ID}">${curVal.FIRM}</option>`, "")}
       </select>
       <button
@@ -2420,6 +2424,6 @@ function FirmComparison() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadPage(Main(), "Şirketler");
+  loadPage(Main(), "Firmalar");
   //loadPage(FirmComparison(), "x");
 })
