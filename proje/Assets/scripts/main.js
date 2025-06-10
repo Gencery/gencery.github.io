@@ -2386,7 +2386,7 @@ function addFirmToUserCompList(firmId) {
 function FirmComparison() {
   //console.log(data, userFirmCompList);
   //Cards
-  let cards = userFirmCompList.sort().reduce((acc, curVal) =>
+  let cards = userFirmCompList.sort((a, b) => a > b).reduce((acc, curVal) =>
     acc +/*html*/`
       <div class="firmCard flex flex-col *:first:grow rounded-lg overflow-hidden">
         ${firmCard(data.filter(item => item.ID == curVal)[0])}
