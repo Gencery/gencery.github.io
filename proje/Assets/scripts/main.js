@@ -2120,7 +2120,7 @@ function loadPage(pageHTMLStr, pageName) {
 function firmCard(props) {
 
   return /*html*/`
-  <div class="bg-slate-300 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
+  <div class="bg-slate-300 opacity-85 p-1 *:m-1 *:mb-4" data-id=${props["ID"]}>
     <!--MAIN PART-->
     <p class="min-h-[50px] flex items-start *:m-1">
       <span class="hidden">FIRM</span>
@@ -2335,57 +2335,62 @@ function Main() {
 //Teknik Bilgiler
 function TechInfo() {
   return /*html*/`
-    <div class="p-2">
-      <h2>About Our Project: A Clear View of Corporate Responsibility</h2>
-      <p>In today's world, a company's success is measured by more than just its financial performance. Stakeholders, from investors to consumers, increasingly demand transparency in a company's social and environmental impact. However, accessing clear, consolidated, and reliable data is often a significant challenge. Information is typically scattered across various reports and databases, making it difficult to get a complete picture of a company's overall health, both financially and non-financially.
-Our project was developed to solve this problem. We provide a centralized, user-friendly platform that gathers and presents key financial and non-financial performance indicators for leading companies in Turkey. Our goal is to empower users with accessible data, allowing for a holistic evaluation and fostering a more informed and transparent business environment.
+    <div class="p-5">
+      <h2 class="font-bold mb-5 text-xl">About Our Project: A Clear View of Corporate Responsibility</h2>
+      <p class="my-5">
+        In today's world, a company's success is measured by more than just its financial performance. Stakeholders, from investors to consumers, increasingly demand transparency in a company's social and environmental impact. However, accessing clear, consolidated, and reliable data is often a significant challenge. Information is typically scattered across various reports and databases, making it difficult to get a complete picture of a company's overall health, both financially and non-financially.
       </p>
-      <h2>Our Data Scope</h2>
-      <p>To ensure the data is relevant and reliable, our analysis focuses on a specific and significant group of companies. Instead of using a broad international list like the Fortune 500, we have concentrated on the Turkish market.
-Our dataset includes <b>47 companies</b> that are listed on the <b>BIST 100 Index</b>. Crucially, all selected companies are also included in both the <b>BIST SUSTAINABILITY Index</b> and the <b>BIST CORPORATE GOVERNANCE Index</b>. This selection criterion ensures that our analysis is centered on firms that are already recognized for their commitment to high standards of sustainability and corporate governance.
+      <p class="my-5">
+        Our project was developed to solve this problem. We provide a centralized, user-friendly platform that gathers and presents key financial and non-financial performance indicators for leading companies in Turkey. Our goal is to empower users with accessible data, allowing for a holistic evaluation and fostering a more informed and transparent business environment.
+      </p>
+      <h2 class="font-bold mb-5 text-xl">Our Data Scope</h2>
+      <p class="my-5">To ensure the data is relevant and reliable, our analysis focuses on a specific and significant group of companies. Instead of using a broad international list like the Fortune 500, we have concentrated on the Turkish market.
+      </p>
+      <p class="my-5">
+        Our dataset includes <b>47 companies</b> that are listed on the <b>BIST 100 Index</b>. Crucially, all selected companies are also included in both the <b>BIST SUSTAINABILITY Index</b> and the <b>BIST CORPORATE GOVERNANCE Index</b>. This selection criterion ensures that our analysis is centered on firms that are already recognized for their commitment to high standards of sustainability and corporate governance.
       </p>
 
 
-      <h2>What This Website Does</h2>
-      <p>
+      <h2 class="font-bold mb-5 text-xl">What This Website Does</h2>
+      <p class="my-5">
         This platform serves as a one-stop source for understanding the holistic performance of these 47 leading Turkish companies. We aggregate and display key metrics related to:
       </p>
-      <ul>
+      <ul class="list-disc ml-5">
         <li>
-          <p><b>Sustainability (ESG Score): </b>How a company manages its environmental, social, and governance responsibilities.</p> 
+          <p class="my-5"><b>Sustainability (ESG Score): </b>How a company manages its environmental, social, and governance responsibilities.</p> 
         </li>
         <li>
-          <p><b>Corporate Governance Index: </b>The effectiveness, transparency, and accountability of a company's leadership.</p> 
+          <p class="my-5"><b>Corporate Governance Index: </b>The effectiveness, transparency, and accountability of a company's leadership.</p> 
         </li>
         <li>
-          <p><b>Primary Financial Data: </b>Primary Financial Data: Core financial information directly from company statements.</p> 
+          <p class="my-5"><b>Primary Financial Data: </b>Primary Financial Data: Core financial information directly from company statements.</p> 
         </li>
         <li>
-          <p><b>Financial Ratios: </b>Key calculations that provide insight into a company's financial health and performance.</p> 
+          <p class="my-5"><b>Financial Ratios: </b>Key calculations that provide insight into a company's financial health and performance.</p> 
         </li>
       </ul>
-      <p>By bringing this information together, we make it easy to compare companies and track their performance over time.</p>
-      <h2>How to Use This Website</h2>
-      <p>
+      <p class="my-5">By bringing this information together, we make it easy to compare companies and track their performance over time.</p>
+      <h2 class="font-bold mb-5 text-xl">How to Use This Website</h2>
+      <p class="my-5">
         Navigating the site is straightforward. You can use the main dashboard to view the overall scores for all companies or select specific companies to see their detailed performance across the different indicators. The data is presented through clear visualizations and scores, allowing you to assess and compare corporate responsibility and financial stability quickly.
       </p>
-      <h2>Who Can Benefit from This Platform?</h2>
-      <p>This tool is designed for a wide range of users who are interested in the ethical and social dimensions of business:</p>
-      <ul>
+      <h2 class="font-bold mb-5 text-xl">Who Can Benefit from This Platform?</h2>
+      <p class="my-5">This tool is designed for a wide range of users who are interested in the ethical and social dimensions of business:</p>
+      <ul class="list-disc ml-5">
         <li>
-          <p><b>Investors: </b>To make informed investment decisions that align with sustainability goals and to assess both financial and non-financial risks.</p>
+          <p class="my-5"><b>Investors: </b>To make informed investment decisions that align with sustainability goals and to assess both financial and non-financial risks.</p>
         </li>
         <li>
-          <p><b>Consumers: </b>To support companies that demonstrate a strong commitment to ethical practices and social responsibility.</p>
+          <p class="my-5"><b>Consumers: </b>To support companies that demonstrate a strong commitment to ethical practices and social responsibility.</p>
         </li>
         <li>
-          <p><b>Researchers and Students: </b>To access consolidated data for academic studies on corporate sustainability, governance, and finance in Turkey.</p>
+          <p class="my-5"><b>Researchers and Students: </b>To access consolidated data for academic studies on corporate sustainability, governance, and finance in Turkey.</p>
         </li>
         <li>
-          <p><b>The Companies Themselves: </b>To benchmark their performance against peers and identify areas for improvement in their financial and social responsibility strategies.</p>
+          <p class="my-5"><b>The Companies Themselves: </b>To benchmark their performance against peers and identify areas for improvement in their financial and social responsibility strategies.</p>
         </li>
         <li>
-          <p><b>Non-Governmental Organizations (NGOs): </b>To monitor corporate performance and advocate for greater transparency and accountability.</p>
+          <p class="my-5"><b>Non-Governmental Organizations (NGOs): </b>To monitor corporate performance and advocate for greater transparency and accountability.</p>
         </li>
       </ul>
     </div>
@@ -2394,17 +2399,75 @@ Our dataset includes <b>47 companies</b> that are listed on the <b>BIST 100 Inde
 
 //Hakkımızda
 function AboutUs() {
+
+  let people = [
+    {
+      id: 0,
+      name: "Emir Moralıoğlu",
+      dept: "Business Administration",
+      uni: "Yaşar University",
+      email: "emirmoralioglu@hotmail.com",
+      mobile: ""
+    },
+    {
+      id: 1,
+      name: "Halil Emre Şaşmazel",
+      dept: "Business Administration",
+      uni: "Yaşar University",
+      email: "emresasmazel@hotmail.com",
+      mobile: "+90 507 036 82 69"
+    },
+    {
+      id: 2,
+      name: "Yiğit Yüksel",
+      dept: "Business Administration",
+      uni: "Yaşar University",
+      email: "",
+      mobile: ""
+    },
+  ]
+
+  function personCard(person) {
+    return /*html*/`
+      <div class="p-2 bg-slate-200 *:my-1">
+        <h3 class="font-bold text-2xl my-1 text-center">${person.name}</h3>
+        <hr/>
+        <!--University /Dept Info-->
+        <div class="text-lg my-1 flex items-center justify-left *:m-1 ">
+          <span class="text-2xl">
+            👨‍🎓
+          </span>
+          <div class="flex flex-col justify-start *:m-1">
+            <span>${person.uni}</span>
+            <span>${person.dept}</span>
+          </div>
+        </div>
+        <!--Email-->
+        <p class="text-lg my-1 flex items-center justify-left *:m-1 ">
+          <span class="text-2xl">✉️</span>
+          <a href="mailto:${person.email}">
+            ${person.email || "-"}
+          </a>
+        </p>
+        <!--Phone-->
+        <p class="text-lg my-1 flex items-center justify-left *:m-1 ">
+          <span class="text-2xl">📞</span>
+          <a href="tel:${person.mobile}">
+            ${person.mobile || "-"}
+          </a>
+        </p>
+      </div>
+    `
+  }
+
   return /*html*/`
-    <h2 class="p-2 font-bold text-lg">Proje Ekibimiz</h2>
-    <div class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 *:rounded-lg *:shadow-md">
-      <div class="bg-slate-200 p-1 *:m-1 *:mb-4">
-        <span>Emir Moralıoğlu</span>
-      </div>
-      <div class="bg-slate-200 p-1 *:m-1 *:mb-4">
-        <span>Halil Emre Şaşmazel</span>
-      </div>
-      <div class="bg-slate-200 p-1 *:m-1 *:mb-4">
-        <span>Yiğit Yüksel</span>
+    <div class="p-5">
+      <!--
+      <h2 class="font-bold mb-5 text-xl">Project Team</h2>
+      -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 *:rounded-lg *:shadow-xl">
+        <!--Cards-->
+        ${people.reduce((acc, curVal) => acc + personCard(curVal), "")}
       </div>
     </div>
   `
@@ -2416,20 +2479,20 @@ function removeFirmCard(removeButton, firmId) {
   firmId = parseInt(firmId);
   userFirmCompList = userFirmCompList.filter(item => item != firmId);
   removeButton.closest('.firmCard').remove();
-  loadPage(FirmComparison(), 'Firma Karşılaştırmaları')
+  loadPage(FirmComparison(), 'Compare Firms')
 }
 
 function addFirmToUserCompList(firmId) {
   if (!firmId) {
-    alert("Lütfen bir firma seçiniz");
+    alert("Please select a firm");
     return;
   }
   firmId = parseInt(firmId);
   if (userFirmCompList.indexOf(firmId) == -1) {
     userFirmCompList.push(firmId);
-    loadPage(FirmComparison(), 'Firma Karşılaştırmaları')
+    loadPage(FirmComparison(), 'Compare Firms')
   } else {
-    alert("Firma zaten listenizde mevcut!");
+    alert("The firm has already been selected!");
   }
 }
 
@@ -2441,27 +2504,29 @@ function FirmComparison() {
     acc +/*html*/`
       <div class="firmCard flex flex-col *:first:grow rounded-lg overflow-hidden">
         ${firmCard(data.filter(item => item.ID == curVal)[0])}
-        <button class="w-full  bg-red-500 p-2  text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none" onclick="removeFirmCard(this, ${curVal})">Kaldır</button>
+        <button class="w-full  bg-red-500 p-2  text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none" onclick="removeFirmCard(this, ${curVal})">Remove</button>
       </div>`, "");
 
   //Result HTML
   let result = /*html*/`
-    <p>Aşağıdaki menüden verilerini karşılaştırmak istediğiniz firmaları seçip, ekle butonuna tıklayabilirsiniz.</p>
-    <div class="*:mt-2">
-      <!--Form-->
-      <select class="border-2 p-2 rounded-lg border-slate-600 mt-5 sm:max-w-[340px] max-w-full">
-        <option hidden value="">Firma seçiniz</option>
-        ${data.filter(item => userFirmCompList.indexOf(item.ID) == -1).reduce((acc, curVal) => acc + /*html*/`<option value="${curVal.ID}">${curVal.FIRM}</option>`, "")}
-      </select>
-      <button
-        type="button"
-        class="w-full sm:max-w-fit  bg-blue-500 p-2 rounded-lg text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none"
-        onclick="addFirmToUserCompList(this.previousElementSibling.value)"
-      >Ekle (${userFirmCompList.length} / ${data.length})</button>
-    </div>
-    <!--Cards-->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-lg">
-      ${cards}
+    <div class="p-2">
+      <p>You can compare the firms by selecting them from the menu below and clicking the "Add" button.</p>
+      <div class="*:mt-2">
+        <!--Form-->
+        <select class="border-2 p-2 rounded-lg border-slate-600 mt-5 sm:max-w-[340px] max-w-full">
+          <option hidden value="">Select a Firm</option>
+          ${data.filter(item => userFirmCompList.indexOf(item.ID) == -1).reduce((acc, curVal) => acc + /*html*/`<option value="${curVal.ID}">${curVal.FIRM}</option>`, "")}
+        </select>
+        <button
+          type="button"
+          class="w-full sm:max-w-fit  bg-blue-500 p-2 rounded-lg text-slate-50 font-bold shadow-sm hover:shadow-lg hover:cursor-pointer active:shadow-none"
+          onclick="addFirmToUserCompList(this.previousElementSibling.value)"
+        >Add (${userFirmCompList.length} / ${data.length})</button>
+      </div>
+      <!--Cards-->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-2 *:rounded-lg *:shadow-lg">
+        ${cards}
+      </div>
     </div>
   `
 
@@ -2475,6 +2540,8 @@ function FirmComparison() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadPage(Main(), "Firmalar");
+  loadPage(Main(), "Firms");
   //loadPage(FirmComparison(), "x");
+  //loadPage(TechInfo(), 'Teknik Bilgiler');
+  //loadPage(AboutUs(), 'Teknik Bilgiler');
 })
