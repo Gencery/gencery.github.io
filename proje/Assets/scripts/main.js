@@ -2336,7 +2336,58 @@ function Main() {
 function TechInfo() {
   return /*html*/`
     <div class="p-2">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur commodi culpa impedit sapiente, quas soluta! Quasi consequatur harum molestias eos debitis tempora facere aut amet, ab delectus vitae! Eveniet, quas?
+      <h2>About Our Project: A Clear View of Corporate Responsibility</h2>
+      <p>In today's world, a company's success is measured by more than just its financial performance. Stakeholders, from investors to consumers, increasingly demand transparency in a company's social and environmental impact. However, accessing clear, consolidated, and reliable data is often a significant challenge. Information is typically scattered across various reports and databases, making it difficult to get a complete picture of a company's overall health, both financially and non-financially.
+Our project was developed to solve this problem. We provide a centralized, user-friendly platform that gathers and presents key financial and non-financial performance indicators for leading companies in Turkey. Our goal is to empower users with accessible data, allowing for a holistic evaluation and fostering a more informed and transparent business environment.
+      </p>
+      <h2>Our Data Scope</h2>
+      <p>To ensure the data is relevant and reliable, our analysis focuses on a specific and significant group of companies. Instead of using a broad international list like the Fortune 500, we have concentrated on the Turkish market.
+Our dataset includes <b>47 companies</b> that are listed on the <b>BIST 100 Index</b>. Crucially, all selected companies are also included in both the <b>BIST SUSTAINABILITY Index</b> and the <b>BIST CORPORATE GOVERNANCE Index</b>. This selection criterion ensures that our analysis is centered on firms that are already recognized for their commitment to high standards of sustainability and corporate governance.
+      </p>
+
+
+      <h2>What This Website Does</h2>
+      <p>
+        This platform serves as a one-stop source for understanding the holistic performance of these 47 leading Turkish companies. We aggregate and display key metrics related to:
+      </p>
+      <ul>
+        <li>
+          <p><b>Sustainability (ESG Score): </b>How a company manages its environmental, social, and governance responsibilities.</p> 
+        </li>
+        <li>
+          <p><b>Corporate Governance Index: </b>The effectiveness, transparency, and accountability of a company's leadership.</p> 
+        </li>
+        <li>
+          <p><b>Primary Financial Data: </b>Primary Financial Data: Core financial information directly from company statements.</p> 
+        </li>
+        <li>
+          <p><b>Financial Ratios: </b>Key calculations that provide insight into a company's financial health and performance.</p> 
+        </li>
+      </ul>
+      <p>By bringing this information together, we make it easy to compare companies and track their performance over time.</p>
+      <h2>How to Use This Website</h2>
+      <p>
+        Navigating the site is straightforward. You can use the main dashboard to view the overall scores for all companies or select specific companies to see their detailed performance across the different indicators. The data is presented through clear visualizations and scores, allowing you to assess and compare corporate responsibility and financial stability quickly.
+      </p>
+      <h2>Who Can Benefit from This Platform?</h2>
+      <p>This tool is designed for a wide range of users who are interested in the ethical and social dimensions of business:</p>
+      <ul>
+        <li>
+          <p><b>Investors: </b>To make informed investment decisions that align with sustainability goals and to assess both financial and non-financial risks.</p>
+        </li>
+        <li>
+          <p><b>Consumers: </b>To support companies that demonstrate a strong commitment to ethical practices and social responsibility.</p>
+        </li>
+        <li>
+          <p><b>Researchers and Students: </b>To access consolidated data for academic studies on corporate sustainability, governance, and finance in Turkey.</p>
+        </li>
+        <li>
+          <p><b>The Companies Themselves: </b>To benchmark their performance against peers and identify areas for improvement in their financial and social responsibility strategies.</p>
+        </li>
+        <li>
+          <p><b>Non-Governmental Organizations (NGOs): </b>To monitor corporate performance and advocate for greater transparency and accountability.</p>
+        </li>
+      </ul>
     </div>
   `
 }
