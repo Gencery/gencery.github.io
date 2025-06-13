@@ -2407,7 +2407,7 @@ function AboutUs() {
       dept: "Business Administration",
       uni: "Yaşar University",
       email: "emirmoralioglu@hotmail.com",
-      mobile: ""
+      mobile: "+90 539 768 47 20"
     },
     {
       id: 1,
