@@ -2407,7 +2407,7 @@ function AboutUs() {
       dept: "Business Administration",
       uni: "Yaşar University",
       email: "emirmoralioglu@hotmail.com",
-      mobile: "+90 539 768 47 20"
+      mobile: "+90 (539) 768 4720"
     },
     {
       id: 1,
@@ -2415,15 +2415,15 @@ function AboutUs() {
       dept: "Business Administration",
       uni: "Yaşar University",
       email: "emresasmazel@hotmail.com",
-      mobile: "+90 507 036 82 69"
+      mobile: "+90 (507) 036 8269"
     },
     {
       id: 2,
       name: "Yiğit Yüksel",
       dept: "Business Administration",
       uni: "Yaşar University",
-      email: "",
-      mobile: ""
+      email: "Yigit-478@hotmail.com",
+      mobile: "+90 (530) 612 6949"
     },
   ]
 
