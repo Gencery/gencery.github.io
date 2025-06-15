@@ -2462,9 +2462,13 @@ function AboutUs() {
 
   return /*html*/`
     <div class="p-5">
-      <!--
+      <p class="mb-5">
+        This website was developed as part of our senior graduation project in the Department of Business Administration at Yaşar University during the 2024-2025 academic year.
+      </p>
+      <p class="my-5">
+        Our project aims to provide a clear, comparative analysis of financial and non-financial data from companies listed in the BIST 100, BIST Sustainability, and BIST Corporate Governance indices.
+      </p>
       <h2 class="font-bold mb-5 text-xl">Project Team</h2>
-      -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 *:rounded-lg *:shadow-xl">
         <!--Cards-->
         ${people.reduce((acc, curVal) => acc + personCard(curVal), "")}
