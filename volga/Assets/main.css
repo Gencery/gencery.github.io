@@ -1,75 +1,86 @@
-html {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 1%;
-  }
-
-  font-family: Verdana;
+* {
+  letter-spacing: 1%;
+  box-sizing: border-box;
 }
+
+html {}
 
 body {
   margin: 0 auto;
-  padding: 1%;
   background-color: black;
-  max-height: 100svh;
-  min-height: 100svh;
+  height: 100svh;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: Verdana;
+
+  >* {
+    margin: 0;
+  }
 }
 
-main {}
+main {
+  max-height: 100%;
+}
 
-.title {
+header {
   color: #ddd;
   padding: 2vh;
   text-align: center;
+  font-size: 5vh;
 }
 
-
-.imgContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  >img {
-    width: 100%;
-    object-fit: scale-down;
+.experience {
+  >* {
     margin: 0;
   }
 
-  .pill {
-    position: absolute;
-    background: none;
-    bottom: 0%;
-    height: 50%;
-    font-size: 2vh;
-    font-weight: bold;
-    border: none;
-    opacity: 0;
-    cursor: pointer;
-  }
+  .imgContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-  .pill-red {
-    left: 0%;
-    width: 50%;
-  }
+    >img {
+      width: 100%;
+      max-width: 500px;
+      object-fit: scale-down;
+      margin: 0 auto;
+    }
 
-  .pill-blue {
-    right: 0%;
-    width: 50%;
+    .pill {
+      position: absolute;
+      background: none;
+      bottom: 0%;
+      height: 50%;
+      font-size: 2vh;
+      font-weight: bold;
+      border: none;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .pill-red {
+      left: 0%;
+      width: 50%;
+    }
+
+    .pill-blue {
+      right: 0%;
+      width: 50%;
+    }
   }
 }
+
 
 .prompt {
   color: white;
   line-height: 4vh;
   text-align: center;
   font-size: 2.25vh;
+  min-height: fit-content;
+  margin: 1%;
 
   >span {
     font-weight: bold;
