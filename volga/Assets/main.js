@@ -5,11 +5,11 @@ let pages = {
         <div class="imgContainer">
           <img src="./Assets/img/bondVolga2.jpg" alt="">
         </div>
-        <div class="nav">
-          <a href="">Education</a>
-          <a href="">Experience</a>
-          <a href="">Contact</a>
-        </div>
+        <nav>
+          <a href="?page=experience">Experience</a>
+          <a href="?page=education">Education</a>
+          <a href="?page=contact">Contact</a>
+        </nav>
       </div>
     `
   },
@@ -33,4 +33,38 @@ let pages = {
   }
 }
 
-document.getElementsByTagName("main")[0].innerHTML = pages.home.content;
+function router() {
+  let locationParams = location.search.slice(1).split("&").map(item => item.split("="));
+  //
+  let locationParamsObj = {};
+  //
+  for (let param of locationParams) {
+    locationParamsObj[param[0]] = param[1]
+  }
+
+  let currentPage = locationParamsObj.page;
+
+  if (currentPage == undefined) {
+    currentPage = "home"
+  }
+
+
+  document.getElementsByTagName("main")[0].innerHTML = pages[currentPage].content;
+}
+
+
+
+
+document.body.addEventListener("click", e => {
+  if (e.target.tagName == "A") {
+    e.preventDefault();
+    history.pushState({}, "", e.target.href);
+    router();
+  }
+})
+
+window.addEventListener("popstate", () => {
+  router();
+})
+
+document.addEventListener("DOMContentLoaded", router)
