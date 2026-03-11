@@ -20,10 +20,6 @@ body {
   }
 }
 
-main {
-  max-height: 100%;
-  flex-grow: 1;
-}
 
 header {
   color: #ddd;
@@ -216,10 +212,19 @@ footer {
 }
 
 body {
+  main {
+    max-height: 100%;
+    flex-grow: 1;
+    transition: opacity 250ms;
+  }
 
   main:has(.home)+footer {
     .navHome {
       display: none;
     }
   }
+}
+
+.op-0 {
+  opacity: 0;
 }

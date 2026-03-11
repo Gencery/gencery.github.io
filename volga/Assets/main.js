@@ -47,9 +47,14 @@ function router() {
   if (currentPage == undefined) {
     currentPage = "home"
   }
+  if (!pages[currentPage]) {
+    currentPage = "home"
 
-
-  document.getElementsByTagName("main")[0].innerHTML = pages[currentPage].content;
+  }
+  let mainNode = document.getElementsByTagName("main")[0];
+  mainNode.classList.add("op-0");
+  mainNode.innerHTML = pages[currentPage].content;
+  mainNode.classList.remove("op-0");
 }
 
 
