@@ -95,3 +95,18 @@ header {
     color: #07f;
   }
 }
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+
+  .homeIcon {
+    max-width: 6vh;
+    cursor: pointer;
+
+    >img {
+      max-width: 100%;
+      object-fit: scale-down;
+    }
+  }
+}
