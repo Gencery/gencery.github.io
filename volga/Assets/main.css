@@ -212,10 +212,11 @@ footer {
 }
 
 body {
+  transition: opacity 250ms;
+
   main {
     max-height: 100%;
     flex-grow: 1;
-    transition: opacity 250ms;
   }
 
   main:has(.home)+footer {
@@ -225,6 +226,6 @@ body {
   }
 }
 
-.op-0 {
+.disappear {
   opacity: 0;
 }

@@ -43,18 +43,21 @@ function router() {
   }
 
   let currentPage = locationParamsObj.page;
+  console.log(currentPage);
 
   if (currentPage == undefined) {
     currentPage = "home"
   }
   if (!pages[currentPage]) {
     currentPage = "home"
-
   }
   let mainNode = document.getElementsByTagName("main")[0];
-  mainNode.classList.add("op-0");
-  mainNode.innerHTML = pages[currentPage].content;
-  mainNode.classList.remove("op-0");
+  document.body.classList.add("disappear");
+  setTimeout(() => {
+
+    mainNode.innerHTML = pages[currentPage].content;
+    document.body.classList.remove("disappear");
+  }, 500)
 }
 
 
