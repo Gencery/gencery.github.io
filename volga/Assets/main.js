@@ -43,7 +43,6 @@ function router() {
   }
 
   let currentPage = locationParamsObj.page;
-  console.log(currentPage);
 
   if (currentPage == undefined) {
     currentPage = "home"
@@ -52,6 +51,7 @@ function router() {
     currentPage = "home"
   }
   let mainNode = document.getElementsByTagName("main")[0];
+  //
   document.body.classList.add("disappear");
   setTimeout(() => {
 
@@ -64,6 +64,7 @@ function router() {
 
 
 document.body.addEventListener("click", e => {
+  console.log(e);
   if (e.target.tagName == "A") {
     e.preventDefault();
     history.pushState({}, "", e.target.href);
@@ -72,6 +73,7 @@ document.body.addEventListener("click", e => {
 })
 
 window.addEventListener("popstate", () => {
+  console.log("popstate");
   router();
 })
 
