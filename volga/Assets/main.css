@@ -31,6 +31,7 @@ header {
   font-size: 5vh;
 }
 
+/*EXPERIENCE PAGE*/
 .experience {
   >* {
     margin: 0;
@@ -71,42 +72,128 @@ header {
       width: 50%;
     }
   }
+
+  .prompt {
+    color: white;
+    line-height: 4vh;
+    text-align: center;
+    font-size: 2.25vh;
+    min-height: fit-content;
+    margin: 1%;
+
+    >span {
+      font-weight: bold;
+      font-size: 3vh;
+    }
+
+    .red {
+      color: #f00;
+    }
+
+    .blue {
+      color: #07f;
+    }
+  }
+
 }
 
-
-.prompt {
-  color: white;
-  line-height: 4vh;
-  text-align: center;
-  font-size: 2.25vh;
-  min-height: fit-content;
-  margin: 1%;
-
-  >span {
-    font-weight: bold;
-    font-size: 3vh;
+/*HOME PAGE*/
+.home {
+  >* {
+    margin: 0;
   }
 
-  .red {
-    color: #f00;
+  position: relative;
+
+  .imgContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
+
+    >img {
+      width: 100%;
+      max-width: 500px;
+      object-fit: scale-down;
+      margin: 0 auto;
+    }
+
+    .pill {
+      position: absolute;
+      background: none;
+      bottom: 0%;
+      height: 50%;
+      font-size: 2vh;
+      font-weight: bold;
+      border: none;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .pill-red {
+      left: 0%;
+      width: 50%;
+    }
+
+    .pill-blue {
+      right: 0%;
+      width: 50%;
+    }
   }
 
-  .blue {
-    color: #07f;
+  .nav {
+    position: absolute;
+    top: 0vh;
+    left: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    >a {
+      text-decoration: none;
+      color: #fff;
+      line-height: 7vh;
+      font-size: 4vh;
+      margin-top: 1vh;
+      background-color: rgba(0, 0, 0, 80%);
+      border-radius: 2vh;
+      padding: 1vh;
+      transition: all 250ms;
+      box-shadow: 0 5px 8px -6px #fff;
+    }
+
+    >a:hover {
+      box-shadow: 0 10px 8px -6px #f00;
+    }
   }
+
 }
 
 footer {
   display: flex;
   justify-content: flex-end;
+  position: relative;
 
-  .homeIcon {
+  .navHome {
     max-width: 6vh;
     cursor: pointer;
+    position: absolute;
+    right: 2vh;
+    bottom: 2vh;
+    transition: all 250ms;
+    background: none;
+    border: none;
 
     >img {
       max-width: 100%;
       object-fit: scale-down;
     }
+  }
+
+  .navHome:hover {
+    transform: scale(1.1);
   }
 }

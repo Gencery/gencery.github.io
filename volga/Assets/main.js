@@ -1,4 +1,18 @@
 let pages = {
+  home: {
+    content: /*html*/`
+      <div class="home">
+        <div class="imgContainer">
+          <img src="./Assets/img/bondVolga2.jpg" alt="">
+        </div>
+        <div class="nav">
+          <a href="">Education</a>
+          <a href="">Experience</a>
+          <a href="">Contact</a>
+        </div>
+      </div>
+    `
+  },
   experience: {
     content: /*html*/`
       <div class="experience">
@@ -19,4 +33,4 @@ let pages = {
   }
 }
 
-document.getElementsByTagName("main")[0].innerHTML = pages.experience.content;
+document.getElementsByTagName("main")[0].innerHTML = pages.home.content;
