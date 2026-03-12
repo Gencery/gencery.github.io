@@ -1,7 +1,12 @@
 async function importResources() {
   let data = fetch("./Assets/volga.json");
-  let travoltaVolga = fetch("./Assets/travoltaVolga.jpg")
-  Promise.all([data, travoltaVolga]).then(responses => responses.forEach(res => console.log(res)));
+  let travoltaVolga = fetch("./Assets/img/travoltaVolga.jpg")
+  Promise.all([data, travoltaVolga]).then(responses => responses.forEach((res, i) => {
+    if (i == 1) {
+
+      document.getElementsByTagName("img")[0].setAttribute("src", res.blob())
+    }
+  }));
 }
 
 importResources();
