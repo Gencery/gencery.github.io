@@ -1,3 +1,11 @@
+async function importResources() {
+  let data = fetch("./Assets/volga.json");
+  let travoltaVolga = fetch("./Assets/travoltaVolga.jpg")
+  Promise.all([data, travoltaVolga]).then(responses => responses.forEach(res => console.log(res)));
+}
+
+importResources();
+
 let pages = {
   home: {
     content: /*html*/`
@@ -34,7 +42,7 @@ let pages = {
   acting: {
     content: /*html*/`
       <div class="acting">
-        
+
       </div>
     `
   },
@@ -44,6 +52,7 @@ let pages = {
     `
   }
 }
+
 
 function router() {
   let locationParams = location.search.slice(1).split("&").map(item => item.split("="));
@@ -65,15 +74,12 @@ function router() {
   let mainNode = document.getElementsByTagName("main")[0];
   //
   document.body.classList.add("disappear");
-  setTimeout(() => {
 
+  setTimeout(() => {
     mainNode.innerHTML = pages[currentPage].content;
     document.body.classList.remove("disappear");
   }, 500)
 }
-
-
-
 
 document.body.addEventListener("click", e => {
   if (e.target.tagName == "A") {
