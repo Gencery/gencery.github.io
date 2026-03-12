@@ -18,8 +18,8 @@ let pages = {
       <div class="experience">
         <div class="imgContainer">
           <img src="./Assets/img/morpheusVolga.png" alt="">
-          <button class="pill pill-red" onclick="console.log('red')">ACTING</button>
-          <button class="pill pill-blue" onclick="console.log('blue')">SOFTWARE</button>
+          <a href="?page=acting" class="pill pill-red"></a>
+          <a href="?page=software" class="pill pill-blue"></a>
         </div>
         <p class="prompt">
           You take the blue pill, you learn about my <span class="blue">Software</span> experience. You take the red pill,
@@ -29,6 +29,18 @@ let pages = {
           (click on a pill to choose)
         </p>
       </div>
+    `
+  },
+  acting: {
+    content: /*html*/`
+      <div class="acting">
+        
+      </div>
+    `
+  },
+  software: {
+    content: /*html*/`
+      
     `
   }
 }
@@ -64,7 +76,6 @@ function router() {
 
 
 document.body.addEventListener("click", e => {
-  console.log(e);
   if (e.target.tagName == "A") {
     e.preventDefault();
     history.pushState({}, "", e.target.href);
@@ -73,7 +84,6 @@ document.body.addEventListener("click", e => {
 })
 
 window.addEventListener("popstate", () => {
-  console.log("popstate");
   router();
 })
 
