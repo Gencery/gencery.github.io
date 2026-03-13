@@ -1,22 +1,59 @@
 async function importResources() {
-  let data = fetch("./Assets/volga.json");
-  let travoltaVolga = fetch("./Assets/img/travoltaVolga.jpg")
-  Promise.all([data, travoltaVolga]).then(responses => responses.forEach((res, i) => {
-    if (i == 1) {
 
-      document.getElementsByTagName("img")[0].setAttribute("src", res.blob())
+  let imagesMap = [
+    {
+      name: "bondVolga",
+      src: "img/bondVolga.jpg"
+    },
+    {
+      name: "bondVolga2",
+      src: "img/bondVolga2.jpg"
+    },
+    {
+      name: "brokebackVolga",
+      src: "img/brokebackVolga.jpg"
+    },
+    {
+      name: "morpheusVolga",
+      src: "img/morpheusVolga.png"
+    }
+  ]
+
+  let responses = await Promise.all(imagesMap.map(async (image) => {
+    return {
+      res: await fetch(`./Assets/${image.src}`),
+      name: image.name
     }
   }));
+
+
+  let blobs = await Promise.all(responses.map(async (respObj) => {
+    return {
+      blob: await respObj.res.blob(),
+      name: respObj.name
+    }
+  }));
+
+  let urlObjs = blobs.map(blobObj => {
+    return {
+      url: URL.createObjectURL(blobObj.blob),
+      name: blobObj.name
+    }
+  });
+
+  let imgsObj = {};
+  urlObjs.forEach(urlObj => imgsObj[urlObj.name] = { url: urlObj.url })
+  return imgsObj;
 }
 
-importResources();
-
-let pages = {
-  home: {
-    content: /*html*/`
+let getPages = async () => {
+  let images = await importResources();
+  return {
+    home: {
+      content: /*html*/`
       <div class="home">
         <div class="imgContainer">
-          <img src="./Assets/img/bondVolga2.jpg" alt="">
+          <img src=${images.bondVolga.url} alt="">
         </div>
         <nav>
           <a href="?page=experience">Experience</a>
@@ -25,12 +62,12 @@ let pages = {
         </nav>
       </div>
     `
-  },
-  experience: {
-    content: /*html*/`
+    },
+    experience: {
+      content: /*html*/`
       <div class="experience">
         <div class="imgContainer">
-          <img src="./Assets/img/morpheusVolga.png" alt="">
+          <img src=${images.morpheusVolga.url} alt="">
           <a href="?page=acting" class="pill pill-red"></a>
           <a href="?page=software" class="pill pill-blue"></a>
         </div>
@@ -43,23 +80,27 @@ let pages = {
         </p>
       </div>
     `
-  },
-  acting: {
-    content: /*html*/`
+    },
+    acting: {
+      content: /*html*/`
       <div class="acting">
 
       </div>
     `
-  },
-  software: {
-    content: /*html*/`
+    },
+    software: {
+      content: /*html*/`
       
     `
+    }
   }
 }
 
 
-function router() {
+
+async function router() {
+  let pages = await getPages();
+  console.log(pages);
   let locationParams = location.search.slice(1).split("&").map(item => item.split("="));
   //
   let locationParamsObj = {};
@@ -86,16 +127,28 @@ function router() {
   }, 500)
 }
 
-document.body.addEventListener("click", e => {
-  if (e.target.tagName == "A") {
-    e.preventDefault();
-    history.pushState({}, "", e.target.href);
+function start() {
+  console.log("start!")
+  document.body.addEventListener("click", e => {
+    if (e.target.tagName == "A") {
+      e.preventDefault();
+      history.pushState({}, "", e.target.href);
+      router();
+    }
+  })
+
+  window.addEventListener("popstate", () => {
     router();
-  }
-})
-
-window.addEventListener("popstate", () => {
+  })
+  //document.addEventListener("DOMContentLoaded", router)
   router();
-})
+}
 
-document.addEventListener("DOMContentLoaded", router)
+try {
+  let images = await importResources();
+  console.log(images);
+  start();
+} catch (error) {
+  console.error(error);
+
+}
