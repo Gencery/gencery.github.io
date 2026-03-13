@@ -18,11 +18,17 @@ async function importResources() {
       src: "img/morpheusVolga.png"
     }
   ]
+  let imgsCount = imagesMap.length;
 
-  let responses = await Promise.all(imagesMap.map(async (image) => {
-    return {
-      res: await fetch(`./Assets/${image.src}`),
-      name: image.name
+  let responses = await Promise.all(imagesMap.map(async (image, i) => {
+    try {
+      console.log(i, imgsCount);
+      return {
+        res: await fetch(`./Assets/${image.src}`),
+        name: image.name
+      }
+    } catch (error) {
+      console.error(error);
     }
   }));
 
