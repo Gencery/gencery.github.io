@@ -3,11 +3,11 @@ async function importResources() {
   let imagesMap = [
     {
       name: "bondVolga2",
-      src: "https://images.pexels.com/photos/36183149/pexels-photo-36183149.jpeg?cs=srgb&dl=pexels-valeriya-36183149.jpg&fm=jpg&w=5464&h=8192"
+      src: "./Assets/img/bondVolga2.jpg"
     },
     {
       name: "brokebackVolga",
-      src: "https://images.pexels.com/photos/1146708/pexels-photo-1146708.jpeg?cs=srgb&dl=pexels-jplenio-1146708.jpg&fm=jpg&w=5068&h=2850"
+      src: "./Assets/img/brokebackVolga.jpg"
     },
     {
       name: "morpheusVolga",
@@ -30,11 +30,12 @@ async function importResources() {
 
   let responseCount = 0;
   let responseStart = new Date();
+  let mainNode = document.getElementsByTagName("main")[0];
 
   let blobs = await Promise.all(responses.map(async (respObj, i) => {
     let blob = await respObj.res.blob();
 
-    console.log(++responseCount, responses.length, blob.size, new Date() - responseStart);
+    mainNode.innerHTML = /*html*/`<span class="loading">${++responseCount}/${responses.length} - ${blob.size / 1024} KB - ${new Date() - responseStart} ms</span>`
     return {
       blob: blob,
       name: respObj.name
