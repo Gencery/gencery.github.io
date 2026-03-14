@@ -18,7 +18,7 @@ async function importResources() {
 
   let responses = await Promise.all(imagesMap.map(async (image, i) => {
     try {
-      document.getElementsByTagName("main")[0].innerHTML = `<span>${i + 1}/${imgsCount}</span>`;
+      document.getElementsByTagName("main")[0].innerHTML = `<span class="loading">${i + 1}/${imgsCount}</span>`;
       return {
         res: await fetch(`./Assets/${image.src}`),
         name: image.name

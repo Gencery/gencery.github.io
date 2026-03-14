@@ -229,3 +229,7 @@ body {
 .disappear {
   opacity: 0;
 }
+
+.loading {
+  color: #fff;
+}
