@@ -14,7 +14,6 @@ async function importResources() {
       src: "./Assets/img/morpheusVolga.png"
     }
   ]
-  let imagesCount = imagesMap.length;
 
   let responses = await Promise.all(imagesMap.map(async (image) => {
 
@@ -29,12 +28,13 @@ async function importResources() {
     }
   }));
 
+  let responseCount = 0;
+  let responseStart = new Date();
 
   let blobs = await Promise.all(responses.map(async (respObj, i) => {
-
     let blob = await respObj.res.blob();
 
-    console.log(i, imagesCount, blob.size, new Date().toISOString());
+    console.log(++responseCount, responses.length, blob.size, new Date() - responseStart);
     return {
       blob: blob,
       name: respObj.name
