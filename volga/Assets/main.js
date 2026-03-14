@@ -3,24 +3,25 @@ async function importResources() {
   let imagesMap = [
     {
       name: "bondVolga2",
-      src: "img/bondVolga2.jpg"
+      src: "https://images.pexels.com/photos/36183149/pexels-photo-36183149.jpeg?cs=srgb&dl=pexels-valeriya-36183149.jpg&fm=jpg&w=5464&h=8192"
     },
     {
       name: "brokebackVolga",
-      src: "img/brokebackVolga.jpg"
+      src: "https://images.pexels.com/photos/1146708/pexels-photo-1146708.jpeg?cs=srgb&dl=pexels-jplenio-1146708.jpg&fm=jpg&w=5068&h=2850"
     },
     {
       name: "morpheusVolga",
-      src: "img/morpheusVolga.png"
+      src: "./Assets/img/morpheusVolga.png"
     }
   ]
-  let imgsCount = imagesMap.length;
+  let imagesCount = imagesMap.length;
 
-  let responses = await Promise.all(imagesMap.map(async (image, i) => {
+  let responses = await Promise.all(imagesMap.map(async (image) => {
+
     try {
-      document.getElementsByTagName("main")[0].innerHTML = `<span class="loading">${i + 1}/${imgsCount}</span>`;
+
       return {
-        res: await fetch(`./Assets/${image.src}`),
+        res: await fetch(`${image.src}`),
         name: image.name
       }
     } catch (error) {
@@ -29,9 +30,13 @@ async function importResources() {
   }));
 
 
-  let blobs = await Promise.all(responses.map(async (respObj) => {
+  let blobs = await Promise.all(responses.map(async (respObj, i) => {
+
+    let blob = await respObj.res.blob();
+
+    console.log(i, imagesCount, blob.size, new Date().toISOString());
     return {
-      blob: await respObj.res.blob(),
+      blob: blob,
       name: respObj.name
     }
   }));
