@@ -2,10 +2,6 @@ async function importResources() {
 
   let imagesMap = [
     {
-      name: "bondVolga",
-      src: "img/bondVolga.jpg"
-    },
-    {
       name: "bondVolga2",
       src: "img/bondVolga2.jpg"
     },
@@ -22,7 +18,7 @@ async function importResources() {
 
   let responses = await Promise.all(imagesMap.map(async (image, i) => {
     try {
-      console.log(i, imgsCount);
+      console.log(`${i + 1}/${imgsCount}`);
       return {
         res: await fetch(`./Assets/${image.src}`),
         name: image.name
@@ -52,14 +48,13 @@ async function importResources() {
   return imgsObj;
 }
 
-let getPages = async () => {
-  let images = await importResources();
-  return {
+function getPage(page) {
+  let pages = {
     home: {
       content: /*html*/`
       <div class="home">
         <div class="imgContainer">
-          <img src=${images.bondVolga.url} alt="">
+          <img src=${images.bondVolga2.url} alt="">
         </div>
         <nav>
           <a href="?page=experience">Experience</a>
@@ -100,13 +95,10 @@ let getPages = async () => {
     `
     }
   }
+  return pages[page]
 }
 
-
-
-async function router() {
-  let pages = await getPages();
-  console.log(pages);
+function router() {
   let locationParams = location.search.slice(1).split("&").map(item => item.split("="));
   //
   let locationParamsObj = {};
@@ -120,21 +112,23 @@ async function router() {
   if (currentPage == undefined) {
     currentPage = "home"
   }
-  if (!pages[currentPage]) {
-    currentPage = "home"
-  }
+
   let mainNode = document.getElementsByTagName("main")[0];
   //
   document.body.classList.add("disappear");
 
   setTimeout(() => {
-    mainNode.innerHTML = pages[currentPage].content;
+    mainNode.innerHTML = getPage(currentPage).content;
     document.body.classList.remove("disappear");
-  }, 500)
+  }, 250)
 }
 
-function start() {
-  console.log("start!")
+let images = null;
+
+async function start() {
+
+  images = await importResources();
+
   document.body.addEventListener("click", e => {
     if (e.target.tagName == "A") {
       e.preventDefault();
@@ -150,11 +144,4 @@ function start() {
   router();
 }
 
-try {
-  let images = await importResources();
-  console.log(images);
-  start();
-} catch (error) {
-  console.error(error);
-
-}
+start()
