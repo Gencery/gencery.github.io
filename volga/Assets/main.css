@@ -3,7 +3,10 @@
   box-sizing: border-box;
 }
 
-html {}
+html {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
 
 body {
   margin: 0 auto;
@@ -189,15 +192,17 @@ header {
 footer {
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  height: 7vh;
 
   .navHome {
     max-width: 6vh;
     cursor: pointer;
-    margin-bottom: 3vh;
-    margin-right: 3vh;
     transition: all 250ms;
     background: none;
     border: none;
+    position: absolute;
+    margin-right: 3vh;
 
     >img {
       max-width: 100%;

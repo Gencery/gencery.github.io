@@ -1,5 +1,4 @@
 async function importResources() {
-
   let imagesMap = [
     {
       name: "bondVolga2",
@@ -81,7 +80,6 @@ function getPage(page) {
         <p class="prompt">
           You take the blue pill, you learn about my <span class="blue">Software</span> experience. You take the red pill,
           you stay in the Wonderland, and see my <span class="red">Acting</span> experience!
-          <br />
           <br />
           (click on a pill to choose)
         </p>
