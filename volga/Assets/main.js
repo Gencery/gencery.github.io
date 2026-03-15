@@ -33,7 +33,9 @@ async function importResources() {
   let blobs = await Promise.all(responses.map(async (respObj, i) => {
     let blob = await respObj.res.blob();
 
-    document.body.innerHTML = /*html*/`<span class="loading">${++responseCount}/${responses.length} - ${blob.size / 1024} KB - ${new Date() - responseStart} ms</span>`
+    let percentage = (++responseCount / responses.length) * 100;
+
+    document.getElementById("filled").style.width = percentage + "%";
     return {
       blob: blob,
       name: respObj.name
