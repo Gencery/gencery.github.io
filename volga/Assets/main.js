@@ -29,12 +29,11 @@ async function importResources() {
 
   let responseCount = 0;
   let responseStart = new Date();
-  let mainNode = document.getElementsByTagName("main")[0];
 
   let blobs = await Promise.all(responses.map(async (respObj, i) => {
     let blob = await respObj.res.blob();
 
-    mainNode.innerHTML = /*html*/`<span class="loading">${++responseCount}/${responses.length} - ${blob.size / 1024} KB - ${new Date() - responseStart} ms</span>`
+    document.body.innerHTML = /*html*/`<span class="loading">${++responseCount}/${responses.length} - ${blob.size / 1024} KB - ${new Date() - responseStart} ms</span>`
     return {
       blob: blob,
       name: respObj.name
@@ -54,19 +53,36 @@ async function importResources() {
 }
 
 function getPage(page) {
+  let header = () => /*html*/`
+    <header>
+      Volga Can Kaya
+      <br>
+      <p>Actor & Software Producer</p>
+    </header>
+  `
+  let footer = () => /*html*/`
+    <footer>
+      <a href="?page=home" class="navHome">
+        <img src="./Assets/img/home.png" alt="">
+      </a>
+    </footer>
+  `
+
   let pages = {
     home: {
       content: /*html*/`
-      <div class="home">
-        <div class="imgContainer">
-          <img src=${images.bondVolga2.url} alt="">
+      <main>
+        <div class="home">
+          <div class="imgContainer">
+            <img src=${images.bondVolga2.url} alt="">
+          </div>
+          <nav>
+            <a href="?page=experience">Experience</a>
+            <a href="?page=education">Education</a>
+            <a href="?page=contact">Contact</a>
+          </nav>
         </div>
-        <nav>
-          <a href="?page=experience">Experience</a>
-          <a href="?page=education">Education</a>
-          <a href="?page=contact">Contact</a>
-        </nav>
-      </div>
+      </main>
     `
     },
     experience: {
@@ -99,7 +115,13 @@ function getPage(page) {
     `
     }
   }
-  return pages[page]
+
+  let fullPage = `
+    ${header()}
+    ${pages[page].content}
+    ${footer()}
+  `
+  return fullPage;
 }
 
 function router() {
@@ -122,7 +144,7 @@ function router() {
   document.body.classList.add("disappear");
 
   setTimeout(() => {
-    mainNode.innerHTML = getPage(currentPage).content;
+    document.body.innerHTML = getPage(currentPage);
     document.body.classList.remove("disappear");
   }, 250)
 }

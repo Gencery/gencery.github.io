@@ -202,7 +202,8 @@ footer {
     background: none;
     border: none;
     position: absolute;
-    margin-right: 3vh;
+    right: 3vh;
+    bottom: 3vh;
 
     >img {
       max-width: 100%;
