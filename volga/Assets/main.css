@@ -75,7 +75,7 @@ footer {
   height: 7vh;
 
   .navHome {
-    max-width: 6vh;
+    max-width: 7vh;
     cursor: pointer;
     transition: all 250ms;
     background: none;
@@ -83,6 +83,10 @@ footer {
     position: absolute;
     right: 3vh;
     bottom: 3vh;
+    background-color: #000;
+    border-radius: 1vh;
+    padding: 1vh;
+    border: 1px solid #fff;
 
     >img {
       max-width: 100%;
