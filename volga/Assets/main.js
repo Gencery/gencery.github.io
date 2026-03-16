@@ -1,4 +1,5 @@
 async function importResources() {
+  //Fetching images
   let imagesMap = [
     {
       name: "bondVolga2",
@@ -11,6 +12,9 @@ async function importResources() {
     {
       name: "morpheusVolga",
       src: "./Assets/img/morpheusVolga.png"
+    }, {
+      name: "home",
+      src: "./Assets/img/home.png"
     }
   ]
 
@@ -33,7 +37,6 @@ async function importResources() {
     let blob = await respObj.res.blob();
 
     let percentageNum = (++responseCount / responses.length) * 100;
-    let bar = document.getElementById("bar");
     let filled = document.getElementById("filled");
     let percentage = document.getElementById("percentage");
     //
@@ -55,7 +58,11 @@ async function importResources() {
 
   let imgsObj = {};
   urlObjs.forEach(urlObj => imgsObj[urlObj.name] = { url: urlObj.url })
-  return imgsObj;
+
+  //fetching json data
+  let data = await fetch("./Assets/data.json").then(res => res.json());
+
+  return { img: imgsObj, data: data };
 }
 
 function getPage(page) {
@@ -69,7 +76,7 @@ function getPage(page) {
   let footer = () => /*html*/`
     <footer>
       <a href="?page=home" class="navHome">
-        <img src="./Assets/img/home.png" alt="">
+        <img src=${images.home.url} alt="">
       </a>
     </footer>
   `
@@ -151,14 +158,18 @@ function router() {
   setTimeout(() => {
     document.body.innerHTML = getPage(currentPage);
     document.body.classList.remove("disappear");
-  }, 250)
+  }, 200)
 }
 
 let images = null;
+let data = null;
 
 async function start() {
 
-  images = await importResources();
+  let resources = await importResources();
+  images = resources.img;
+  data = resources.data;
+
 
   document.body.addEventListener("click", e => {
     if (e.target.tagName == "A") {
