@@ -1,3 +1,24 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 1vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
 * {
   letter-spacing: 1%;
   box-sizing: border-box;
@@ -273,39 +294,61 @@ body {
 
 }
 
-/*EXPERIENCE PAGE*/
+/*ACTING PAGE*/
+body:has(.acting) {
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f00;
+    border-radius: 1vh;
+  }
+}
+
 .acting {
   flex-grow: 1;
   color: white;
   overflow-y: scroll;
+
+
 
   >* {
     margin: 0;
   }
 
   .card {
-    margin: 2vh;
+    margin: 5vh 1vh;
     border-radius: 1vh;
     padding: 1vh;
-    box-shadow: 0 0 10px -2px #f00;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 0px 10px 0px #f00;
 
     >* {
       margin: 0;
     }
 
-    >.logo {
-      width: 30%;
-      overflow: hidden;
-      border-radius: 1vh;
+    >.info {
 
-      >img {
-        object-fit: scale-down;
-        width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
+      >.logo {
+        width: 30%;
+        overflow: hidden;
+        border-radius: 1vh;
+
+        >img {
+          object-fit: scale-down;
+          width: 100%;
+
+        }
       }
+
+
+    }
+
+    video {
+      width: 100%;
+      border-radius: 1vh;
     }
   }
 

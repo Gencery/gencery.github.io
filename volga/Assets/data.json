@@ -89,7 +89,8 @@
         "Director": "Tim Burton",
         "Company": "Netflix",
         "Location": "Dublin, Ireland",
-        "logo": "./Assets/img/netflix.png"
+        "logo": "./Assets/img/netflix.png",
+        "video": "./Assets/wednesday.mp4"
       },
       {
         "name": "Lynley (Season 1)",

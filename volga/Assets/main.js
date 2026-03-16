@@ -120,17 +120,24 @@ function getPage(page) {
       <div class="acting">
         ${data.experience.acting.reduce((acc, current) => acc + /*html*/`
           <div class="card">
-            <div>
-              <p>${current.name || ""}</p>
-              <p>${current.role || ""}</p>
-              <p>${current.timeline || ""}</p>
-              <p>${current.Director || ""}</p>
-              <p>${current.Company || ""}</p>
-              <p>${current.Location || ""}</p>
+            <div class="info">
+              <div>
+                <p>${current.name || ""}</p>
+                <p>${current.role || ""}</p>
+                <p>${current.timeline || ""}</p>
+                <p>${current.Director || ""}</p>
+                <p>${current.Company || ""}</p>
+                <p>${current.Location || ""}</p>
+              </div>
+              ${current.logo ? /*html*/`<div class="logo">
+                <img src=${current.logo} />
+              </div>` : ""}
             </div>
-            ${current.logo ? /*html*/`<div class="logo">
-              <img src=${current.logo} />
-            </div>` : ""}
+            ${current.video ? /*html*/`
+              <video controls>
+                <source src=${current.video} type="video/mp4">
+              </video>
+            ` : ""}
           </div>
         `, "")
         }
