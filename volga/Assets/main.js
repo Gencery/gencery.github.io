@@ -118,7 +118,22 @@ function getPage(page) {
     acting: {
       content: /*html*/`
       <div class="acting">
-
+        ${data.experience.acting.reduce((acc, current) => acc + /*html*/`
+          <div class="card">
+            <div>
+              <p>${current.name || ""}</p>
+              <p>${current.role || ""}</p>
+              <p>${current.timeline || ""}</p>
+              <p>${current.Director || ""}</p>
+              <p>${current.Company || ""}</p>
+              <p>${current.Location || ""}</p>
+            </div>
+            ${current.logo ? /*html*/`<div class="logo">
+              <img src=${current.logo} />
+            </div>` : ""}
+          </div>
+        `, "")
+        }
       </div>
     `
     },

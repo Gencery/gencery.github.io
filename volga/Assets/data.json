@@ -88,7 +88,8 @@
         "timeline": "Sep 2025",
         "Director": "Tim Burton",
         "Company": "Netflix",
-        "Location": "Dublin, Ireland"
+        "Location": "Dublin, Ireland",
+        "logo": "./Assets/img/netflix.png"
       },
       {
         "name": "Lynley (Season 1)",
@@ -96,7 +97,8 @@
         "timeline": "Aug 2025",
         "Director": "Edward Bazalgette",
         "Company": "BBC",
-        "Location": "Dublin, Ireland"
+        "Location": "Dublin, Ireland",
+        "logo": "./Assets/img/bbc.png"
       },
       {
         "name": "Ben Leman (Season 1)",
@@ -104,7 +106,8 @@
         "timeline": "Oct 2025",
         "Director": "Semih Bağcı",
         "Company": "NTC Media",
-        "Location": "İzmir, Türkiye"
+        "Location": "İzmir, Türkiye",
+        "logo": "./Assets/img/ntc.png"
       },
       {
         "name": "Cennetin Çocukları (Season 1)",
@@ -112,14 +115,16 @@
         "timeline": "Oct 2025",
         "Director": "Soner Caner",
         "Company": "Motto Production",
-        "Location": "Balıkesir, Türkiye"
+        "Location": "Balıkesir, Türkiye",
+        "logo": "./Assets/img/motto.png"
       },
       {
         "name": "Sibirya Tarım",
         "role": "Voiceover for Advertisement",
         "timeline": "Feb 2020",
         "Company": "Sibirya AS",
-        "Location": "Novosibirsk, Russia"
+        "Location": "Novosibirsk, Russia",
+        "logo": "./Assets/img/sibirya.png"
       },
       {
         "name": "God vs. The Devil: Divine Nonsense (Short Comedy Film)",
@@ -140,8 +145,7 @@
         "role": "Lead (Tourist)",
         "timeline": "Sep 2020",
         "Director": "Victor Butenko",
-        "Company": "Novosibirsk, Russia",
-        "Location": "İzmir, Türkiye"
+        "Company": "Novosibirsk, Russia"
       }
     ]
   }
