@@ -28,14 +28,15 @@ async function importResources() {
   }));
 
   let responseCount = 0;
-  let responseStart = new Date();
 
   let blobs = await Promise.all(responses.map(async (respObj, i) => {
     let blob = await respObj.res.blob();
 
     let percentage = (++responseCount / responses.length) * 100;
-
-    document.getElementById("filled").style.width = percentage + "%";
+    let filledBar = document.getElementById("filled");
+    filledBar.style.width = percentage + "%";
+    filledBar.innerText = percentage.toFixed(1) + "%";
+    //
     return {
       blob: blob,
       name: respObj.name
@@ -141,7 +142,6 @@ function router() {
     currentPage = "home"
   }
 
-  let mainNode = document.getElementsByTagName("main")[0];
   //
   document.body.classList.add("disappear");
 
@@ -169,7 +169,7 @@ async function start() {
     router();
   })
   //document.addEventListener("DOMContentLoaded", router)
-  router();
+  //router();
 }
 
 start()

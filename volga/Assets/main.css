@@ -247,14 +247,15 @@ body {
 
   .bar {
     border: 1px solid #fff;
-    width: 80%;
     height: 4vh;
+    text-align: center;
 
     #filled {
       height: 100%;
       width: 0;
       transition: width 10ms;
       background-color: #fff;
+      position: relative;
     }
   }
 }
