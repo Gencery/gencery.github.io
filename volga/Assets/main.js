@@ -172,7 +172,7 @@ async function start() {
     router();
   })
   //document.addEventListener("DOMContentLoaded", router)
-  //router();
+  router();
 }
 
 start()
