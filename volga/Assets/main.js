@@ -32,10 +32,13 @@ async function importResources() {
   let blobs = await Promise.all(responses.map(async (respObj, i) => {
     let blob = await respObj.res.blob();
 
-    let percentage = (++responseCount / responses.length) * 100;
-    let filledBar = document.getElementById("filled");
-    filledBar.style.width = percentage + "%";
-    filledBar.innerText = percentage.toFixed(1) + "%";
+    let percentageNum = (++responseCount / responses.length) * 100;
+    let bar = document.getElementById("bar");
+    let filled = document.getElementById("filled");
+    let percentage = document.getElementById("percentage");
+    //
+    filled.style.width = percentageNum + "%";
+    percentage.innerText = percentageNum.toFixed(1) + "%";
     //
     return {
       blob: blob,
