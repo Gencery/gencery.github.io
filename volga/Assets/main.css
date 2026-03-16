@@ -257,6 +257,7 @@ body {
       transition: width 10ms;
       color: #000;
       background-color: #fff;
+      width: 0%;
     }
 
     #percentage {
