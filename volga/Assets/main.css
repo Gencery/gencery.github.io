@@ -112,7 +112,8 @@ body {
     flex-grow: 1;
   }
 
-  main:has(.home)+footer {
+  .home+footer {
+
     .navHome {
       display: none;
     }
