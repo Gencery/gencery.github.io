@@ -39,6 +39,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
+  >main {
+    box-shadow: 0 -1px 4px -2px #ddd;
+  }
+
   >* {
     margin: 0;
   }

@@ -84,8 +84,8 @@ function getPage(page) {
   let pages = {
     home: {
       content: /*html*/`
-      <main>
-        <div class="home">
+      
+        <main class="home">
           <div class="imgContainer">
             <img src=${images.bondVolga2.url} alt="">
           </div>
@@ -94,13 +94,13 @@ function getPage(page) {
             <a href="?page=education">Education</a>
             <a href="?page=contact">Contact</a>
           </nav>
-        </div>
-      </main>
+        </main>
+      
     `
     },
     experience: {
       content: /*html*/`
-      <div class="experience">
+      <main class="experience">
         <div class="imgContainer">
           <img src=${images.morpheusVolga.url} alt="">
           <a href="?page=acting" class="pill pill-red"></a>
@@ -112,12 +112,12 @@ function getPage(page) {
           <br />
           (click on a pill to choose)
         </p>
-      </div>
+    </main>
     `
     },
     acting: {
       content: /*html*/`
-      <div class="acting">
+      <main class="acting">
         ${data.experience.acting.reduce((acc, current) => acc + /*html*/`
           <div class="card">
             <div class="info">
@@ -141,7 +141,7 @@ function getPage(page) {
           </div>
         `, "")
         }
-      </div>
+      </main>
     `
     },
     software: {
