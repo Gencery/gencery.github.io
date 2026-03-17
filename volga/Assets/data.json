@@ -90,7 +90,7 @@
         "Company": "Netflix",
         "Location": "Dublin, Ireland",
         "logo": "./Assets/img/netflix.png",
-        "video": "./Assets/wednesday2.mp4"
+        "video": "./Assets/video/wednesday.mp4"
       },
       {
         "name": "Lynley (Season 1)",
@@ -99,7 +99,8 @@
         "Director": "Edward Bazalgette",
         "Company": "BBC",
         "Location": "Dublin, Ireland",
-        "logo": "./Assets/img/bbc.png"
+        "logo": "./Assets/img/bbc.png",
+        "video": "./Assets/video/lynley.mp4"
       },
       {
         "name": "Ben Leman (Season 1)",
