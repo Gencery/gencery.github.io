@@ -39,11 +39,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  >main {
-    border-top: 1px solid rgba(255, 255, 255, 10%);
-    border-bottom: 1px solid rgba(255, 255, 255, 10%);
-  }
-
   >* {
     margin: 0;
   }
@@ -55,6 +50,7 @@ header {
   padding: 2vh;
   text-align: center;
   font-size: 5vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 20%);
 
   >p {
     font-size: 3vh;
@@ -75,9 +71,16 @@ header {
 
 footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: relative;
-  height: 7vh;
+  height: 5vh;
+  border-top: 1px solid rgba(255, 255, 255, 20%);
+  color: #ddd;
+  font-size: 2vh;
+
+  .copyright {
+    margin: 1vh;
+  }
 
   .navHome {
     max-width: 7vh;
@@ -86,8 +89,8 @@ footer {
     background: none;
     border: none;
     position: absolute;
-    right: 3vh;
-    bottom: 3vh;
+    right: 2vh;
+    bottom: 6vh;
     background-color: #000;
     border-radius: 1vh;
     padding: 1vh;
@@ -99,6 +102,7 @@ footer {
       pointer-events: none;
     }
   }
+
 
   .navHome:hover {
     transform: scale(1.1);
