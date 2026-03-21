@@ -2,8 +2,16 @@ async function importResources() {
   //Fetching images
   let imagesMap = [
     {
-      name: "bondVolga2",
-      src: "./Assets/img/bondVolga2.jpg"
+      name: "godfatherVolga",
+      src: "./Assets/img/godfatherVolga.jpg"
+    },
+    {
+      name: "luckyDuck",
+      src: "./Assets/img/luckyDuck.jpg"
+    },
+    {
+      name: "travoltaVolga",
+      src: "./Assets/img/travoltaVolga.jpg"
     },
     {
       name: "brokebackVolga",
@@ -88,7 +96,7 @@ function getPage(page) {
       
         <main class="home">
           <div class="imgContainer">
-            <img src=${images.bondVolga2.url} alt="">
+            <img src=${images.luckyDuck.url} alt="">
           </div>
           <nav>
             <a href="?page=experience">Experience</a>

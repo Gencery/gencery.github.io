@@ -47,7 +47,7 @@ body {
 
 header {
   color: #ddd;
-  padding: 2vh;
+  padding: 1vh;
   text-align: center;
   font-size: 5vh;
   border-bottom: 1px solid rgba(255, 255, 255, 20%);
@@ -226,7 +226,7 @@ body {
       text-decoration: none;
       color: #fff;
       line-height: 7vh;
-      font-size: 3.5vh;
+      font-size: 3vh;
       margin-top: 1vh;
       background-color: rgba(0, 0, 0, 80%);
       border-radius: 1vh;
@@ -323,8 +323,6 @@ body:has(.acting) {
   color: white;
   overflow-y: scroll;
 
-
-
   >* {
     margin: 0;
   }
@@ -362,6 +360,7 @@ body:has(.acting) {
 
     video {
       width: 100%;
+      object-fit: scale-down;
       border-radius: 1vh;
     }
   }
