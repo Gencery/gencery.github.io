@@ -250,6 +250,7 @@ async function start() {
   let resources = await importResources();
   images = resources.img;
   data = resources.data;
+  console.log(images);
 
 
   document.body.addEventListener("click", e => {
