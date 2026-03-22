@@ -20,9 +20,34 @@ async function importResources() {
     {
       name: "morpheusVolga",
       src: "./Assets/img/morpheusVolga.png"
-    }, {
+    },
+    {
       name: "home",
       src: "./Assets/img/home.png"
+    },
+    {
+      name: "volga1",
+      src: "./Assets/img/volga1.jpg"
+    },
+    {
+      name: "volga2",
+      src: "./Assets/img/volga2.jpg"
+    },
+    {
+      name: "volga3",
+      src: "./Assets/img/volga3.jpg"
+    },
+    {
+      name: "volga4",
+      src: "./Assets/img/volga4.jpg"
+    },
+    {
+      name: "volga5",
+      src: "./Assets/img/volga5.jpg"
+    },
+    {
+      name: "volga6",
+      src: "./Assets/img/volga6.jpg"
     }
   ]
 
@@ -170,7 +195,7 @@ function getPage(page) {
         ${[1, 2, 3, 4, 5, 6].reduce((acc, cur) => {
         return acc +/*html*/`
             <div class="card">
-              <img src="./Assets/img/volga${cur}.jpg" alt="">
+              <img src=${images["volga" + cur].url} alt="">
             </div>
           `
       }, "")}
