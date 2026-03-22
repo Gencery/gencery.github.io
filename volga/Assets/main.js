@@ -214,7 +214,7 @@ function router() {
   setTimeout(() => {
     document.body.innerHTML = getPage(currentPage);
     document.body.classList.remove("disappear");
-  }, 200)
+  }, 350)
 }
 
 let images = null;
