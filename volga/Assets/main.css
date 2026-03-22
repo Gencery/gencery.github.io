@@ -388,9 +388,13 @@ body:has(.acting) {
     }
 
     >img {
-      max-width: 100%;
+      width: 100%;
+      object-fit: contain;
     }
 
-    >video {}
+    >video {
+      width: 100%;
+      object-fit: contain;
+    }
   }
 }
