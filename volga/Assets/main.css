@@ -355,7 +355,7 @@ body:has(.acting) {
         border-radius: 1vh;
 
         >img {
-          object-fit: scale-down;
+          object-fit: contain;
           width: 100%;
 
         }
