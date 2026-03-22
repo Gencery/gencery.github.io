@@ -127,7 +127,7 @@ function getPage(page) {
     },
     acting: {
       content: /*html*/`
-      <main class="acting">
+      <main class="cardContainer acting">
         ${data.experience.acting.reduce((acc, current) => acc + /*html*/`
           <div class="card">
             <div class="info">
@@ -155,6 +155,26 @@ function getPage(page) {
           </div>
         `, "")
         }
+      </main>
+    `
+    },
+    gallery: {
+      content: /*html*/`
+      <main class="cardContainer gallery">
+        <div class="card">
+          <h4>Showreel</h4>
+          <video controls poster="./Assets/img/showreelPoster.jpg">
+            <source src="./Assets/video/showreel.mp4" type="video/mp4">
+          </video>
+        </div>
+        ${[1, 2, 3, 4, 5, 6].reduce((acc, cur) => {
+        return acc +/*html*/`
+            <div class="card">
+              <img src="./Assets/img/volga${cur}.jpg" alt="">
+            </div>
+          `
+      }, "")}
+        
       </main>
     `
     },

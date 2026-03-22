@@ -324,7 +324,7 @@ body:has(.acting) {
   }
 }
 
-.acting {
+.cardContainer {
   flex-grow: 1;
   color: white;
   overflow-y: scroll;
@@ -334,10 +334,9 @@ body:has(.acting) {
   }
 
   .card {
-    margin: 1vh 1vh 5vh 1vh;
+    margin: 2vh 2vh 5vh 2vh;
     border-radius: 1vh;
     padding: 1vh;
-    box-shadow: 0 0px 10px 0px #f00;
 
     >* {
       margin: 0;
@@ -371,4 +370,24 @@ body:has(.acting) {
     }
   }
 
+}
+
+.acting {
+  .card {
+    box-shadow: 0 0px 5px 0px #f00;
+  }
+}
+
+.gallery {
+  .card {
+    box-shadow: 0 0px 5px 0px #0f0;
+
+    >h4 {
+      margin: 1vh 0;
+    }
+
+    >img {
+      max-width: 100%;
+    }
+  }
 }
