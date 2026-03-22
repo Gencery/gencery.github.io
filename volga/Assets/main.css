@@ -44,6 +44,11 @@ body {
   }
 }
 
+a {
+  margin-bottom: 2vh;
+  display: inline-block;
+  color: inherit;
+}
 
 header {
   color: #ddd;
@@ -90,7 +95,7 @@ footer {
     border: none;
     position: absolute;
     right: 2vh;
-    bottom: 6vh;
+    bottom: 2vh;
     background-color: #000;
     border-radius: 1vh;
     padding: 1vh;
@@ -186,6 +191,7 @@ body {
     >img {
       width: 100%;
       max-width: 500px;
+      max-height: 70vh;
       object-fit: scale-down;
       margin: 0 auto;
     }
@@ -219,26 +225,26 @@ body {
     left: 1vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
+    margin-top: 1vh;
 
     >a {
       text-decoration: none;
       color: #fff;
       line-height: 7vh;
       font-size: 3vh;
-      margin-top: 1vh;
       background-color: rgba(0, 0, 0, 80%);
       border-radius: 1vh;
       padding: 1vh 2vh;
-      transition: box-shadow 500ms;
+      transition: box-shadow 250ms;
       box-shadow: 0 0px 3px 0px #fff;
       animation-name: slidein;
       animation: slidein 0.5s ease-out;
     }
 
     >a:hover {
-      box-shadow: 0 10px 8px -6px #fff;
+      box-shadow: 0 0 0px 0px #fff;
     }
   }
 }

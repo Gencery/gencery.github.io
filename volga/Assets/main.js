@@ -83,7 +83,7 @@ function getPage(page) {
   `
   let footer = () => /*html*/`
     <footer>
-      <a href="?page=home" class="navHome">
+      <a href="./?page=home" class="navHome">
         <img src=${images.home.url} alt="">
       </a>
       <span class="copyright">© 2026 Volga Can Kaya. All rights reserved</span>
@@ -99,9 +99,10 @@ function getPage(page) {
             <img src=${images.luckyDuck.url} alt="">
           </div>
           <nav>
-            <a href="?page=experience">Experience</a>
-            <a href="?page=education">Education</a>
-            <a href="?page=contact">Contact</a>
+            <a href="./?page=experience">Experience</a>
+            <a href="./?page=education">Education</a>
+            <a href="./?page=gallery">Gallery</a>
+            <a href="./?page=contact">Contact</a>
           </nav>
         </main>
       
@@ -112,8 +113,8 @@ function getPage(page) {
       <main class="experience">
         <div class="imgContainer">
           <img src=${images.morpheusVolga.url} alt="">
-          <a href="?page=acting" class="pill pill-red"></a>
-          <a href="?page=software" class="pill pill-blue"></a>
+          <a href="./?page=acting" class="pill pill-red"></a>
+          <a href="./?page=software" class="pill pill-blue"></a>
         </div>
         <p class="prompt">
           You take the blue pill, you learn about my <span class="blue">Software</span> experience. You take the red pill,
@@ -131,12 +132,16 @@ function getPage(page) {
           <div class="card">
             <div class="info">
               <div>
-                <p>${current.name || ""}</p>
+                <h3>${current.name || ""}</h3>
                 <p>${current.role || ""}</p>
                 <p>${current.timeline || ""}</p>
                 <p>${current.Director || ""}</p>
                 <p>${current.Company || ""}</p>
                 <p>${current.Location || ""}</p>
+                <p>${current.note || ""}</p>
+                ${current.imdb ? /*html*/`
+                  <a href=${current.imdb}>IMDB Page</a>
+                ` : ""}
               </div>
               ${current.logo ? /*html*/`<div class="logo">
                 <img src=${current.logo} />
@@ -203,7 +208,10 @@ async function start() {
 
 
   document.body.addEventListener("click", e => {
-    if (e.target.tagName == "A") {
+
+    let tag = e.target;
+
+    if (tag.tagName == "A" && tag.href.includes("/?page")) {
       e.preventDefault();
       history.pushState({}, "", e.target.href);
       router();

@@ -83,6 +83,15 @@
     ],
     "acting": [
       {
+        "name": "Sanctuary: A Witch's Tale (Season 2)",
+        "role": "Supporter",
+        "timeline": "Jan 2026",
+        "Director": "Dathaí Keane",
+        "Company": "AMC+",
+        "Location": "Dublin, Ireland",
+        "logo": "./Assets/img/amc.png"
+      },
+      {
         "name": "Wednesday (Season 2)",
         "role": "Doctor",
         "timeline": "Sep 2025",
@@ -126,28 +135,34 @@
         "timeline": "Feb 2020",
         "Company": "Sibirya AS",
         "Location": "Novosibirsk, Russia",
-        "logo": "./Assets/img/sibirya.png"
+        "logo": "./Assets/img/sibirya.png",
+        "video": "./Assets/video/sibirya.mp4"
       },
       {
         "name": "God vs. The Devil: Divine Nonsense (Short Comedy Film)",
         "role": "Lead (God and The Devil)",
         "timeline": "Jan 2026",
         "Director": "Volga Can Kaya",
-        "Location": "İzmir, Türkiye"
+        "Location": "İzmir, Türkiye",
+        "note": "This short film has been officially selected for the 2026 Lift-Off International Film Festival.",
+        "imdb": "https://www.imdb.com/title/tt39322156/",
+        "video": "./Assets/video/godVsDevil.mp4"
       },
       {
         "name": "Duality (Short Horror Film)",
         "role": "Lead (Sleep Demon)",
         "timeline": "Nov 2025",
         "Director": "Volga Can Kaya",
-        "Location": "İzmir, Türkiye"
+        "Location": "İzmir, Türkiye",
+        "video": "./Assets/video/duality.mp4"
       },
       {
         "name": "Campfire (Short Drama Film)",
         "role": "Lead (Tourist)",
         "timeline": "Sep 2020",
         "Director": "Victor Butenko",
-        "Company": "Novosibirsk, Russia"
+        "Company": "Novosibirsk, Russia",
+        "video": "./Assets/video/campfire.mp4"
       }
     ]
   }
