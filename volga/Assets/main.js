@@ -2,20 +2,8 @@ async function importResources() {
   //Fetching images
   let imagesMap = [
     {
-      name: "godfatherVolga",
-      src: "./Assets/img/godfatherVolga.jpg"
-    },
-    {
       name: "luckyDuck",
       src: "./Assets/img/luckyDuck.jpg"
-    },
-    {
-      name: "travoltaVolga",
-      src: "./Assets/img/travoltaVolga.jpg"
-    },
-    {
-      name: "brokebackVolga",
-      src: "./Assets/img/brokebackVolga.jpg"
     },
     {
       name: "morpheusVolga",
@@ -24,6 +12,10 @@ async function importResources() {
     {
       name: "home",
       src: "./Assets/img/home.png"
+    },
+    {
+      name: "volga11",
+      src: "./Assets/img/volga11.jpg"
     },
     {
       name: "volga1",
@@ -48,6 +40,10 @@ async function importResources() {
     {
       name: "volga6",
       src: "./Assets/img/volga6.jpg"
+    },
+    {
+      name: "laptopVolga",
+      src: "./Assets/img/laptopVolga.jpg"
     }
   ]
 
@@ -188,7 +184,7 @@ function getPage(page) {
       <main class="cardContainer gallery">
         <div class="card">
           <h4>Showreel</h4>
-          <video controls poster="./Assets/img/showreelPoster.jpg">
+          <video controls poster="./Assets/img/volga2.jpg">
             <source src="./Assets/video/showreel.mp4" type="video/mp4">
           </video>
         </div>
@@ -212,27 +208,27 @@ function getPage(page) {
       content: /*html*/`
       <main class="contact">
         <div class="imgContainer">
-          <img src="./Assets/img/laptopVolga.jpg" alt="">
-          <div class="links">
-            <a href="mailto:volcankay@gmail.com" class="socLink">
-              <img src="./Assets/img/socials/gmail.png" alt="gmail logo">
-            </a>
-            <a href="https://www.instagram.com/volgacankaya/" class="socLink">
-              <img src="./Assets/img/socials/instagram.png" alt="instagram logo">
-            </a>
-            <a href="https://www.youtube.com/@VolgaCanKaya/" class="socLink">
-              <img src="./Assets/img/socials/youtube.png" alt="youtube logo">
-            </a>
-            <a href="https://www.imdb.com/name/nm18108555/" class="socLink">
-              <img src="./Assets/img/socials/imdb.png" alt="imdb logo">
-            </a>
-            <a href="https://www.mandy.com/u/volgacankaya/" class="socLink">
-              <img src="./Assets/img/socials/mandy.avif" alt="mandy logo">
-            </a>
-            <a href="" class="socLink">
-              <img src="./Assets/img/socials/fishpond.jpg" alt="fishpond logo">
-            </a>
-          </div>
+          <img src=${images.volga11.url} alt="">
+        </div>
+        <div class="links">
+          <a href="mailto:volcankay@gmail.com" class="socLink">
+            <img src="./Assets/img/socials/gmail.png" alt="gmail logo">
+          </a>
+          <a href="https://www.instagram.com/volgacankaya/" class="socLink">
+            <img src="./Assets/img/socials/instagram.png" alt="instagram logo">
+          </a>
+          <a href="https://www.youtube.com/@VolgaCanKaya/" class="socLink">
+            <img src="./Assets/img/socials/youtube.png" alt="youtube logo">
+          </a>
+          <a href="https://www.imdb.com/name/nm18108555/" class="socLink">
+            <img src="./Assets/img/socials/imdb.png" alt="imdb logo">
+          </a>
+          <a href="https://www.mandy.com/u/volgacankaya/" class="socLink">
+            <img src="./Assets/img/socials/mandy.avif" alt="mandy logo">
+          </a>
+          <a href="" class="socLink">
+            <img src="./Assets/img/socials/fishpond.jpg" alt="fishpond logo">
+          </a>
         </div>
       </main>
     `

@@ -395,9 +395,9 @@ body:has(.acting) {
 }
 
 .contact {
+  position: relative;
 
   .imgContainer {
-    position: relative;
     overflow: hidden;
     height: 75vh;
 
@@ -412,10 +412,11 @@ body:has(.acting) {
     padding: 1vh;
     position: absolute;
     left: 0;
-    bottom: 10%;
+    bottom: 15%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 
     .socLink {
       height: 7vh;
@@ -430,6 +431,10 @@ body:has(.acting) {
         object-fit: contain;
         border-radius: inherit;
       }
+    }
+
+    .socLink:hover {
+      transform: scale(1.1);
     }
   }
 }
