@@ -226,7 +226,7 @@ function getPage(page) {
           <a href="https://www.mandy.com/u/volgacankaya/" class="socLink">
             <img src="./Assets/img/socials/mandy.avif" alt="mandy logo">
           </a>
-          <a href="" class="socLink">
+          <a href="https://fishpond.ie/volgacankaya" class="socLink">
             <img src="./Assets/img/socials/fishpond.jpg" alt="fishpond logo">
           </a>
         </div>
