@@ -81,7 +81,7 @@ footer {
   height: 5vh;
   border-top: 1px solid rgba(255, 255, 255, 20%);
   color: #ddd;
-  font-size: 2vh;
+  font-size: 1rem;
 
   .copyright {
     margin: 1vh;
@@ -396,10 +396,11 @@ body:has(.acting) {
 
 .contact {
   position: relative;
+  height: 50vh;
 
   .imgContainer {
     overflow: hidden;
-    height: 75vh;
+    height: 100%;
 
     img {
       object-fit: scale-down;
@@ -412,14 +413,14 @@ body:has(.acting) {
     padding: 1vh;
     position: absolute;
     left: 0;
-    bottom: 15%;
+    bottom: 5rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
 
     .socLink {
-      height: 7vh;
+      height: 8vh;
       border-radius: 2vh;
       padding: 3px;
       background-color: rgba(0, 0, 0, 75%);
