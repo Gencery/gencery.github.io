@@ -153,7 +153,7 @@ function getPage(page) {
           <div class="card">
             <div class="info">
               <div>
-                <h3>${current.name || ""}</h3>
+                <h4>${current.name || ""}</h4>
                 <p>${current.role || ""}</p>
                 <p>${current.timeline || ""}</p>
                 <p>${current.Director || ""}</p>
