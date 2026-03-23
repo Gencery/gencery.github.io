@@ -393,3 +393,43 @@ body:has(.acting) {
     }
   }
 }
+
+.contact {
+
+  .imgContainer {
+    position: relative;
+    overflow: hidden;
+    height: 75vh;
+
+    img {
+      object-fit: scale-down;
+      max-width: 100%;
+    }
+  }
+
+  .links {
+    color: #ddd;
+    padding: 1vh;
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .socLink {
+      height: 7vh;
+      border-radius: 2vh;
+      padding: 3px;
+      background-color: rgba(0, 0, 0, 75%);
+      margin: 0.5vh;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+        border-radius: inherit;
+      }
+    }
+  }
+}
