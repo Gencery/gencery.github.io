@@ -81,7 +81,7 @@ footer {
   height: 5vh;
   border-top: 1px solid rgba(255, 255, 255, 20%);
   color: #ddd;
-  font-size: 1rem;
+  font-size: 0.8rem;
 
   .copyright {
     margin: 1vh;
@@ -395,47 +395,48 @@ body:has(.acting) {
 }
 
 .contact {
-  position: relative;
   height: 50vh;
 
   .imgContainer {
     overflow: hidden;
     height: 100%;
+    position: relative;
 
     img {
       object-fit: scale-down;
       max-width: 100%;
     }
-  }
 
-  .links {
-    color: #ddd;
-    padding: 1vh;
-    position: absolute;
-    left: 0;
-    bottom: 5rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+    .links {
+      color: #ddd;
+      position: absolute;
+      left: 0;
+      top: 60%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
 
-    .socLink {
-      height: 8vh;
-      border-radius: 2vh;
-      padding: 3px;
-      background-color: rgba(0, 0, 0, 75%);
-      margin: 0.5vh;
-      overflow: hidden;
+      .socLink {
+        height: 6vh;
+        border-radius: 2vh;
+        padding: 3px;
+        background-color: rgba(0, 0, 0, 75%);
+        margin: 0.5vh;
+        overflow: hidden;
 
-      img {
-        height: 100%;
-        object-fit: contain;
-        border-radius: inherit;
+        img {
+          height: 100%;
+          object-fit: contain;
+          border-radius: inherit;
+        }
+      }
+
+      .socLink:hover {
+        transform: scale(1.1);
       }
     }
-
-    .socLink:hover {
-      transform: scale(1.1);
-    }
   }
+
+
 }

@@ -209,27 +209,28 @@ function getPage(page) {
       <main class="contact">
         <div class="imgContainer">
           <img src=${images.volga11.url} alt="">
+          <div class="links">
+            <a href="mailto:volcankay@gmail.com" class="socLink">
+              <img src="./Assets/img/socials/gmail.png" alt="gmail logo">
+            </a>
+            <a href="https://www.instagram.com/volgacankaya/" class="socLink">
+              <img src="./Assets/img/socials/instagram.png" alt="instagram logo">
+            </a>
+            <a href="https://www.youtube.com/@VolgaCanKaya/" class="socLink">
+              <img src="./Assets/img/socials/youtube.png" alt="youtube logo">
+            </a>
+            <a href="https://www.imdb.com/name/nm18108555/" class="socLink">
+              <img src="./Assets/img/socials/imdb.png" alt="imdb logo">
+            </a>
+            <a href="https://www.mandy.com/u/volgacankaya/" class="socLink">
+              <img src="./Assets/img/socials/mandy.avif" alt="mandy logo">
+            </a>
+            <a href="https://fishpond.ie/volgacankaya" class="socLink">
+              <img src="./Assets/img/socials/fishpond.jpg" alt="fishpond logo">
+            </a>
+          </div>
         </div>
-        <div class="links">
-          <a href="mailto:volcankay@gmail.com" class="socLink">
-            <img src="./Assets/img/socials/gmail.png" alt="gmail logo">
-          </a>
-          <a href="https://www.instagram.com/volgacankaya/" class="socLink">
-            <img src="./Assets/img/socials/instagram.png" alt="instagram logo">
-          </a>
-          <a href="https://www.youtube.com/@VolgaCanKaya/" class="socLink">
-            <img src="./Assets/img/socials/youtube.png" alt="youtube logo">
-          </a>
-          <a href="https://www.imdb.com/name/nm18108555/" class="socLink">
-            <img src="./Assets/img/socials/imdb.png" alt="imdb logo">
-          </a>
-          <a href="https://www.mandy.com/u/volgacankaya/" class="socLink">
-            <img src="./Assets/img/socials/mandy.avif" alt="mandy logo">
-          </a>
-          <a href="https://fishpond.ie/volgacankaya" class="socLink">
-            <img src="./Assets/img/socials/fishpond.jpg" alt="fishpond logo">
-          </a>
-        </div>
+        
       </main>
     `
     },
