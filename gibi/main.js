@@ -373,10 +373,10 @@ let selectMenu = /*html*/`
 `
 
 let iframe = /*html*/`
-  <iframe frameborder="0"></iframe>
+  <iframe  allowfullscreen frameborder="0"></iframe>
 `
 
 document.body.innerHTML = /*html*/`
-  ${selectMenu}
   ${iframe}
+  ${selectMenu}
 `;
