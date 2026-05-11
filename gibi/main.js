@@ -362,6 +362,7 @@ function epSelect(elem) {
 
 let selectMenu = /*html*/`
   <select oninput="epSelect(this)">
+    <option value="" hidden>Bölüm Seçiniz</option>
     ${Object.keys(episodes).reduce((accSeasons, curSeason) => accSeasons +/*html*/`
       <!--SEASON-->
       <optgroup label="${curSeason}.Sezon">
