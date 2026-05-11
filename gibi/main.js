@@ -52,11 +52,13 @@ let episodes = {
     },
     "11": {
       "name": "Yılmaz Bey Banyo",
-      "length": "31:59"
+      "length": "31:59",
+      "code": "9937888414419"
     },
     "12": {
       "name": "Atın Bulunuşu",
-      "length": "34:58"
+      "length": "34:58",
+      "code": "9937888742099"
     }
   },
   "2": {
@@ -206,7 +208,8 @@ let episodes = {
     },
     "9": {
       "name": "İç Mimari ve Dirty Talk",
-      "length": "31:14"
+      "length": "31:14",
+      "code": "9939629116115"
     },
     "10": {
       "name": "MÖ 2998-2997 Eğitim Öğretim Yılı",
@@ -267,15 +270,18 @@ let episodes = {
     },
     "11": {
       "name": "Kenan Ticaret",
-      "length": "36:53"
+      "length": "36:53",
+      "code": "9941067827923"
     },
     "12": {
       "name": "Demir Kalenin Kuzgunları: Ölüm Büyücüsü'nün Mirası",
-      "length": "46:54"
+      "length": "46:54",
+      "code": "9941067893459"
     },
     "13": {
       "name": "Demir Kalenin Kuzgunları: Ahşap Sandığın Muhafızları",
-      "length": "51:51"
+      "length": "51:51",
+      "code": "9941068024531"
     }
   },
   "6": {
@@ -331,15 +337,18 @@ let episodes = {
     },
     "11": {
       "name": "Başkaları",
-      "length": "47:20"
+      "length": "47:20",
+      "code": "10020787915475"
     },
     "12": {
       "name": "Yapılanlar: Sade Bir Tören",
-      "length": "57:30"
+      "length": "57:30",
+      "code": "10033951083219"
     },
     "13": {
       "name": "Yapılanlar: Don Yılmaz'ın Seçimi",
-      "length": "1:05:29"
+      "length": "1:05:29",
+      "code": "10055641139923"
     }
   }
 }
