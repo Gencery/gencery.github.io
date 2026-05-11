@@ -2,15 +2,18 @@ let episodes = {
   "1": {
     "1": {
       "name": "Kokariç",
-      "length": "27:20"
+      "length": "27:20",
+      "embed": "9937688398547"
     },
     "2": {
       "name": "Vatka",
-      "length": "28:46"
+      "length": "28:46",
+      "embed": "9937714350803"
     },
     "3": {
       "name": "Nü Model",
-      "length": "30:07"
+      "length": "30:07",
+      "embed": "9937735060179"
     },
     "4": {
       "name": "Erasmus'la Gelen Yamyam",
@@ -329,3 +332,4 @@ document.body.innerHTML = selectMenu;
 //     }
 //   });
 
+[...document.getElementsByClassName("video-card__aylki __horizontal__aylki card__xs1sd")].filter(item => item.getElementsByClassName("name__scwlw").length)
