@@ -288,7 +288,7 @@ let episodes = {
     "1": {
       "name": "Waffle",
       "length": "52:52",
-      "code": "10020787915475"
+      "code": "9941068352211"
     },
     "2": {
       "name": "Mikrodalga",
@@ -298,7 +298,7 @@ let episodes = {
     "3": {
       "name": "Girls' Night Out",
       "length": "50:56",
-      "code": "10055641139923"
+      "code": "9941068614355"
     },
     "4": {
       "name": "Metin",
