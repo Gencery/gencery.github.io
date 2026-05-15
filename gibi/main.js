@@ -221,17 +221,17 @@ let episodes = {
     "1": {
       "name": "Sinek",
       "length": "40:08",
-      "code": "9941067827923"
+      "code": "9941066058451"
     },
     "2": {
       "name": "Kahır",
       "length": "46:05",
-      "code": "9941067893459"
+      "code": "9941066255059"
     },
     "3": {
       "name": "Şako Bosphorus",
       "length": "41:02",
-      "code": "9941068024531"
+      "code": "9941066320595"
     },
     "4": {
       "name": "Yokluk",
